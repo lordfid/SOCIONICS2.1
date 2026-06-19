@@ -1,4 +1,4 @@
-import type { TestMode, TestSession } from "../types";
+import type { TestMode, TestSession, ScenarioCategory } from "../types";
 import { ALL_QUESTIONS, getCoreQuestions, getHoldoutQuestions, getTieBreakQuestions } from "../data/questions";
 import { CHANNELS, ELEMENTS } from "../data/modelA";
 
@@ -28,51 +28,73 @@ function targetCount(mode: TestMode) {
   return mode === "ringkas" ? 80 : mode === "standar" ? 128 : 224;
 }
 
-function selectCoverageBase(seed: number) {
-  const core = getCoreQuestions();
-  const selected: string[] = [];
-  for (const element of ELEMENTS) {
-    for (const channel of CHANNELS) {
-      const cell = core.filter((q) => q.element === element && q.channel === channel);
-      const picked = shuffle(cell, seed + selected.length * 17)[0];
-      if (picked) selected.push(picked.id);
-    }
+const CATEGORY_QUOTAS: Record<TestMode, Record<ScenarioCategory, number>> = {
+  ringkas: {
+    daily_basic: 11, chat_medsos: 7, asmara: 10, persahabatan: 8, keluarga: 7,
+    sekolah: 7, kerja_shift: 7, kerja_kantor: 6, uang: 4, tubuh_lelah: 4,
+    kegagalan: 5, duka: 4
+  },
+  standar: {
+    daily_basic: 18, chat_medsos: 11, asmara: 16, persahabatan: 14, keluarga: 11,
+    sekolah: 11, kerja_shift: 11, kerja_kantor: 9, uang: 7, tubuh_lelah: 7,
+    kegagalan: 7, duka: 6
+  },
+  mendalam: {
+    daily_basic: 32, chat_medsos: 20, asmara: 28, persahabatan: 24, keluarga: 20,
+    sekolah: 20, kerja_shift: 20, kerja_kantor: 16, uang: 12, tubuh_lelah: 12,
+    kegagalan: 12, duka: 8
   }
-  return selected;
-}
+};
 
 export function createSession(mode: TestMode, nickname = ""): TestSession {
   const seed = Math.floor(Math.random() * 2 ** 31);
-  const base = selectCoverageBase(seed); // 64 items
-  const exclude = new Set(base);
+  const target = targetCount(mode);
+  const quotas = CATEGORY_QUOTAS[mode];
 
-  // Quotas for different test modes
-  let extraCoreCount = 0;
-  let holdoutCount = 0;
+  // Group questions by category
+  const candidatesByCategory: Record<ScenarioCategory, string[]> = {
+    daily_basic: [], chat_medsos: [], asmara: [], persahabatan: [], keluarga: [],
+    sekolah: [], kerja_shift: [], kerja_kantor: [], uang: [], tubuh_lelah: [],
+    kegagalan: [], duka: []
+  };
 
-  if (mode === "ringkas") {
-    extraCoreCount = 0;
-    holdoutCount = 16;
-  } else if (mode === "standar") {
-    extraCoreCount = 48;
-    holdoutCount = 16;
-  } else {
-    // mendalam / penuh
-    extraCoreCount = 128;
-    holdoutCount = 32;
+  const pool = ALL_QUESTIONS.filter((q) => q.kind !== "tie-break");
+  pool.forEach((q) => {
+    const cat = q.category || "daily_basic";
+    candidatesByCategory[cat].push(q.id);
+  });
+
+  const selectedSet = new Set<string>();
+  let catIndex = 0;
+
+  // 1. Pull the quota amount from each category
+  for (const [cat, quotaVal] of Object.entries(quotas)) {
+    const scCat = cat as ScenarioCategory;
+    const shuffledList = shuffle(candidatesByCategory[scCat], seed + catIndex * 53);
+    const sliced = shuffledList.slice(0, quotaVal);
+    sliced.forEach((id) => selectedSet.add(id));
+    catIndex++;
   }
 
-  const extraCore = shuffle(
-    getCoreQuestions().filter((q) => !exclude.has(q.id)),
-    seed + 19
-  ).slice(0, extraCoreCount).map((q) => q.id);
+  // 2. Fallback check: If the total size is less than target, backfill from remaining pools
+  if (selectedSet.size < target) {
+    const remainingCandidates = pool
+      .map((q) => q.id)
+      .filter((id) => !selectedSet.add(id)); // Attempt addition and find rest
+    const shuffledRemainder = shuffle(remainingCandidates, seed + 999);
+    for (const id of shuffledRemainder) {
+      if (selectedSet.size >= target) break;
+      selectedSet.add(id);
+    }
+  }
 
-  const holdout = shuffle(getHoldoutQuestions(), seed + 41)
-    .slice(0, holdoutCount)
-    .map((q) => q.id);
+  // 3. Fallback check: If the total size is more than target (e.g. duplicate set additions or overrides), slice back to target
+  let fullList = Array.from(selectedSet);
+  if (fullList.length > target) {
+    fullList = shuffle(fullList, seed + 1234).slice(0, target);
+  }
 
-  const full = [...base, ...extraCore, ...holdout];
-  const questionIds = spreadQuestions(full, seed + 97);
+  const questionIds = spreadQuestions(fullList, seed + 97);
   const now = new Date().toISOString();
 
   return {

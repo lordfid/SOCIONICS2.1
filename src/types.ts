@@ -103,6 +103,20 @@ export interface QuestionOption {
   reaction: string;
 }
 
+export type ScenarioCategory =
+  | "daily_basic"
+  | "chat_medsos"
+  | "asmara"
+  | "persahabatan"
+  | "keluarga"
+  | "sekolah"
+  | "kerja_shift"
+  | "kerja_kantor"
+  | "uang"
+  | "tubuh_lelah"
+  | "kegagalan"
+  | "duka";
+
 export interface SocionicsQuestion {
   id: string;
   kind: QuestionKind;
@@ -116,6 +130,7 @@ export interface SocionicsQuestion {
   responseFocus: string;
   options: QuestionOption[];
   tieBreak?: { a: SocionicsType; b: SocionicsType };
+  category?: ScenarioCategory;
 }
 
 export type Answers = Record<string, number>;
