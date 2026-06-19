@@ -112,32 +112,8 @@ export default function TestEngine({
         
         {/* Step Metadata & Preamble Boxes */}
         <div className="flex flex-wrap gap-2.5 mb-5 items-center">
-          <span 
-            id="test-q-dimension"
-            className="text-[9px] tracking-widest uppercase font-mono px-2 py-0.7 rounded shadow-sm flex items-center gap-1.5 border"
-            style={{
-              backgroundColor: isGarden ? '#FFF3F3' : '#3D2520',
-              borderColor: isGarden ? '#FFE0E0' : '#5C3830',
-              color: isGarden ? '#E57373' : '#EAA99E'
-            }}
-          >
-            <Target size={11} />
-            Elem: {currentQuestion.element} × Kanal: {currentQuestion.channel}
-          </span>
-
-          <span 
-            className="text-[9px] tracking-widest uppercase font-mono px-2 py-0.7 rounded shadow-sm flex items-center gap-1.5 border"
-            style={{
-              backgroundColor: isGarden ? '#F5F5FA' : '#1F2A38',
-              borderColor: isGarden ? '#E8E8FF' : '#31445B',
-              color: isGarden ? '#5268F1' : '#8DACEC'
-            }}
-          >
-            ⚖️ Skala: {currentQuestion.scale}
-          </span>
-          
-          <span className="text-[10px] text-stone-400 font-serif italic ml-auto hidden sm:inline">
-            Akses: tekan tombol [1 - 5] untuk menjawab cepat
+          <span className="text-[10px] text-stone-400 dark:text-stone-500 font-serif italic flex items-center gap-1.5">
+            💡 Akses Cepat: tekan tombol angka [1 sampai 5] di keyboard untuk mengisi jawaban secara instan.
           </span>
         </div>
 
@@ -212,23 +188,31 @@ export default function TestEngine({
                       </span>
                     </div>
 
-                    {/* Explanations shown only on select or subtle subtext */}
-                    <p className="text-[11px] text-stone-500 dark:text-stone-400 mt-1 leading-relaxed">
-                      {option.meaning}
-                    </p>
-
-                    {isSelected && option.reaction && (
+                    {/* Explanations shown only as a beautiful drop-down upon selection to avoid response bias */}
+                    {isSelected && (
                       <motion.div 
                         initial={{ opacity: 0, height: 0 }}
                         animate={{ opacity: 1, height: 'auto' }}
-                        className="mt-2 text-[10px] italic border-t border-dashed pt-2 font-serif flex items-center gap-1.5"
+                        className="mt-2.5 text-[11px] space-y-2 border-t border-dashed pt-2.5"
                         style={{
-                          color: isGarden ? '#A15949' : '#D2A28A',
-                          borderTopColor: isGarden ? '#FFDFDF' : '#573E37'
+                          borderColor: isGarden ? '#FFDFDF' : '#573E37'
                         }}
                       >
-                        <Flame size={12} className="text-amber-500 inline flex-shrink-0" />
-                        <span>Dinamika psikismu: "{option.reaction}"</span>
+                        <div className="space-y-0.5">
+                          <span className="font-bold uppercase tracking-wider text-[9px] text-[#B58572] dark:text-[#EAA99E] block">💡 Artinya:</span>
+                          <p className="text-stone-700 dark:text-[#DFC9C5] leading-relaxed font-sans">{option.meaning}</p>
+                        </div>
+                        {option.reaction && (
+                          <div className="space-y-0.5 pt-1">
+                            <span className="font-bold uppercase tracking-wider text-[9px] text-rose-500 flex items-center gap-1 leading-none">
+                              <Flame size={11} className="text-amber-500 animate-pulse flex-shrink-0" />
+                              <span>🎬 Reaksi Fisik Nyata:</span>
+                            </span>
+                            <p className="italic font-serif leading-relaxed" style={{ color: isGarden ? '#A15949' : '#D2A28A' }}>
+                              "{option.reaction}"
+                            </p>
+                          </div>
+                        )}
                       </motion.div>
                     )}
                   </div>

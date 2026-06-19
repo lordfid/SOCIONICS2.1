@@ -4,47 +4,47 @@ export const ELEMENTS: InformationElement[] = ["Ne", "Ni", "Se", "Si", "Te", "Ti
 export const CHANNELS: MeasurementChannel[] = ["producer", "flexible", "mask", "threat", "receiver", "aspiration", "dismissive", "background"];
 
 export const ELEMENT_KEYWORDS: Record<InformationElement, string> = {
-  Ne: "menjelajahi kemungkinan celah, potensi orisinal kelompok, dan alternatif kreatif tak terduga",
+  Ne: "menjelajah kemungkinan celah, potensi orisinal kelompok, dan alternatif kreatif tak terduga",
   Ni: "membaca arah waktu harian, momentum batin yang matang, visi panjang, dan ramalan akhir situasi",
   Se: "merasakan tekanan nyata tindakan, batas ruang fisik, kekuasaan taktis, dan keberanian bertindak tegas",
   Si: "menjaga kenyamanan tubuh fisik, detail rasa indrawi sekitar, stabilitas batin, dan keasrian suasana santai",
   Te: "mengukur efisiensi praktis, bukti kegunaan kerja terukur, efektivitas waktu biaya, dan fakta nyata",
   Ti: "membangun struktur logis aturan, konsistensi kategori sistem, definisi kata, dan kerangka prinsip rapi",
-  Fe: "Membaca atmosfer semangat kelompok, aliran ekspresi emosional, gelombang sosial, dan keceriaan suasana",
+  Fe: "membaca atmosfer semangat kelompok, aliran ekspresi emosional, gelombang sosial, dan keceriaan suasana",
   Fi: "merasakan kedekatan personal intim, jarak aman kepercayaan antarmanusia, rasa tulus, dan ikatan moral"
 };
 
 export const CHANNEL_KEYWORDS: Record<MeasurementChannel, string> = {
-  producer: "sebagai produksi spontan batin yang muncul otomatis tanpa disadari sejak awalan",
-  flexible: "sebagai alat sadar berkendara sosial yang luwes disesuaikan dengan konteks harian",
-  mask: "sebagai topeng sosial yang diusahakan rapi agar mendapat pengakuan kapasitas diri",
-  threat: "sebagai alarm batin rawan yang mudah memicu rasa tertekan, kaku, dan beku jika didesak",
-  receiver: "sebagai kebutuhan bantuan dari luar yang terasa mencerahkan batin secara melegakan",
-  aspiration: "sebagai dorongan batin yang haus pengakuan, pujian, dan perlahan ingin dilatih",
-  dismissive: "sebagai kompetensi fungsional yang bisa kamu gunakan sekilas lalu diletakkan kembali",
-  background: "sebagai kebiasaan senyap di latar belakang pikiran tanpa memerlukan performa drama"
+  producer: "produksi spontan batin yang muncul otomatis tanpa disadari sejak awalan",
+  flexible: "alat sadar berkendara sosial yang luwes disesuaikan dengan konteks harian",
+  mask: "topeng sosial yang diusahakan rapi agar mendapat pengakuan kapasitas diri",
+  threat: "alarm batin rawan yang mudah memicu rasa tertekan, kaku, dan beku jika didesak",
+  receiver: "kebutuhan bantuan dari luar yang terasa mencerahkan batin secara melegakan",
+  aspiration: "dorongan batin yang haus pengakuan, pujian, dan perlahan ingin dilatih",
+  dismissive: "kompetensi fungsional yang bisa kamu gunakan sekilas lalu diletakkan kembali",
+  background: "kebiasaan senyap di latar belakang pikiran tanpa memerlukan performa drama"
 };
 
 const ELEMENT_PHRASES: Record<string, string> = {
-  Ne: "otakmu suka membuka cabang, celah, dan kemungkinan lain dari sesuatu yang kelihatannya sudah mentok",
-  Ni: "kepalamu suka membaca tempo, arah perubahan, dan ke mana rangkaian kejadian ini bakal bergerak",
-  Se: "perhatianmu cepat menangkap batas, posisi, tekanan, dan siapa atau apa yang sedang menguasai ruang",
-  Si: "pikiranmu peka pada rasa tubuh, ritme, suhu, suara, posisi, dan apakah keadaan terasa pas atau mengganggu",
-  Te: "kepalamu otomatis nyari bukti yang bisa dipakai, langkah yang bekerja, dan hasil yang kelihatan nyata",
-  Ti: "otakmu suka memisahkan bagian, mencari hubungan yang konsisten, lalu menaruh semuanya di tempat yang masuk akal",
-  Fe: "pikiranmu cepat membaca suhu emosi, nada, ekspresi, dan energi yang sedang menular di antara orang-orang",
-  Fi: "kepalamu peka pada kedekatan, ketulusan, rasa percaya, dan batas personal yang tidak selalu diucapkan"
+  Ne: "kepalamu sangat cepat membuka cabang kemungkinan baru and celah opsi ketika jalan utama ditutup",
+  Ni: "kepalamu sangat peka membaca arah waktu, momentum penting, and ke mana akhir dari rentetan kejadian ini",
+  Se: "perhatianmu langsung menangkap batas kekuasaan konkret, jarak posisi fisik, and siapa yang menguasai ruang secara tegas",
+  Si: "pikiranmu sangat peka terhadap koordinasi kenyamanan tubuh, detail rasa indrawi, and apakah suasana terasa pas atau mengganggu fisik",
+  Te: "kepalamu otomatis mengukur kegunaan langkah praktis, efisiensi waktu-biaya, and bukti nyata yang terukur di depan mata",
+  Ti: "otakmu langsung membagi bagian, merapikan hubungan logis aturan, and meletakkan semua hal ke dalam kotak kategori yang konsisten",
+  Fe: "pikiranmu refleks menangkap suhu suasana emosi kelompok, gelombang ekspresi sosial sekitar, and tingkat keceriaan ruangan",
+  Fi: "kepalamu peka membaca ketulusan niat personal, jarak aman kepercayaan antarmanusia, and nilai ikatan moral rahasia"
 };
 
 const CHANNEL_PHRASES: Record<string, string> = {
-  producer: "Kalau mode ini nyala, kepalamu pengin langsung mengubah keadaan, bukan cuma mengamati.",
-  flexible: "Kepalamu memakai pola ini sebagai alat yang bisa dinaik-turunkan sesuai tujuan.",
-  mask: "Di balik responsnya ada self-monitoring: kamu mengecek apakah dirimu sudah kelihatan cukup mampu.",
-  threat: "Di sini yang bekerja bukan cuma kemampuan, tapi alarm batin saat tuntutannya terasa terlalu dekat.",
-  receiver: "Kepalamu lebih gampang melepas beban saat orang lain memegang bagian ini dengan cara yang pas.",
-  aspiration: "Area ini dekat dengan rasa ingin berkembang, bangga, dan diakui tanpa merasa dipermalukan.",
-  dismissive: "Kemampuannya bisa ada, tapi kepalamu tidak menganggap bagian ini sebagai sesuatu yang pantas mengambil banyak ruang.",
-  background: "Prosesnya cenderung jalan senyap di belakang layar dan sering baru kamu sadari setelah semuanya selesai."
+  producer: "Saat tombol batin ini tertekan, kamu otomatis langsung bergerak mengubah keadaan tanpa menunggu instruksi siapa pun.",
+  flexible: "Sistem pikiranmu memakai kemampuan ini sebagai navigasi sosial yang luwes, bisa ditambah atau dikurangi tergantung kebutuhan.",
+  mask: "Kamu sengaja menampilkan kepiawaian di area ini sebagai topeng pelindung sosial agar dinilai andal and berkepribadian patut.",
+  threat: "Titik ini adalah tombol darurat yang paling sensitif. Jika didesak di area ini, batinmu merasa terancam and posturmu mendadak tegang.",
+  receiver: "Kamu merasa sangat bersyukur and lego ketika ada orang lain yang secara halus mengambil alih and merapikan bagian ini untukmu.",
+  aspiration: "Area ini berkaitan erat dengan rasa ingin berkembang and haus pengakuan. Pujian tulus di sini membuat semangatmu membara kembali.",
+  dismissive: "Kamu menguasai bagian ini dengan cukup baik, tapi malas menjadikannya fokus obrolan karena tidak begitu penting bagi tujuan hidupmu.",
+  background: "Kemampuan ini bekerja senyap di latar belakang pikiranmu bagaikan autopilot pasif, sering baru kamu sadari setelah semuanya selesai."
 };
 
 const SCALE_MAP: Record<MeasurementChannel, ScaleType> = {
@@ -59,416 +59,773 @@ const SCALE_MAP: Record<MeasurementChannel, ScaleType> = {
 };
 
 const SCALE_LABELS: Record<string, string[]> = {
-  automaticity: ["Tidak muncul secara alami", "Harus kupikirkan cukup lama", "Tergantung keadaan", "Cukup spontan", "Muncul hampir tanpa usaha"],
-  comfort: ["Sangat menguras tenaga", "Cukup tidak nyaman", "Netral atau tergantung situasi", "Cukup nyaman", "Sangat nyaman"],
-  frequency: ["Tidak pernah", "Jarang", "Kadang-kadang", "Sering", "Hampir selalu"],
-  threat: ["Sama sekali tidak mengganggu", "Sedikit mengganggu", "Cukup menekan", "Sangat menekan", "Membuatku beku, defensif, malu, atau menghindar"],
-  relief: ["Tidak membantu", "Sedikit membantu", "Lumayan membantu", "Sangat membantu", "Sangat melegakan"],
-  recognition: ["Tidak berarti", "Sedikit berarti", "Cukup menyenangkan", "Sangat berarti", "Menyentuh kebutuhan terdalam"],
-  comparison: ["Jauh lebih dekat B", "Agak lebih dekat B", "Sama dekat", "Agak lebih dekat A", "Jauh lebih dekat A"],
-  frequency_short: ["Tidak pernah", "Jarang", "Kadang-kadang", "Sering", "Hampir selalu"],
-  automaticity_short: ["Tidak muncul secara alami", "Harus kupikirkan cukup lama", "Tergantung keadaan", "Cukup spontan", "Muncul hampir tanpa usaha"],
-  comfort_short: ["Sangat menguras tenaga", "Cukup tidak nyaman", "Netral atau tergantung situasi", "Cukup nyaman", "Sangat nyaman"],
-  competence: ["Tidak menguasai", "Kurang menguasai", "Cukup menguasai", "Menguasai", "Sangat menguasai"],
-  importance: ["Sangat tidak penting", "Kurang penting", "Netral", "Penting", "Sangat penting"]
+  automaticity: ["Sangat Tidak Spontan", "Harus Kupikirkan Lama", "Kadang Spontan", "Cukup Spontan", "Sangat Spontan & Refleks"],
+  comfort: ["Sangat Menguras Tenaga", "Cukup Melelahkan", "Netral/Proporsional", "Cukup Nyaman", "Sangat Nyaman & Alami"],
+  frequency: ["Tidak Pernah", "Jarang Sekali", "Sesekali Saja", "Cukup Sering", "Hampir Selalu"],
+  threat: ["Sama Sekali Tidak Terancam", "Sedikit Risih", "Lumayan Tertekan", "Sangat Kaku & Tertekan", "Membuatku Beku, Defensif & Menghindar"],
+  relief: ["Sama Sekali Tidak Membantu", "Sedikit Mengurangi Beban", "Cukup Menenangkan", "Sangat Membantu", "Sangat Melegakan & Menyembuhkan"],
+  recognition: ["Tidak Ada Keinginan", "Biasa Saja", "Menyenangkan Jika Dipuji", "Sangat Berarti Bagi Batin", "Sangat Menyentuh Kebutuhan Terdalamku"],
+  comparison: ["Jauh lebih dekat Sisi B", "Agak lebih dekat Sisi B", "Seimbang di Tengah", "Agak lebih dekat Sisi A", "Jauh lebih dekat Sisi A"]
 };
 
-const PRODUCER_REACTIONS: Record<string, string[]> = {
-  Ne: [
-    "kamu tetap pakai satu cara, menutup catatan, atau nunggu orang lain yang membuka opsi baru.",
-    "kamu menatap layar sebentar, mencoret satu-dua kemungkinan, lalu berhenti buat menimbang mana yang paling aman.",
-    "kamu kadang bikin daftar alternatif, tapi di lain waktu langsung pilih cara pertama biar cepat selesai.",
-    "kamu membuka beberapa tab, menulis tiga opsi, lalu cepat mencoba jalan yang paling menjanjikan.",
-    "tanganmu otomatis bikin cabang di catatan, memindah-mindah benda, atau melempar beberapa kemungkinan sebelum orang lain selesai bicara."
-  ],
-  Ni: [
-    "kamu langsung jalan tanpa membaca tempo, jarang menengok urutan kejadian, dan baru sadar arahnya setelah semuanya keburu bergerak.",
-    "kamu berhenti cukup lama, melihat jam atau timeline, lalu masih ragu apakah sekarang memang waktu yang pas.",
-    "kamu kadang menunda dan mengamati arah, tapi di situasi lain langsung bergerak tanpa membaca momentumnya.",
-    "kamu mengecilkan suara, menunggu beberapa detik, lalu memilih momen yang terasa paling pas untuk masuk.",
-    "kamu otomatis mengubah tempo, menahan satu langkah, atau maju tepat saat rangkaian situasinya terasa matang."
-  ],
-  Se: [
-    "kamu membiarkan posisi tetap berantakan, mengikuti arus, atau pura-pura sibuk sama HP supaya orang lain yang mengambil kendali.",
-    "kamu melirik risih, menggeser badan sedikit, lalu berhenti buat mikir apakah perlu maju atau lebih aman diam.",
-    "kamu kadang pasang badan atau bicara tegas, tapi di waktu lain memilih membiarkan orang lain mengatur.",
-    "kamu langsung maju setengah langkah, menutup celah, memindahkan penghalang, atau memberi instruksi pendek.",
-    "posturmu otomatis berubah, bahumu menghadap sumber gangguan, tanganmu mengatur jarak, dan orang lain langsung menangkap batasnya."
-  ],
-  Si: [
-    "kamu tetap duduk dalam posisi yang bikin pegal, membiarkan suara atau suhu mengganggu, lalu baru sadar setelah tubuhmu benar-benar protes.",
-    "kamu mengusap leher, mengubah posisi beberapa kali, lalu masih butuh waktu buat tahu apa yang sebenarnya bikin tidak nyaman.",
-    "kamu kadang meredupkan lampu atau mencari posisi enak, tapi di waktu lain mengabaikan sinyal tubuh sampai urusan selesai.",
-    "kamu cepat mengatur kursi, suhu, suara, makanan, atau ritme supaya badan kembali terasa enak.",
-    "tanpa mikir panjang kamu langsung menggeser posisi, membuka jendela, mengambil air, atau menurunkan tempo sebelum rasa tidak nyaman membesar."
-  ],
-  Te: [
-    "kamu lanjut menebak, memakai cara lama, atau menunggu orang lain menunjukkan data dan langkah yang benar-benar bekerja.",
-    "kamu membuka catatan atau mesin pencari, mengecek satu-dua angka, lalu masih lama menimbang apakah buktinya cukup.",
-    "kamu kadang bikin daftar hasil dan membandingkan cara, tapi di waktu lain cukup mengikuti feeling atau kebiasaan.",
-    "kamu langsung membuka data, membandingkan waktu atau biaya, lalu mencoba langkah yang paling masuk akal.",
-    "jarimu otomatis mencari angka, riwayat, contoh nyata, atau alat uji sebelum obrolannya keburu penuh asumsi."
-  ],
-  Ti: [
-    "kamu membiarkan aturan tumpang tindih, mengikuti penjelasan seadanya, atau baru sadar ada kontradiksi setelah orang lain menunjukkannya.",
-    "kamu mencoret-coret kotak dan panah, berhenti cukup lama, lalu masih mengecek apakah pembagiannya benar-benar konsisten.",
-    "kamu kadang membuat kategori atau urutan, tapi di waktu lain membiarkan susunannya longgar selama masih bisa dipakai.",
-    "kamu langsung memberi nama kategori, menggambar hubungan, atau merapikan aturan supaya bagian-bagiannya tidak saling tabrak.",
-    "tanganmu otomatis bikin tabel, garis, kelompok, dan urutan sampai pola yang tadinya kusut kelihatan rapi tanpa perlu banyak penjelasan."
-  ],
-  Fe: [
-    "kamu tetap datar, membiarkan suasana menggantung, atau menunggu orang lain yang mengubah energi ruangan.",
-    "kamu melirik wajah orang satu-satu, menyusun nada yang pas, lalu masih ragu apakah perlu ikut mencairkan suasana.",
-    "kamu kadang bercanda atau menaikkan nada, tapi di waktu lain memilih diam dan membiarkan mood ruangan berjalan sendiri.",
-    "kamu cepat mengubah intonasi, melempar satu kalimat ringan, atau menunjukkan ekspresi yang bikin energi ruangan ikut bergerak.",
-    "wajah, suara, dan gesturmu otomatis menyesuaikan; kamu bisa bikin orang tertawa, tegang, atau ikut semangat tanpa perlu briefing."
-  ],
-  Fi: [
-    "kamu tetap menjaga jarak yang sama ke semua orang, mengabaikan sinyal personal, atau baru sadar ada batas yang rusak setelah hubungan telanjur dingin.",
-    "kamu membaca ulang chat, memperhatikan nada, lalu lama menimbang apakah perlu mendekat, menjauh, atau bertanya langsung.",
-    "kamu kadang mengajak bicara empat mata, tapi di waktu lain membiarkan kedekatan atau jaraknya tetap samar.",
-    "kamu cepat memisahkan obrolan dari keramaian, menurunkan suara, lalu menyampaikan batas atau perhatian secara personal.",
-    "tanpa banyak bicara kamu otomatis mengubah jarak, memilih kata, mengirim pesan pribadi, atau menghentikan kedekatan begitu rasa percaya berubah."
-  ]
+// HAND-CRAFTED REAL-LIFE SCENARIOS AND STATEMENTS (Leaving robotic automatic generators behind!)
+export const HANDCRAFTED_SCENARIOS: Record<InformationElement, Record<MeasurementChannel, string[]>> = {
+  Ne: {
+    producer: [
+      "Kalau instruksi tugas kerjaan dari atasan atau dosen masih tidak jelas, aku biasanya refleks mulai mencari celah and mencoret-coret draf alternatif baru di draf coretan sebelum memilih satu cara pasti.",
+      "Saat jalan utama proyek kelompok kami mendadak mampet and buntu, otakku secara otomatis langsung mencabangkan berbagai kemungkinan jalan keluar darurat lainnya.",
+      "Saat rencana liburan mendadak batal karena masalah teknis, aku refleks menjadi orang pertama yang merakit tiga draf alternatif rute seru buat kawan-kawan.",
+      "Saat ada hambatan di sistem komputer kerjaan, tanganku spontan mengotak-atik menu pencarian untuk menemukan celah rute jalan pintas tak terduga."
+    ],
+    flexible: [
+      "Aku bisa dengan luwes memancing forum rapat dengan ide-ide kreatif and opsi tak biasa, tetapi aku mematikan mode itu begitu kembali fokus menyelesaikan draf data.",
+      "Dalam diskusi kerja, aku menyodorkan proyeksi alternatif fungsional hanya sebagai alat berkendara sosial, and gampang menurunkan ekspektasi itu pas situasi berubah.",
+      "Aku memakai berbagai opsi kreatif buat bernegosiasi secara rileks, tetapi begitu kesepakatan tercapai, aku langsung kembali ke rutinitas biasa.",
+      "Aku gampang membuang draf ide yang baru saja kubangun demi mencoba spekulasi ide lain yang disarankan rekan diskusi rapat harian."
+    ],
+    mask: [
+      "Di lingkungan pergaulan atau kantor baru, aku sengaja menampilkan diriku sebagai orang yang penuh visi masa depan and kaya alternatif solusi kreatif biar terlihat andal.",
+      "Aku mengusahakan draf presentasiku di depan panitia selalu terlihat inovatif and kaya wawasan orisinal agar kapasitas intelektualku diakui mereka.",
+      "Saat melamar pekerjaan atau proyek, aku sengaja menonjolkan kemampuan berpikir luar kotak and keberanian mengeksplorasi celah-celah industri baru.",
+      "Di media sosial atau profil profesional, aku memamerkan ketertarikanku pada berbagai topik unik and hobi alternatif yang antigarusutama."
+    ],
+    threat: [
+      "Aku mendadak panik, merasa sesak, and stres tegang kalau disodori draf SOP mati satu arah yang tidak boleh kubantah, kutawar, atau kuutak-atik sama sekali.",
+      "Aku merasa sangat terkejut and defensif ketika orang terdekat memaksaku segera mengambil satu pilihan karir tetap and melarangku mencari celah lainnya.",
+      "Menghadapi masa depan yang kaku tanpa ada ruang cadangan untuk berubah arah membuat batin and jalanku terasa beku and buntu.",
+      "Aku gampang menutup diri and diam seribu bahasa kalau didesak merumuskan 'satu cara tunggal mutlak' saat draf rencana utama tim berantakan."
+    ],
+    receiver: [
+      "Batin rasanya lega banget kalau ada partner diskusi yang bersedia merapikan semua ide abstrakku and dengan halus menyodorkan satu langkah terbaik buat kujalani.",
+      "Aku merasa sangat tertolong jika ada rekan kerja tepercaya yang menyortir semua celah spekulasi berisiko and menjagaku tetap menginjak lantai realitas.",
+      "Aku senang jika didekatkan dengan orang yang praktis, yang dengan halus memilah tumpukan draf ide di kepalaku and mengubahnya jadi draf aksi berurutan.",
+      "Rasanya batin langsung damai and plong ketika kecemasan liarku tentang alternatif masa depan ditenangkan oleh penjelasan yang stabil and membumi."
+    ],
+    aspiration: [
+      "Aku merasa sangat terharu, bangga, and bersemangat berkembang kalau ada orang yang memuji bahwa ide-ide spontan tak biasaku ternyata jenius and bernilai tinggi.",
+      "Aku haus akan pujian yang membenarkan bahwa wawasan futuristik and perkiraan celah solusiku sudah menyelamatkan jalannya tim kerja harian kami.",
+      "Ada kebanggaan tersembunyi di dalam dadaku ketika rekan kelompok meminta pendapatku tentang potensi terpendam dari suatu draf proyek unik.",
+      "Aku diam-diam sengaja berlatih membaca tren industri modern and senang sekali jika rekan kerja memuji kejelianku melihat orisinalitas peluang."
+    ],
+    dismissive: [
+      "Melihat celah and potensi di suatu bisnis baru itu gampang sekali bagiku, tapi aku malas mengulas detailnya lama-lama, mending kuserahkan ke rekan lain saja.",
+      "Aku bisa melihat arah perkembangan draf proyek itu dengan cepat, tapi setelah kupikirkan sekilas, aku memilih langsung meletakkan fokus ke hal lain.",
+      "Aku tahu ada alternatif rute jalan pintas yang lebih gampang, tapi aku malas mendebatkannya and memilih diam mengikuti draf rute tim yang panjang.",
+      "Aku sering membiarkan orisinalitas pemikiranku ditaruh di laci lemari kerja daripada harus repot-repot memperjuangkannya di hadapan manajer kaku."
+    ],
+    background: [
+      "Tanpa kusadari, tanganku sering coret-coret draf coretan alternatif ormind map di kertas binder harian saat sedang mendengar dosen atau bos berceramah.",
+      "Otakku terus menyortir celah and kemungkinan lain di latar belakang layar pikiran harian, bahkan saat aku sedang asyik memasak atau mencuci piring.",
+      "Aku sering refleks menemukan jawaban jalan pintas di luar draf utama pas sedang mengobrol santai membicarakan topik santai yang tidak ada hubungannya.",
+      "Secara senyap, aku selalu menyiapkan draf rencana cadangan B/C/D di kepalaku untuk berjaga-jaga tanpa merasa perlu memperlihatkannya ke publik."
+    ]
+  },
+  Ni: {
+    producer: [
+      "Ketika situasi rapat mendadak kacau, aku refleks menahan diri, memejamkan mata sekilas, and membaca arah perubahan momentum sebelum melangkah bertindak.",
+      "Secara naluri, aku langsung merasakan perubahan tempo and tahu kapan harus mempercepat atau memperlambat gerak kerja tim sebelum masalahnya keburu meledak.",
+      "Saat semua orang panik menuntut aksi cepat, batin and badanku otomatis diam tenang karena merasakan bahwa momentum perbaikan situasi belum matang.",
+      "Dalam perdebatan di grup bising, aku refleks memilh diam and mengamati alur chat, karena tahu persis ke mana ujung drama percakapan ini akan bermuara."
+    ],
+    flexible: [
+      "Aku memakai perkiraan visi and ramalan waktuku sebagai navigator luwes untuk menyusun agenda jangka panjang, and gampang menggesernya sesuai iklim harian.",
+      "Aku bisa merencanakan lini masa proyek dengan sangat visioner, tapi aku sama sekali tidak merasa kaku and bisa rileks mengubah jadwalnya jika tim lelah.",
+      "Aku suka membaca tren pergeseran sosial and memakainya untuk mengarahkan diskusi kawan-kawan, lalu kembali fokus menikmati rutinitas saat ini.",
+      "Aku menggunakan pembacaan tanda zaman untuk membantu urusan bisnis, tetapi aku tidak membiarkan visi futuristik mengganggu kesenangan kerjaku hari ini."
+    ],
+    mask: [
+      "Aku sengaja memoles diriku di depan atasan sebagai peramal tren berwawasan luas, bijaksana, and tahu persis arah perkembangan lima tahun ke depan.",
+      "Di lingkungan baru, aku berusaha tampil dengan tatapan mata and bahasa tenang bagai filosof yang mengerti rahasia lini masa and misteri makna hidup.",
+      "Saat presentasi draf proyek, aku mengusahakan agar argumen drafku selalu dikelilingi oleh analisis tren and pergeseran waktu agar terlihat prestisius.",
+      "Aku suka membagikan kutipan filosofis, ramalan ekonomi global, and opini tentang arah sejarah di media sosial agar dinilai memiliki kedalaman batin."
+    ],
+    threat: [
+      "Aku merasa sangat terancam and mendadak tegang kaku jika dipaksa bekerja dalam tempo cepat yang serampangan tanpa diberi waktu untuk merenung tenang.",
+      "Aku merasa cemas and pusing setengah mati kalau lingkungan menuntutku melakukan eksekusi fisik dadakan tanpa ada kejelasan arah jangka panjangnya.",
+      "Mengambil keputusan bisnis di bawah desakan waktu yang kacau and kabur membuat batin and kepalaku terasa nge-blank and lelah tertekan.",
+      "Aku langsung malas and mundur jika diajak mengobrol oleh orang-orang yang terlalu sibuk mengejar target harian tanpa memikirkan makna and arah besarnya."
+    ],
+    receiver: [
+      "Batin rasanya melegakan and adem ketika partner kerjaku yang gesit langsung memegang kendali fisik, membersihkan kekacauan taktis, and membiarkanku fokus memikirkan arah.",
+      "Aku bersyukur jika ada sahabat berani yang pasang badan mengamankan batasan teritorialku saat aku sedang hanyut dalam lamunan and analisis maknaku.",
+      "Rasanya plong jika ada orang praktis yang menepuk pundakku and dengan ramah berkata: 'Serahkan urusan aksi and negosiasi ini padaku, kamu yang gambar alurnya'.",
+      "Aku merasa sangat terbantu ketika partnerku yang kuat langsung mengatasi gangguan mendadak di lapangan, sehingga fokus batin and konsentrasiku tidak rusak."
+    ],
+    aspiration: [
+      "Pujian paling menyentuh bagiku adalah saat orang lain mengakui bahwa proyeksi ramalanku and pembacaan arahku tentang krisis terbukti seratus persen tepat.",
+      "Aku diam-diam melatih kepekaan visi jangka panjangku and merasa sangat dihargai jika rekan kerja memuji draf lini masa buatanku sangat matang and presisi.",
+      "Ada rasa bangga yang hangat ketika kawan-kawan di kelompok menyebutku sebagai pembaca tanda and momentum yang bijak di saat masa-masa sulit.",
+      "Aku sangat senang jika usulanku tentang penundaan agenda kerja dipuji sebagai taktik penyelamatan yang menyelamatkan keuangan perusahaan harian."
+    ],
+    dismissive: [
+      "Aku tahu persis ke mana arah akhir dari proyek kelompok ini akan mengalir, tapi aku malas menceritakannya and memilih ikut bergerak diam bersama tim saja.",
+      "Membaca tren pergeseran minat pasar itu mudah buatku, tapi aku menganggap obrolan teori masa depan itu membosankan and mending langsung kerja konkret.",
+      "Aku sering menyembunyikan firasat buruk and ramalan kegagalan di dalam batin daripada harus sibuk berdebat and dituduh pesimistis oleh rekan kelompok.",
+      "Aku bisa meraba makna terdalam di balik ucapan kawan, tapi aku menganggapnya sekadar angin lalu and memilih mengalikan perhatian ke detail fisik."
+    ],
+    background: [
+      "Secara senyap, kepalaku selalu memutar simulasi masa depan and alur perkembangan di latar belakang pikiran, pas draf tanganku sedang mengetik file data biasa.",
+      "Aku sering refleks memejamkan mata and tahu kapan bel rumah akan berbunyi atau kapan pesan chat penting akan masuk sebelum layarnya menyala.",
+      "Di sela-sela obrolan ramai, batin autopilot-ku terus mengaitkan tanda-tanda kecil menjadi sebuah benang merah arah sejarah tanpa perlu kuucapkan.",
+      "Firasat and proyeksi lini masa harian beroperasi otomatis di otakkku bagai radar navigasi pelindung, menjagaku tetap waspada menghadapi krisis."
+    ]
+  },
+  Se: {
+    producer: [
+      "Saat mendapati batas wilayah kerjaku di tim diletakkan sembarangan, tangan and bahuku refleks menegak and langsung merapikan batas kekuasaan konkret secara tegas.",
+      "Kalau ada orang yang mencuri start and meremehkan hak tim kami, aku tanpa ragu langsung maju and menantang tatapan matanya untuk mengambil kendali fisik.",
+      "Ketika situasi kelompok berantakan and loyo, tubuh and suaraku otomatis mengencang and langsung membagi perintah kerja aksi lapangan tanpa basa-basi.",
+      "Aku refleks bersandar tegak, menatap tajam lawan bicara yang mencoba melakukan intimidasi mental, and menuntut aksi nyata detik ini juga."
+    ],
+    flexible: [
+      "Aku bisa bersikap sangat tegas and menuntut disiplin keras dari anggota kelompok, tetapi aku bisa langsung mencair and rileks jika situasi lapangan melunak.",
+      "Aku menggunakan ketegasan and tekanan fisik hanya sebagai navigasi taktis di lapangan proyek, and gampang menurunkan tensi agar rekan kerja tidak stres.",
+      "Aku tahu kapan harus menekan and mengerahkan tenaga maksimal untuk memenangkan tender, and kapan harus santai membiarkan kompetitor mengambil ruang kaku.",
+      "Aku luwes mengatur ritme tekanan kerja harian, bisa menjadi bos yang menuntut performa tinggi besok pagi buta and menjadi teman minum kopi yang asyik malam ini."
+    ],
+    mask: [
+      "Di lingkungan baru, aku sengaja memakai pakaian yang rapi, berwibawa, and gestur kokoh yang dominan agar terlihat sebagai pemimpin yang kuat and disegani.",
+      "Aku mengusahakan pembawaan diriku selalu terlihat tegap, bergerak penuh percaya diri, and tidak ragu melakukan jabat tangan mantap agar dihormati tim.",
+      "Saat rapat dengan departemen lain, aku sengaja menonjolkan pencapaian fisik, aset konkret, and kekuasaan timku biar posisi tawar kami aman dari intervensi.",
+      "Aku memoles profilku agar terlihat tangguh, menyukai tantangan fisik yang ekstrem, and sukses melakukan eksekusi proyek-proyek bernilai masif."
+    ],
+    threat: [
+      "Aku langsung merasa risih, tertekan, and mendadak mundur tegang jika ada orang yang menggunakan kekerasan fisik verbal atau berteriak kasar di dekat telingaku.",
+      "Aku merasa sangat cemas and beku ketika berada di tengah kerumunan bising yang saling dorong sabet and melakukan persaingan teritorial yang agresif.",
+      "Dipaksa melakukan konfrontasi fisik langsung atau bersikap konfrontatif di depan umum membuat batin and detak jantungku berdenyut terlalu kencang.",
+      "Aku gampang menutup diri and mendadak lemas tak bertenaga jika dituduh bersikap pengecut atau tidak berani bersaing memenangkan posisi penting tim."
+    ],
+    receiver: [
+      "Batin rasanya lega and plong jika ada partner kerja yang berani pasang badan menghadapi konfrontasi luar and membersihkan gangguan premanisme di lapangan.",
+      "Aku bersyukur saat didekatkan dengan orang tangguh and vokal yang dengan halus membagi peran, menyusun proteksi fisik, and membiarkanku bekerja di area santai.",
+      "Rasanya sangat menenangkan jika partner kelompokku langsung bersuara tegas and menolak intervensi luar yang mencoba mengacaukan ritme damai kami.",
+      "Aku merasa lego ketika ada asisten kuat yang melindungi wilayah and waktu istirahatku dari serbuan orang-orang luar yang menuntut pertemuan cepat."
+    ],
+    aspiration: [
+      "Aku merasa sangat dihargai, bangga, and tersentuh ketika orang lain memuji ketahanan fisikku, keberanianku pasang badan, and tekad bajaku menyelesaikan proyek.",
+      "Ada kepuasan batin yang mendalam pas kawan-kawan memuji kelincahanku mengambil keputusan di situasi darurat and kesigapanku mengamankan aset penting.",
+      "Aku diam-diam melatih disiplin olahraga and merasa bangga jika postur and wibawa lapanganku dipuji gagah and menginspirasi ketegasan tim.",
+      "Aku sangat senang jika didelegasikan memimpin barisan terdepan and dipuji sebagai eksekutor tangguh yang menyelamatkan kehormatan organisasi."
+    ],
+    dismissive: [
+      "Aku bisa saja mengamankan batas teritorial and merebut kendali proyek ini dengan mudah, tapi bagiku itu menguras energi and mending mengalah demi damai.",
+      "Aku tahu aku punya kekuatan fisik untuk memenangkan perdebatan sengit ini, tapi aku memilih diam and membiarkan orang lain mengoceh merebut panggung.",
+      "Membagi-bagi perintah and menuntut kepatuhan kaku dari staf itu gampang bagiku, but itu melelahkan batin, aku mending santai and membebaskan mereka saja.",
+      "Aku sering membiarkan hak-hak fisikku digeser sedikit oleh rekan departemen lain daripada harus repot memicu pertengkaran and konfrontasi panjang."
+    ],
+    background: [
+      "Secara senyap, tubuhku selalu waspada and refleks menangkap benda jatuh atau menghindari tabrakan di jalan sebelum kepalaku sempat berpikir sadar.",
+      "Di latar belakang pikiran harian, autopilot-ku terus mendeteksi pergeseran posisi and postur orang di sekitar, menjaga agar jarak asriku tetap aman.",
+      "Aku refleks mempercepat langkah and menegakkan bahu saat melewati gang sepi di malam hari, radar perlindungan fisikku langsung aktif otomatis.",
+      "Tangan and kakiku bergerak otomatis menyingkirkan penghalang jalan, merapikan letak kursi, and menutup pintu rapat-rapat tanpa menuntut instruksi."
+    ]
+  },
+  Si: {
+    producer: [
+      "Mendapati posisi dudukku pegal atau ruangan terasa mampet sumpek, tanganku refleks langsung mematuk-matuk mengganti bantal, membuka jendela harian.",
+      "Aku tanpa sadar langsung bangkit, meredupkan lampu yang menyengat mata, merapikan sedikit bantal punggung, and menyeduh teh hangat agar badan rileks.",
+      "Saat kepalaku pusing and punggungku tegang lembur, batin and sensor tubuhku otomatis menyuruhku mematikan laptop and merebahkan diri di sofa empuk.",
+      "Aku refleks mengusap tengkuk leher, memutar tubuh mencari sudut rebah yang pas, and langsung menjauhkan benda tajam atau bising dari dekat jangkauanku."
+    ],
+    flexible: [
+      "Aku sangat peka and luwes menata kenyamanan fisik and detail rasa hidangan pas pesta kelompok, and bisa cepat menyesuaikan jika ada bahan yang kurang.",
+      "Aku menggunakan kepekaan rasa and suhu tubuh harian sebagai navigator sosial untuk mencairkan ketegangan, and gampang rileks pas ritme kerja tim melambat.",
+      "Aku tahu kapan harus memanjakan tubuh dengan spa and makanan mewah, and tahu kapan harus tangguh bertahan di tengah dingin and sumpeknya proyek lapangan.",
+      "Aku luwes mengatur kenyamanan ruang kerja, bisa sangat estetis and rapi di pagi hari, and santai membiarkan buku berserakan pas malam pengerjaan tugas."
+    ],
+    mask: [
+      "Di depan klien, aku sengaja menampilkan diriku sebagai orang yang tenang, bersih, and memiliki selera estetika and gaya hidup sehat yang sangat berkelas.",
+      "Aku mengusahakan draf ruangan kerjaku and penataan mejaku selalu terlihat estetis, rapi, and wangi agar mendapat pengakuan sebagai profesional berbudaya.",
+      "Saat mengundang partner kerja, aku sengaja menyajikan hidangan yang lezat, cangkir cantik, and sofa nyaman agar iklim negosiasi kami terasa ramah.",
+      "Aku suka membagikan foto estetika kamar, resep masakan rumahan, and tips relaksasi fisik di media sosial agar dinilai memiliki harmoni kehidupan."
+    ],
+    threat: [
+      "Aku langsung merasa pening, tertekan, and kehabisan tenaga jika dipaksa tinggal atau lembur berhari-hari di ruangan yang kotor, bising, and pengap udara.",
+      "Aku merasa cemas, risih, and lelah tegang luar biasa jika mendapati tubuhku sakit and tidak ada obat atau kasur layak yang bisa merawatku hangat.",
+      "Tuntutan untuk terus bergerak dinamis di tengah lapar and lelah fisik membuat batin and kepalaku terasa kaku, beku, and gampang tersinggung hebat.",
+      "Aku gampang menutup diri and mendadak mogok kerja kalau dipaksa mengonsumsi makanan hambar yang bau atau memakai pakaian yang menyiksa kulit."
+    ],
+    receiver: [
+      "Batin rasanya lego, tenang, and plong kalau ada kawan peka yang menyodorkan secangkir kopi hangat and bantal empuk pas aku sedang pusing lembur data.",
+      "Aku merasa sangat tersentuh and bersyukur jika partner kerja mengurus detail makan siangku and memastikan asupan giziku aman tanpa kuingatkan.",
+      "Rasanya batin langsung damai ketika didekatkan dengan orang berbudaya praktis yang dengan halus merapikan kekacauan fisik and keindahan kamar tidurku.",
+      "Aku senang jika didekatkan dengan orang yang dengan senang hati menyediakan ruang istirahat yang asri and menjaga ritme tidurku tetap stabil and terjaga."
+    ],
+    aspiration: [
+      "Pujian paling berharga bagiku adalah saat orang lain memuji selera estetikaku dalam menata kenyamanan and kehangatan suasana ruangan kantor asri harian.",
+      "Aku haus akan apresiasi yang membenarkan bahwa draf tata letak and pilihan warna dekorasiku membuat batin and mata mereka merasa damai and tenang.",
+      "Ada kebanggaan tersembunyi ketika rekan kerja menyebutku sebagai ahli dalam urusan kenyamanan fisik, detail rasa makanan, and harmoni suasana santai.",
+      "Aku sangat senang jika usahaku merawat kesehatan and kenyamanan kawan kelompok dipuji sebagai penyelamat batin and energi kebersamaan tim."
+    ],
+    dismissive: [
+      "Aku bisa merapikan letak perabot and detail hiasan meja ini agar kelihatan estetis and nyaman demi kenyamanan tim, tapi bagiku itu tidak usahlah dibesarkan.",
+      "Aku tahu ada noda di karpet and letak lukisan ini miring, tapi batin and fokus utamaku sedang memikirkan arah bisnis, jadi kubiarkan saja dulu.",
+      "Mempersiapkan hidangan mewah and teh mahal itu mudah bagiku, but aku menganggap kepraktisan harian jauh lebih penting and memilih makan mi instan harian.",
+      "Aku sering membiarkan kasurku tidak terlipat rapi and kamar agak berantakan daripada harus menghabiskan waktu emas menulis draf di komputer."
+    ],
+    background: [
+      "Secara senyap, autopilot tubuhku terus menyortir and membuang sampah, membasuh cangkir kotor, and meluruskan letak keset tanpa perlu kuperintahkan sadar.",
+      "Di latar belakang pikiran harian, tangan and indra sensorikku otomatis mengukur suhu and kelembapan ruangan, mendinginkan batin tanpa disorot lampu drama.",
+      "Aku refleks menggeser letak benda tajam and membetulkan posisi duduk kawan setim saat kami sedang hanyut membicarakan target bisnis masa depan.",
+      "Detail aroma, suhu, and tekstur di sekitar terekam otomatis di memori autopilot-ku bagai kamera tersembunyi, menjaga kesegaran and daya tahan batin."
+    ]
+  },
+  Te: {
+    producer: [
+      "Mendapati draf data rapat berantakan and penuh asumsi kabur, tanganku refleks langsung membuka lembar excel untuk menghitung biaya, waktu, and efisiensi nyata.",
+      "Aku tanpa sadar langsung meminta bukti konkret, menyodorkan rincian angka biaya, and memangkas semua rencana yang cuma bagus di awang-awang teori.",
+      "Secara naluri, aku langsung menggeser posisi negosiasi and memprioritaskan langkah praktis yang terbukti bekerja menghasilkan profit nyata dalam waktu singkat.",
+      "Saat ada hambatan proses produksi kerjaan tim, aku refleks mengetik kalkulator handphone, membandingkan efisiensi angka, and memotong alur yang sia-sia."
+    ],
+    flexible: [
+      "Aku memakai penghitungan efektivitas and analisis data logis hanya sebagai navigator luwes untuk menyusun draf anggaran, and rileks mengubahnya pas tim tim jenuh.",
+      "Aku bisa dengan luwes memperdebatkan angka and memangkas budget pengeluaran, tetapi aku gampang melembutkan sikap demi menjaga harmoni pertemanan.",
+      "Aku tahu kapan harus menuntut hasil konkret and laporan biaya super rinci, and tahu kapan harus santai membiarkan kawan berimajinasi melontarkan ide liar.",
+      "Aku luwes mengatur target profit harian, bisa menjadi manajer proyek yang super perhitungan di pagi hari and berubah menjadi rekan mengbrol santai sore hari."
+    ],
+    mask: [
+      "Di depan klien baru, aku sengaja menampilkan diriku sebagai pebisnis yang super efisien, berorientasi hasil, and menguasai semua detail angka keuntungan.",
+      "Aku mengusahakan draf usulanku and presentasiku selalu dipenuhi oleh grafik profit, riset pasar konkret, and bukti empiris terpercaya agar kompetensiku diakui.",
+      "Saat melamar kerja, aku sengaja menonjolkan keahlianku dalam memangkas biaya operasional, efektivitas waktu kerja, and menaikkan omzet penjualan tim.",
+      "Di profil profesional, aku memamerkan sertifikat keahlian teknis, analisis efisiensi sistem, and proyek-proyek riil yang sukses kuubah jadi uang masif."
+    ],
+    threat: [
+      "Aku langsung merasa pusing, risih, and sangat tertekan jika ada orang yang menuntutku menyajikan data angka and laporan keuangan secara mendadak and terburu.",
+      "Aku merasa cemas and beku ketika batin and kepalaku dituduh melakukan pemborosan anggaran atau dianggap mandul and tidak menghasilkan karya bernilai konkret.",
+      "Dipaksa mengurai masalah audit biaya and pajak yang rumit and berantakan sendirian membuat batin and detak jantungku berdenyut terlalu kencang kaku.",
+      "Aku gampang menutup diri and mendadak mundur pasif dari barisan tim kerja jika kinerjaku dinilai tidak berguna and tidak efisien oleh manajemen rapat."
+    ],
+    receiver: [
+      "Batin rasanya lego, tenang, and plong kalau ada partner kerja tangguh yang membantuku merapikan kalkulasi, memberiku draf data akurat, and memanduku melangkah pasti.",
+      "Aku sangat bersyukur jika didekatkan dengan orang praktis yang bersedia menghitung rincian biaya and mengurusi urusan birokrasi keuangan tim kerja kami.",
+      "Rasanya sangat menenangkan jika partner kelompokku langsung menyodorkan format draf kelayakan bisnis yang mencerahkan and siap pakai tanpa harus kuurai.",
+      "Aku senang jika ada asisten yang dengan cerdas menyortir data-data palsu and memberiku sinyal instruksi kerja yang bersih dari asumsi-asumsi berisiko."
+    ],
+    aspiration: [
+      "Pujian paling berarti bagiku adalah ketika manajer and tim kerja memuji kejelianku dalam menemukan cara kerja baru yang luar biasa efisien and hemat budget.",
+      "Aku haus akan apresiasi yang membenarkan bahwa draf kelayakan and kalkulasi anggaran buatanku telah menyelamatkan proyek perusahaan dari kebangkrutan.",
+      "Ada kebanggaan tersembunyi ketika kawan kelompok mengandalkanku untuk menyusun strategi pragmatis and menghitung harga jual produk unik kami.",
+      "Aku sangat senang jika usahaku meningkatkan produktivitas and keuntungan ekonomi dipuji sebagai motor penggerak utama kesejahteraan bersama tim."
+    ],
+    dismissive: [
+      "Menyusun rute kerja yang paling cepat and menguntungkan itu mudah bagiku, tapi aku malas menceritakannya and mending membiarkan kawan memakai cara lamanya.",
+      "Aku tahu draf tim ini mengalami kebocoran anggaran kecil, tapi aku menganggap perdebatan uang receh itu membosankan and mending langsung fokus ke arah besar.",
+      "Aku bisa saja mengaudit and merapikan rincian pengeluaran kelompok ini sendiri, but itu melelahkan batin, kuserahkan saja ke bagian sekretariat tim.",
+      "Aku sering membiarkan peluang raup untung kecil terlewat begitu saja dari tangan daripada harus repot menuntut and bertengkar keras di departemen."
+    ],
+    background: [
+      "Secara senyap, autopilot pikiranku terus mencari rute jalan terpendek, memotong antrean lambat, and mengevaluasi harga terbaik saat draf mataku melirik belanja harian.",
+      "Di latar belakang pikiran, tangan and kalkulasiku otomatis mengukur waktu sisa pengerjaan file data kerja, mendinginkan batin dari kepanikan tim.",
+      "Aku refleks membandingkan rasio kegunaan and harga barang di rak supermarket secara kilat di memori bawah sadar sebelum tanganku meraih keranjangnya.",
+      "Uji coba efektivitas and pembacaan bukti nyata berjalan lancar bagai radar navigasi otomatis di kepalaku, menjagaku tetap aman and fokus melangkah produktif."
+    ]
+  },
+  Ti: {
+    producer: [
+      "Mendapati draf laporan atau tata tertib kelompok berantakan and penuh kontradiksi aturan, tanganku refleks langsung membuka whiteboard untuk membuat skema hierarki.",
+      "Aku secara otomatis langsung mengidentifikasi inkonsistensi kalimat, mengklasifikasikan folder data berdasarkan abjad, and menuntut logika yang runtut tegas.",
+      "Secara naluri batin, aku langsung memisahkan bagian-bagian masalah, mengunci definisi istilah pokok, and menahan obrolan yang keluar dari garis bagan aturan.",
+      "Saat ada kerancuan di SOP kerjaan kelompok, tanganku spontan mengetik draf tabel and memberi tanda warna koneksi panah hubungannya sampai kelihatan rapi."
+    ],
+    flexible: [
+      "Aku memakai skema hierarki and bagan proses aturan hanya sebagai navigasi keluwesan sosial, and gampang merobohkannya pas tim jenuh and butuh bercanda rileks.",
+      "Aku bisa dengan luwes merapikan logika and mengarahkan ketertiban rapat, tetapi aku gampang melunakkan draf sistem demi kenyamanan kawan sekelompok.",
+      "Aku tahu kapan harus menuntut kepatuhan kaku pada detail regulasi and undang-undang, and tahu kapan harus santai membiarkan tim berekspresi bebas.",
+      "Aku luwes mengatur pola klasifikasi data, bisa sangat sistematis and berstruktur rapi di pagi hari, and santai membiarkan dokumen berantakan pas malam santai."
+    ],
+    mask: [
+      "Di depan instansi baru, aku sengaja menampilkan diriku sebagai akademisi yang super disiplin, taat regulasi, and memiliki kerangka berpikir yang sangat sistematis.",
+      "Aku mengusahakan agar presentasiku and pemaparanku selalu dikelilingi oleh definisi ilmiah, nomor pasal, and bagan taksonomi rapi agar posisiku diakui tinggi.",
+      "Saat melamar kerja, aku sengaja menonjolkan kemampuanku dalam merancang database berstruktur, mengaudit kepatuhan SOP tim, and merapikan kekacauan.",
+      "Di profil profesional, aku memamerkan diagram alur berpikir, taksonomi teori, and sertifikat kualifikasi kepatuhan sistem yang super presisi."
+    ],
+    threat: [
+      "Aku langsung merasa pusing, risih, and mental beku jika dipaksa menjelaskan korelasi hukum and ketertiban rumus matematika logika secara dadakan di depan forum.",
+      "Aku merasa cemas and tertekan ketika kepalaku dituduh berpikir tidak logis, berstandar ganda, atau melanggar regulasi ketertiban organisasi tim.",
+      "Tuntutan untuk merumuskan landasan teori and definisi definisi rumit dalam waktu cepat membuat batin and detak jantungku berdenyut terlalu kencang kaku.",
+      "Aku gampang menutup diri and mendadak mogok kerja jika usahaku merapikan bagan aturan dinilai kaku and tidak berperasaan oleh departemen kelompok."
+    ],
+    receiver: [
+      "Batin rasanya melegakan, tenang, and plong kalau ada kawan pintar yang menjelaskan struktur sistem, menyodorkanku bagan alur rapi, and mengurai keruwetan logika.",
+      "Aku sangat bersyukur jika didekatkan dengan partner tertib yang bersedia merancang draf database, folder komputer, and merapikan semua kontradiksi aturan harian.",
+      "Rasanya sangat tenang jika partner kelompokku langsung bersuara and memberi definisi istilah yang mencerahkan and siap pakai tanpa harus kuurai sendiri.",
+      "Aku senang jika ada asisten yang dengan cerdas menyortir dokumen berantakan and memberiku sinyal instruksi kerja yang bersih and teratur terstruktur."
+    ],
+    aspiration: [
+      "Pujian paling menyentuh bagiku adalah ketika orang lain mengakui bahwa model logika, bagan hierarki, and kerangka penjelasanku sangat presisi and jernih.",
+      "Aku haus akan apresiasi yang membenarkan bahwa draf aturan and struktur klasifikasi buatanku membuat urusan organisasi tim yang rumit menjadi mudah dipahami.",
+      "Ada kebanggaan terpisah ketika kawan setim mengandalkanku untuk merancang skema kerja and mendefinisikan istilah krusial di draf kesepakatan.",
+      "Aku sangat senang jika usahaku mendisiplinkan ketertiban and konsistensi aturan dihargai sebagai jangkar penyelamat stabilitas and keadilan tim."
+    ],
+    dismissive: [
+      "Merapikan susunan folder and folder komputer ini sangat mudah bagiku, tapi aku malas menceritakannya and mending membiarkan kawan memakai cara lamanya.",
+      "Aku tahu draf tim ini mengalami inkonsistensi penjelasan kecil, tapi aku menganggap argumen revisi teks itu membosankan and mending langsung kerja konkret.",
+      "Aku bisa saja mengaudit and menstrukturkan ulang pembagian tugas kelompok ini sendiri, but itu melelahkan batin, kuserahkan saja ke bagian sekretariat.",
+      "Aku sering membiarkan draf aturanku ditaruh di laci lemari kerja daripada harus repot mendebat and adu argumen keras face-to-face di departemen tim."
+    ],
+    background: [
+      "Secara senyap, autopilot ku terus membagi and menyortir benda berdasarkan fungsi, ukuran, and kepatutan kegunaan saat mataku melirik suasana harian.",
+      "Di latar belakang pikiran harian, otak and logikaku otomatis mendeteksi pola hubung kait and relasi sebab akibat, mendinginkan batin dari kekacauan situasi.",
+      "Aku refleks merapikan tumpukan kertas and mengurutkan urutan kunci di laci meja kerja secara bawah sadar sebelum tanganku meraih draf tugas berikutnya.",
+      "Analisis konsistensi and penyaringan kontradiksi beroperasi otomatis bagai radar ketertiban di kepalaku, menjagaku tetap fokus and aman melangkah sistematis."
+    ]
+  },
+  Fe: {
+    producer: [
+      "Mendapati suasana kelompok mendadak kaku, sunyi, and hambar, wajah and suaraku refleks langsung melontarkan banyolan and tawa ceria untuk memicu semangat.",
+      "Aku secara otomatis langsung menyapa kawan baru, menaikkan intonasi suara, and menebarkan energi ceria agar mood seluruh ruangan ikut mencerah.",
+      "Secara naluri, aku langsung merasakan perubahan suhu emosi kelompok and menyuntikkan gelombang ekspresif harian agar keheningan diganti kegembiraan.",
+      "Saat ada drama kaku di forum pertemanan, tanganku spontan melempar candaan ringan and melebarkan senyuman sampai semua orang ikut merasa terbawa rileks."
+    ],
+    flexible: [
+      "Aku memakai ekspresi ceria, candaan banyolan, and intonasi melengking hanya sebagai navigator luwes untuk menyatukan kelompok, and rileks pas suasana sedih.",
+      "Aku bisa dengan sangat ekspresif meramaikan forum and mencairkan ketegangan rapat, tetapi aku gampang mematikan mode itu pas beralih ke tugas entri data.",
+      "Aku tahu kapan harus menaikkan nada penuh semangat dramatis untuk menghidupkan panggung, and kapan harus santai membiarkan ruangan hening mengheningkan cipta.",
+      "Aku luwes mengatur pancaran energiku harian, bisa menjadi sosok yang super hangat ceria di pagi hari and berubah menjadi penyendiri sunyi di malam hari."
+    ],
+    mask: [
+      "Di depan klien baru, aku sengaja menampilkan diriku sebagai orang yang paling antusias, ekspresif, and menguasai teknik komunikasi masa yang hangat.",
+      "Aku mengusahakan draf caraku menyapa and bercerita selalu penuh tawa, kontak mata manis, and vibrasi positif yang kuat agar kapasitas sosialku diakui.",
+      "Saat presentasi di panggung umum, aku sengaja menonjolkan gaya teatrikal, variasi intonasi suara dramatis, and ekspresi hidup biar audiens terpesona.",
+      "Di profil profesional, aku memamerkan foto-foto keceriaan tim kerja, testimoni kehangatan kolaborasi, and kegiatan sosial yang super ekspresif."
+    ],
+    threat: [
+      "Aku langsung merasa pusing, risih, and mendadak kaku beku jika dipaksa memimpin sorak-sorai and menghidupkan keceriaan forum kaku di tengah duka.",
+      "Aku merasa sangat cemas, takut salah tingkah, and tertekan ketika batin and ekspresiku disorot lampu and dituntut tampil super heboh menghibur orang.",
+      "Tuntutan untuk terus tersenyum and memancarkan energi ceria buatan pas batin and badanku sedang lelah berduka membuat kepalaku pusing tertekan.",
+      "Aku gampang menutup diri and mendadak mundur menyendiri jika keteateran and ekspresi hangatku dituduh palsu atau cari perhatian oleh departemen."
+    ],
+    receiver: [
+      "Batin rasanya melegakan, tenang, and plong kalau ada kawan supel yang langsung mengambil kendali mic, memecah kesunyian, and menghidupkan tawa ruangan.",
+      "kamu senang menerima sapaan hangat, ikut tersenyum meringankan beban batin, lalu membiarkan orang yang ekspresif itu memimpin sorak-sorai kelompok.",
+      "Begitu orang humoris and ekspresif itu masuk, kepalamu lebih cepat terhibur and kecanggungan sosial di sekitarmu langsung runtuh.",
+      "Aku merasa sangat terselamatkan ketika partner setimku yang ramah bersedia memandu keceriaan and mencairkan ketegangan rapat kaku tim kerja kami."
+    ],
+    aspiration: [
+      "Pujian paling mencerahkan bagiku adalah ketika orang lain menyatakan bahwa candaan, senyuman, and kehadiranku telah mengembalikan keceriaan hidup mereka.",
+      "Aku haus akan apresiasi yang membenarkan bahwa vibrasi positif and kehangatan ekspresiku berhasil menyelamatkan energi tim dari keputusasaan kerja.",
+      "Ada kebanggaan tersembunyi pas kawan kelompok menyebutku sebagai pembawa cahaya and penyelamat semangat kebersamaan di masa-masa sulit.",
+      "Aku sangat senang jika usahaku mencairkan suasana beku diakui and dipuji sebagai perekat kebahagiaan and magnet tawa yang paling andal bagi kelompok."
+    ],
+    dismissive: [
+      "Mencairkan suasana tegang and membuat orang tertawa renyah itu gampang sekali bagiku, but aku malas melakukannya and memilih diam membaca data buku.",
+      "Aku tahu semua orang di ruangan ini sedang canggung kaku, tapi aku menganggap sandiwara tawa sosial itu melelahkan and mending kutaruh fokus ke HP.",
+      "Aku bisa saja melempar banyolan and memimpin keriuhan pesta kelompok ini sendiri, tapi itu menguras energi batin, kubiarkan orang lain saja yang memandu.",
+      "Aku sering membiarkan senyumku surut and berekspresi datar saja daripada harus repot berpura-pura heboh and antusias di hadapan bos kaku department."
+    ],
+    background: [
+      "Secara senyap, autopilot wajah and suaraku terus memantulkan senyuman manis, tawa penenang, and intonasi ramah pembawa damai tanpa perlu kuperintahkan.",
+      "Di latar belakang pikiran harian, empati autopilot-ku terus memindai gelombang emosi and radar ketegangan batin tim setim harian untuk kuredakan.",
+      "Aku refleks memperhalus desah napas and melembutkan tatapan mata ketika melihat rekan diskusi mulai tegang kaku, radar pendingin suasana aktif otomatis.",
+      "Pancaran energi harmoni and penularan mood positif berjalan lancar bagai radar keselamatan sosial di batin, menjagaku and tim tetap rileks bekerja."
+    ]
+  },
+  Fi: {
+    producer: [
+      "Mendapati batas personal and privasiku digeser orang asing, wajah and posturku refleks langsung memisahkan diri, mendadak kaku dingin and diam berjarak.",
+      "Aku tanpa sadar langsung memotong percakapan, menutup folder percakapan pribadi, and menegakkan batas jarak aman kepercayaan secara tegas.",
+      "Secara naluri, aku langsung mengukur ketulusan niat orang di depanku, and melangkah mundur setengah meter jika mencium kebohongan and manipulasi.",
+      "Saat ada perkataan yang menyinggung nilai moral and ketulusan batin, aku refleks menutup tatapan mata, bersuara lirih kaku, and menjaga jarak dingin."
+    ],
+    flexible: [
+      "Aku memakai kepekaan batas personal, jarak sosial, and sinyal kepercayaan hanya sebagai navigator luwes untuk berteman karib harian di kelompok.",
+      "Aku bisa bersikap santai and bercanda intim akrab dengan siapa saja, but aku gampang menegakkan kembali batasan jarak aman pas dia mulai lancang.",
+      "Aku tahu kapan harus membuka hati lebar-lebar untuk berbagi rahasia batin, and kapan harus santai memasang sekat pemisah jarak personal tepercaya.",
+      "Aku luwes mengatur tingkat keakraban sosial, bisa sangat intim and hangat di dalam lingkaran dalam kelompok, and bersikap formal ramah kepada orang luar."
+    ],
+    mask: [
+      "Di depan komunitas baru, aku sengaja menampilkan diriku sebagai sosok yang sangat santun, beretika luhur, and menjunjung moralitas tinggi yang tulus.",
+      "Aku mengusahakan draf tatapan mataku and bahasa tubuhku selalu memancarkan kehalusan budi, kesetiaan janji, and ketenangan batin agar karakterku dihormati.",
+      "Saat rapat koordinasi tim, aku sengaja menonjolkan nilai-nilai kemanusiaan, rasa saling menghargai, and etika berteman biar posisi timku dinilai andal.",
+      "Aku memoles profil sosialku agar terlihat dekat dengan kegiatan kemanusiaan, peduli pada sesama, and loyal menjaga nilai-nilai luhur warisan keluarga."
+    ],
+    threat: [
+      "Aku langsung merasa sesak, risih, and mendadak mundur kaku jika didesak menceritakan masalah pribadi and rahasia batin di depan umum.",
+      "Aku merasa sangat cemas and terluka tegang luar biasa jika dinilai munafik, dingin, and tidak punya rasa peduli atau ketulusan oleh kawan kelompok.",
+      "Tuntutan untuk bersumpah setia and menunjukkan keintiman buatan di depan partner kerja yang tidak kupercayai membuat kepalaku pusing kaku.",
+      "Aku gampang menutup diri and mendadak beku jika integritas moral and batas rahasia pribadiku ditawar berisiko oleh departemen organisasi tim."
+    ],
+    receiver: [
+      "Batin rasanya melegakan, tenang, and plong kalau ada rekan peka yang merangkul bahuku tatkala sedih, and menjamin kesetiaan and keamananku tanpa kata.",
+      "Aku bersyukur jika didekatkan dengan sahabat setia yang dengan halus menjaga rahasia batin and menghargai keputusan jarak personal asriku.",
+      "Rasanya sangat damai and mencerahkan batin ketika partner setimku langsung bersikap sopan santun, menghargai privasiku, and tidak banyak mencampuri urusanku.",
+      "Aku senang jika didekatkan dengan orang yang dengan tulus mementingkan perasaan lelahku and memberi kehangatan batin yang bersih dari drama kerja."
+    ],
+    aspiration: [
+      "Pujian paling menyentuh batin and membuatku bangga adalah saat sahabat karib memuji keluhuran akhlak, ketulusan cinta batin, and kesetiaan moralitas hidupku.",
+      "Aku haus akan apresiasi yang membenarkan bahwa draf perlindungan and kepedulian empat mata yang kuberikan telah menyelamatkan jiwanya dari kehancuran.",
+      "Ada kebanggaan tersembunyi di dalam dada pas kawan luhur menyebutku sebagai pelindung komitmen and pilar kejujuran yang paling tepercaya bagi mereka.",
+      "Aku sangat senang jika usahaku merawat harmoni persahabatan and menjaga janji dipuji sebagai jangkar kesetiaan yang tak tergoyahkan oleh angin badai."
+    ],
+    dismissive: [
+      "Membaca ketulusan and jarak batin orang di depanku itu sangat mudah bagiku, but aku malas memikirkannya and memilih diam fokus menyelesaikan kerja spreadsheet.",
+      "Aku tahu dua sahabat di sampingku ini diam-diam sedang saling membenci, but aku menganggap drama relasi interpersonal itu membosankan and mending kubiarkan saja.",
+      "Aku bisa saja merajut kembali tali silaturahmi yang rusak and mendamaikan kawan-kawan yang bertengkar, but itu menguras tanggi, kubiarkan mereka sendiri.",
+      "Aku sering menyembunyikan batas kekecewaan moral and diam-diam mencoretnya dari daftar orang tepercaya daripada harus repot ribut mengonfrontasi langsung."
+    ],
+    background: [
+      "Secara senyap, autopilot ku terus mengukur tingkat ketulusan suara gerak orang, menyaring kepalsuan, and menjaga area batasan moral batin tetap aman.",
+      "Di latar belakang pikiran harian, empati internal autopilot-ku terus mendeteksi pergeseran rasa percaya and dinamika ikatan batin kawan tanpa terpengaruh sorrot lampu.",
+      "Aku refleks memperhalus tutur kata and menurunkan intonasi volume pas melihat sahabat sedang berada di fase batin yang rapuh and menderita.",
+      "Penyaringan nilai harmoni and pendeteksian getaran moralitas beroperasi otomatis bagai jangkar perlindungan jiwa di kepalaku, jagaku and tim tetap tulus bertindak."
+    ]
+  }
 };
 
-function getMeaning(element: string, channel: string, value: number): string {
-  const chPhrase = CHANNEL_PHRASES[channel] || "";
-  const elPhrase = ELEMENT_PHRASES[element] || "";
-  
-  if (channel === "mask" || channel === "dismissive") {
-    if (value === 1) return `Pola ini hampir tidak pernah jadi cara harianmu. Kepalamu biasanya memilih jalur lain yang terasa lebih masuk akal atau lebih ringan. ${chPhrase}`;
-    if (value === 2) return `Pola ini muncul sesekali, biasanya karena keadaan memaksa. Begitu tekanannya hilang, kamu balik lagi ke kebiasaan yang lebih natural. ${chPhrase}`;
-    if (value === 3) return `Pola ini lumayan ada, tapi belum konsisten. Kadang ${elPhrase}, kadang kamu sama sekali tidak merasa perlu masuk ke mode itu. ${chPhrase}`;
-    if (value === 4) return `Pola ini cukup sering muncul dalam keseharianmu. Kepalamu gampang balik ke cara ini walau tidak selalu di setiap kesempatan. ${chPhrase}`;
-    return `Pola ini sangat konsisten. Orang dekat kemungkinan sudah bisa nebak bahwa kepalamu bakal masuk ke cara ini lagi. ${chPhrase}`;
-  }
-  
-  if (channel === "producer" || channel === "background" || channel === "flexible") {
-    if (value === 1) return `Proses ini bukan default otakmu. Dalam situasi seperti ini, ${elPhrase}, tapi pola itu biasanya baru muncul setelah ada pemicu yang sangat jelas atau orang lain lebih dulu membuka jalannya. ${chPhrase}`;
-    if (value === 2) return `Kamu sebenarnya bisa masuk ke mode ini, tapi kepalamu butuh pause, menyusun langkah, dan meyakinkan diri dulu sebelum responsnya keluar. ${chPhrase}`;
-    if (value === 3) return `Mode ini nyala-mati. Kadang kepalamu langsung masuk ke pola ini, kadang energi, orang, dan kondisi saat itu bikin kamu memilih jalur lain. ${chPhrase}`;
-    if (value === 4) return `Pola ini cukup dekat dengan respons pertamamu. Begitu pemicunya muncul, ${elPhrase}, bahkan sebelum kamu sempat banyak mengatur diri. ${chPhrase}`;
-    return `Pola ini sudah kayak autopilot. Begitu situasinya muncul, ${elPhrase}, nyaris barengan dengan saat kamu sadar ada sesuatu yang perlu ditangani. ${chPhrase}`;
-  }
-  
-  if (channel === "threat") {
-    if (value === 1) return `Tuntutan ini tidak menyentuh alarm batinmu. Kepalamu tetap punya ruang buat berpikir, mencoba, dan salah tanpa merasa harga dirimu sedang diserang. ${chPhrase}`;
-    if (value === 2) return `Ada sedikit gesekan di kepala, tapi kamu masih gampang menenangkan diri dan kembali melihat pilihan yang tersedia. ${chPhrase}`;
-    if (value === 3) return `Alarm batinmu mulai nyala. Sebagian pikiranmu sibuk takut salah atau dinilai, jadi ruang gerakmu terasa lebih sempit. ${chPhrase}`;
-    if (value === 4) return `Tuntutan ini gampang menyentuh titik sensitifmu. Kepalamu masuk mode bertahan, makin kaku, dan susah melihat pilihan dengan santai. ${chPhrase}`;
-    return `Tuntutan ini langsung menekan tombol daruratmu. Pikiranmu bisa nge-blank, defensif, malu, atau cuma ingin secepatnya keluar dari situasi itu. ${chPhrase}`;
-  }
-  
-  if (channel === "receiver") {
-    if (value === 1) return `Bantuan di area ini tidak banyak mengubah keadaan batinmu. Kepalamu tetap merasa lebih aman memegang bagian itu sendiri atau mencari bentuk bantuan lain. ${chPhrase}`;
-    if (value === 2) return `Ada sedikit rasa ringan, tapi tidak sampai bikin kepalamu benar-benar menyerahkan kendali atau merasa sangat terbantu. ${chPhrase}`;
-    if (value === 3) return `Bantuan ini lumayan menurunkan beban. Kamu masih bisa jalan sendiri, tapi kepalamu tidak perlu memegang semuanya seketat tadi. ${chPhrase}`;
-    if (value === 4) return `Bantuan ini benar-benar berguna. Begitu orang yang tepat masuk, kepalamu lebih cepat tenang dan situasinya terasa jauh lebih bisa dijalani. ${chPhrase}`;
-    return `Bantuan ini menyentuh kebutuhan yang dalam. Rasanya kayak ada bagian berat di kepalamu yang akhirnya dipegang orang yang ngerti caranya. ${chPhrase}`;
-  }
-  
-  if (channel === "aspiration") {
-    if (value === 1) return `Pujian di area ini lewat begitu saja. Kepalamu tidak menjadikannya bukti penting tentang siapa dirimu atau ke mana kamu ingin berkembang. ${chPhrase}`;
-    if (value === 2) return `Pujian itu enak didengar, tapi efeknya tipis dan cepat hilang. Kamu tidak merasa perlu mengejar pengalaman yang sama lagi. ${chPhrase}`;
-    if (value === 3) return `Pujian ini lumayan masuk. Kadang bikin semangatmu naik, kadang cuma terasa seperti komentar baik biasa. ${chPhrase}`;
-    if (value === 4) return `Pujian ini menyentuh bagian yang ingin tumbuh. Kepalamu menyimpannya sebagai bukti bahwa kamu mungkin memang bisa berkembang di sini. ${chPhrase}`;
-    return `Pujian ini masuk sangat dalam. Kamu bisa replay kalimatnya berkali-kali karena area ini berkaitan dengan rasa bangga yang masih sensitif. ${chPhrase}`;
-  }
-  
-  return "";
-}
-
-function getReaction(element: string, channel: string, value: number, situation: string, preamble?: string): string {
-  const customPreamble = preamble || (situation.startsWith("Diharapkan") || situation.startsWith("Diminta") || situation.length > 20 ? `Pas lagi menghadapi ${situation.toLowerCase()}, ` : `Pas ${situation.toLowerCase()}, `);
-  
-  if (channel === "comparison") return ""; // Comparison doesn't use standard elements path
-
-  if (channel === "mask") {
-    const list = [
-      "kamu tidak mencoba memainkan mode itu dan memilih tampil apa adanya.",
-      "kamu baru mencoba setelah melihat orang lain, lalu gerak atau ucapanmu masih terasa hati-hati.",
-      "kamu bisa memainkan perannya kalau perlu, tapi begitu tuntutannya turun kamu cepat melepasnya.",
-      "kamu cukup lancar menjaga ekspresi, kata, atau tindakan supaya kelihatan mampu meski tetap ada rasa capek.",
-      "kamu langsung memasang mode performa, mengontrol wajah dan pilihan kata, lalu mempertahankannya sampai situasi selesai."
-    ];
-    return `${customPreamble}${list[value - 1]}`;
-  }
-  
-  if (channel === "threat") {
-    if (value === 1) return `${customPreamble}kamu tetap bernapas normal, menatap situasinya, lalu mengambil satu langkah tanpa sibuk membela diri.`;
-    if (value === 2) return `${customPreamble}kamu sempat mengerutkan dahi atau menarik napas, tapi beberapa detik kemudian tetap lanjut.`;
-    
-    const bases: Record<string, string> = {
-      Ne: "kamu membuka-tutup catatan, melontarkan ide setengah jadi, lalu mendadak buntu karena semua pilihan terasa jelek",
-      Ni: "kamu berkali-kali melihat jam atau timeline, mengulang prediksi di kepala, lalu makin takut salah membaca momennya",
-      Se: "bahumu kaku, rahangmu mengeras, suaramu bisa mendadak mengecil atau justru naik karena kamu merasa sedang didesak",
-      Si: "kamu terus mengubah posisi, memegang kepala atau perut, lalu makin susah fokus karena semua sensasi terasa mengganggu",
-      Te: "kamu bolak-balik mengecek angka, takut datanya salah, lalu menunda keputusan karena tidak yakin langkah mana yang benar-benar bekerja",
-      Ti: "kamu menghapus dan menulis ulang susunan, terpaku pada satu aturan, lalu nge-blank ketika ada pengecualian baru",
-      Fe: "senyummu kaku, nadamu jadi dibuat-buat, atau kamu menarik diri karena merasa semua orang sedang membaca ekspresimu",
-      Fi: "kamu membaca ulang pesan, menjawab sangat pendek, menjaga jarak, atau menutup obrolan karena takut salah menilai kedekatan"
-    };
-    const b = bases[element] || "";
-    if (value === 3) return `${customPreamble}${b}, meski kamu masih bisa memaksa diri menyelesaikan bagian pentingnya.`;
-    if (value === 4) return `${customPreamble}${b}, lalu kamu mulai mempersempit obrolan, mencari kepastian, atau ingin menyerahkan bagian itu.`;
-    return `${customPreamble}${b}, kemudian kamu bisa menutup percakapan, menghindar, atau pergi supaya tekanannya berhenti.`;
-  }
-  
-  if (channel === "receiver") {
-    if (value === 1) return `${customPreamble}bantuan itu kamu dengar sebentar lalu kamu tetap mengerjakan semuanya dengan caramu sendiri.`;
-    if (value === 2) return `${customPreamble}kamu mengambil satu bagian kecil dari bantuan itu, mengangguk, lalu kembali memegang sisanya sendiri.`;
-    
-    const bases: Record<string, string> = {
-      Ne: "bahumu turun, kamu langsung membuka catatan, lalu mulai menambahkan pilihan baru dari kemungkinan yang orang itu tunjukkan",
-      Ni: "kamu berhenti memaksa jawaban cepat, mengangguk pelan, lalu menyusun ulang langkah sesuai tempo yang dijelaskan orang itu",
-      Se: "posturmu lebih rileks, kamu mundur setengah langkah, lalu membiarkan orang yang tegas itu mengamankan batas dan membagi peran",
-      Si: "napasmu melambat, kamu memperbaiki posisi duduk atau menerima minum, lalu tubuhmu terasa lebih gampang diajak lanjut",
-      Te: "kamu langsung mengikuti data atau langkah yang diberikan, mencentang satu-satu, lalu beban di kepalamu terasa turun",
-      Ti: "kamu melihat bagan atau aturan yang dibuat orang itu, mengangguk, lalu bisa melanjutkan tanpa terus mengurai semuanya sendirian",
-      Fe: "wajahmu lebih hidup, kamu ikut tersenyum atau bicara lagi, lalu energi ruangan tidak terasa seberat tadi",
-      Fi: "bahumu melemas, kamu mulai bicara lebih jujur, lalu membiarkan orang itu menjaga jarak atau kedekatan dengan cara yang terasa aman"
-    };
-    const b = bases[element] || "";
-    if (value === 3) return `${customPreamble}${b}, tapi kamu masih menjaga sebagian kendali di tanganmu.`;
-    if (value === 4) return `${customPreamble}${b}, dan kamu mulai mengikuti arah orang itu tanpa terlalu banyak menahan diri.`;
-    return `${customPreamble}${b}, sampai perubahan di wajah, napas, atau posturmu kelihatan jelas.`;
-  }
-  
-  if (channel === "aspiration") {
-    if (value === 1) return `${customPreamble}kamu cuma mengangguk atau bilang makasih lalu langsung pindah topik.`;
-    if (value === 2) return `${customPreamble}kamu tersenyum sebentar, menyimpan komentarnya, tapi tidak mengubah apa pun setelah itu.`;
-    
-    const bases: Record<string, string> = {
-      Ne: "kamu menyimpan idenya, membuka catatan baru, lalu kepikiran mengembangkan kemungkinan itu lagi setelah obrolan selesai",
-      Ni: "kamu mengulang pujian itu di kepala, menandai momen penting, lalu makin berani mempercayai pembacaan arahmu",
-      Se: "posturmu langsung lebih tegak, kamu mengambil peran lebih jelas, lalu ingin membuktikan bahwa kamu memang bisa memegang keadaan",
-      Si: "kamu tersenyum kecil, memperhatikan detail kenyamanan lagi, lalu makin percaya pada kepekaan tubuhmu",
-      Te: "kamu menyimpan hasilnya, membandingkan progres, lalu ingin mencoba metode yang lebih efektif lagi",
-      Ti: "kamu merapikan catatan, memperbaiki modelnya, lalu ingin menunjukkan bahwa susunannya bisa tetap konsisten",
-      Fe: "wajahmu langsung cerah, nada suaramu naik, lalu kamu ingin menghidupkan suasana itu sekali lagi",
-      Fi: "kamu mengingat kalimatnya lama, mengirim respons personal, lalu makin berani menjaga hubungan dengan cara yang terasa tulus"
-    };
-    const b = bases[element] || "";
-    if (value === 3) return `${customPreamble}${b}, walau dorongannya bisa hilang lagi setelah beberapa waktu.`;
-    if (value === 4) return `${customPreamble}${b}, lalu kamu sengaja mencari kesempatan lain buat melatihnya.`;
-    return `${customPreamble}${b}, dan kalimat pujiannya masih terulang di kepalamu berhari-hari.`;
-  }
-
-  const list = PRODUCER_REACTIONS[element] || [];
-  const suffixValue = list[value - 1] || "";
-  
-  if (channel === "dismissive") {
-    const listSuffixes = [
-      ", dan kamu memang tidak punya dorongan buat mengambil bagian itu.",
-      ", tapi kamu cepat menyerahkannya ke orang lain karena rasanya bukan urusan utama.",
-      ", lalu kamu menilai apakah bagian itu layak diteruskan atau cukup ditinggal.",
-      ", kemudian setelah selesai kamu langsung pindah ke hal yang menurutmu lebih penting.",
-      ", lalu kamu merapikannya tanpa drama dan tetap menganggapnya bukan sesuatu yang perlu dibatidakan."
-    ];
-    const cleanSuffix = suffixValue.endsWith(".") ? suffixValue.slice(0, -1) : suffixValue;
-    return `${customPreamble}${cleanSuffix}${listSuffixes[value - 1]}`;
-  }
-  
-  if (channel === "background") {
-    const listSuffixes = [
-      ", dan proses itu hampir tidak berjalan di belakang layar.",
-      ", tapi kamu masih perlu sadar penuh buat menjaga langkahnya.",
-      ", dan kadang baru sadar belakangan bahwa kamu sempat melakukannya.",
-      ", sementara perhatian utamamu tetap ada di urusan lain.",
-      ", bahkan sebelum kamu sadar tubuh atau tanganmu sudah lebih dulu bergerak."
-    ];
-    const cleanSuffix = suffixValue.endsWith(".") ? suffixValue.slice(0, -1) : suffixValue;
-    return `${customPreamble}${cleanSuffix}${listSuffixes[value - 1]}`;
-  }
-
-  return `${customPreamble}${suffixValue}`;
-}
-
-export const ALL_QUESTIONS: SocionicsQuestion[] = [];
-
-// SYSTEMATIC programmatic generator to fit into output constraints perfectly
-// Guarantees all kinds (256 core, 32 holdout, 32 tie-breaker) are created exactly.
-const createCoreQuestions = () => {
+// HELPER: Generates 256 core questions using the rich handcrafted scenarios database
+function generateCoreQuestions(): SocionicsQuestion[] {
+  const list: SocionicsQuestion[] = [];
   for (const element of ELEMENTS) {
     for (const channel of CHANNELS) {
       const scale = SCALE_MAP[channel];
-      const keywordEl = ELEMENT_KEYWORDS[element];
-      const keywordCh = CHANNEL_KEYWORDS[channel];
-      
-      // Question 1
-      const q1Id = `core_${element.toLowerCase()}_${channel}_01`;
-      const s1 = `Ketika situasi menuntut untuk ${keywordEl}, maka secara naluri batin saya cenderung mengekspresikannya ${keywordCh}.`;
-      ALL_QUESTIONS.push({
-        id: q1Id,
-        kind: "core",
-        element,
-        channel,
-        context: "new_situation",
-        scale,
-        statement: s1,
-        sourceSituation: `Kebutuhan untuk ${keywordEl.split(",")[0]}`,
-        sourceResponse: s1,
-        responseFocus: `pembacaan ${element}`,
-        options: generateOptions(element, channel, scale, `Kebutuhan untuk ${keywordEl.split(",")[0]}`)
-      });
-
-      // Question 2
-      const q2Id = `core_${element.toLowerCase()}_${channel}_02`;
-      const s2 = `Saat berada dalam kelompok sosial ramai yang membutuhkan kita ${keywordEl}, batin saya refleks bergerak ${keywordCh}.`;
-      ALL_QUESTIONS.push({
-        id: q2Id,
-        kind: "core",
-        element,
-        channel,
-        context: "group",
-        scale,
-        statement: s2,
-        sourceSituation: `Diskusi kelompok tentang ${element}`,
-        sourceResponse: s2,
-        responseFocus: `ekspresi ${element}`,
-        options: generateOptions(element, channel, scale, `Diskusi kelompok tentang ${element}`)
-      });
-
-      // Question 3
-      const q3Id = `core_${element.toLowerCase()}_${channel}_03`;
-      const s3 = `Menghadapi tantangan hidup harian berupa ${keywordEl} membuat saya harus meresponsnya ${keywordCh} demi menjaga keseimbangan.`;
-      ALL_QUESTIONS.push({
-        id: q3Id,
-        kind: "core",
-        element,
-        channel,
-        context: "private",
-        scale,
-        statement: s3,
-        sourceSituation: `Tantangan pribadi memikirkan ${element}`,
-        sourceResponse: s3,
-        responseFocus: `koordinasi ${element}`,
-        options: generateOptions(element, channel, scale, `Tantangan pribadi memikirkan ${element}`)
-      });
-
-      // Question 4 (The v3 variant)
-      const q4Id = `v3_${element.toLowerCase()}_${channel}_04`;
-      const s4 = `Bilamana dalam pekerjaan terdapat desakan kuat berkaitan dengan cara ${keywordEl}, saya spontan mengelolanya ${keywordCh}.`;
-      ALL_QUESTIONS.push({
-        id: q4Id,
-        kind: "core",
-        element,
-        channel,
-        context: "work",
-        scale,
-        statement: s4,
-        sourceSituation: `Pekerjaan yang memicu fungsi ${element}`,
-        sourceResponse: s4,
-        responseFocus: `implementasi ${element}`,
-        options: generateOptions(element, channel, scale, `Pekerjaan yang memicu fungsi ${element}`)
-      });
+      const statements = HANDCRAFTED_SCENARIOS[element][channel];
+      for (let i = 0; i < 4; i++) {
+        const id = `core_${element.toLowerCase()}_${channel}_0${i + 1}`;
+        list.push({
+          id,
+          kind: "core",
+          element,
+          channel,
+          context: `Skenario Realistis ${element} (Adegan #${i + 1})`,
+          scale,
+          statement: statements[i],
+          sourceSituation: `Konteks nyata ${element} saluran ${channel}`,
+          sourceResponse: statements[i],
+          responseFocus: `resonansi ${element}:${channel}`,
+          options: generateOptions(element, channel, scale, statements[i])
+        });
+      }
     }
   }
-};
+  return list;
+}
 
-const createHoldoutQuestions = () => {
+// HELPER: Generates 32 holdout questions using deterministic select scenarios
+function generateHoldoutQuestions(): SocionicsQuestion[] {
+  const list: SocionicsQuestion[] = [];
+  const testChannels: MeasurementChannel[] = ["producer", "threat", "receiver", "background"];
   for (const element of ELEMENTS) {
-    const holdoutChannels: MeasurementChannel[] = ["producer", "threat", "receiver", "background"];
-    holdoutChannels.forEach((channel, idx) => {
-      const qId = `holdout_${element.toLowerCase()}_0${idx + 1}`;
+    testChannels.forEach((channel, idx) => {
+      const id = `holdout_${element.toLowerCase()}_0${idx + 1}`;
       const scale = SCALE_MAP[channel];
       const keywordEl = ELEMENT_KEYWORDS[element];
-      const keywordCh = CHANNEL_KEYWORDS[channel];
-      const state = `Sebagai pemeriksa batin terpisah, mendapati situasi yang mengharuskan kita ${keywordEl} bisa saya lakukan ${keywordCh} secara terkontrol.`;
-      ALL_QUESTIONS.push({
-        id: qId,
+      const stmt = `Mendapati lingkungan sosial atau tuntutan kerja yang mengharuskan aku ${keywordEl}, saya refleks menyikapinya sebagai ${keywordEl.split(",")[0]}.`;
+      list.push({
+        id,
         kind: "holdout",
         element,
         channel,
-        context: "testing_verification",
+        context: "Verifikasi metodologi respon silang",
         scale,
-        statement: state,
-        sourceSituation: `Holdout uji ${element}`,
-        sourceResponse: state,
-        responseFocus: `verifikasi ${element}`,
-        options: generateOptions(element, channel, scale, `Holdout uji ${element}`)
+        statement: stmt,
+        sourceSituation: `Uji komparasi silang ${element}`,
+        sourceResponse: stmt,
+        responseFocus: `verifikasi ${element}:${channel}`,
+        options: generateOptions(element, channel, scale, stmt)
       });
     });
   }
-};
+  return list;
+}
 
-const createTieBreakQuestions = () => {
+// HELPER: Generates 32 tie-breaker questions
+function generateTieBreakQuestions(): SocionicsQuestion[] {
   const tieBreakPairs: Array<[SocionicsType, SocionicsType]> = [
     ["ILE", "IEE"], ["SEI", "SLI"], ["ESE", "EIE"], ["LII", "LSI"],
-    ["SLE", "SEE"], ["IEI", "ILI"], ["LIE", "LSE"], ["ESI", "EII"],
-    ["ILE", "LII"], ["SEI", "ESE"], ["SLE", "LSI"], ["IEI", "EIE"],
-    ["SEE", "ESI"], ["ILI", "LIE"], ["IEE", "EII"], ["SLI", "LSE"]
+    ["SLE", "SEE"], ["IEI", "ILI"], ["LIE", "ESI"], ["IEE", "EII"],
+    ["ILE", "LII"], ["SEI", "ESE"], ["EIE", "IEI"], ["LSI", "SLE"],
+    ["SEE", "ILI"], ["LIE", "ESI"], ["IEE", "SLI"], ["LSE", "EII"]
   ];
 
-  tieBreakPairs.forEach(([a, b]) => {
-    // Generate 2 questions per pair to equal 32 total
+  const list: SocionicsQuestion[] = [];
+  tieBreakPairs.forEach(([a, b], pairIdx) => {
     for (let idx = 1; idx <= 2; idx++) {
-      const qId = `tb_${a.toLowerCase()}_${b.toLowerCase()}_0${idx}`;
-      const state = `Dalam mengambil keputusan relasional penting, saya jauh lebih memprioritaskan ciri dasar batin tipe ${a} dibanding preferensi tipe ${b} (Pertanyaan pembeda #${idx}).`;
-      
+      const id = `tb_${a.toLowerCase()}_${b.toLowerCase()}_0${idx}`;
+      const stmt = idx === 1
+        ? `Saat berdiskusi and merampungkan tugas penting, keputusanku jauh lebih mencerminkan gaya batin ${a} (prinsip and rute aksi kerja nyata) dibanding cara ${b}.`
+        : `Dalam menghadapi perselisihan argumen atau krisis di sekelompok kawan, aku refleks bertindak menggunakan cara tangguh ${a} dibanding kompromi ala ${b}.`;
+
       const options: QuestionOption[] = [1, 2, 3, 4, 5].map((val) => {
         const labels = SCALE_LABELS.comparison;
         const meanings = [
-          `Sisi kedua (${b}) terasa jauh lebih dekat dengan cara kerja kepalamu. Sisi pertama mungkin bisa kamu lakukan, tapi bukan jalur yang paling natural. Kalau mode ini nyala, kepalamu pengin langsung mengubah keadaan, bukan cuma mengamati.`,
-          `Kepalamu agak condong ke sisi kedua (${b}), walau sisi pertama masih muncul di keadaan tertentu. Kalau mode ini nyala, kepalamu pengin langsung mengubah keadaan, bukan cuma mengamati.`,
-          `Dua sisi ini terasa sama kuat. Pilihanmu benar-benar bergantung pada siapa, tujuan, dan tekanan yang sedang ada. Kalau mode ini nyala, kepalamu pengin langsung mengubah keadaan, bukan cuma mengamati.`,
-          `Kepalamu agak condong ke sisi pertama (${a}), walau sisi kedua tetap bisa dipakai saat keadaan menuntut. Kalau mode ini nyala, kepalamu pengin langsung mengubah keadaan, bukan cuma mengamati.`,
-          `Sisi pertama (${a}) terasa jauh lebih natural dan cepat mengambil alih keputusanmu dibanding sisi kedua. Kalau mode ini nyala, kepalamu pengin langsung mengubah keadaan, bukan cuma mengamati.`
+          `Kepalamu sepenuhnya menolak gaya ${a} and merasa bahwa cara kerja serta respons kehidupanmu 100% selaras dengan tipe ${b}.`,
+          `Kepalamu agak condong ke gaya respons tipe ${b}, meskipun kamu masih sesekali melihat sudut pandang dari sisi ${a}.`,
+          `Kedua gaya respons ini terasa seimbang and sama kuatnya di dalam batinmu, tergantung pada rekan and situasi nyata yang ada.`,
+          `Kepalamu agak condong ke cara tangguh and penyelesaian ala tipe ${a}, meskipun ada sedikit pengaruh dari kompromi tipe ${b}.`,
+          `Kamu yakin batin and aksi spontanmu sepenuhnya digerakkan oleh kecenderungan tipe ${a}, and hampir tidak pernah memakai cara ${b}.`
         ];
         const listReactions = [
-          `kamu menggeser keputusan ke arah kecenderungan ${b}, mulai mengerjakan langkah dari sana, dan meninggalkan cara ${a} sebagai cadangan.`,
-          `kamu lebih dulu mencoba pendekatan ${b}, lalu baru kembali ke cara ${a} jika hasil awalnya tidak cocok.`,
-          `kamu berhenti sebentar, melihat dua pilihan tipe secara bergantian, lalu menentukan arah berdasarkan keadaan paling konkret saat itu.`,
-          `kamu lebih dulu mencoba pendekatan ${a}, lalu baru pindah ke cara ${b} jika situasinya mendesak.`,
-          `kamu langsung bergerak lewat gaya batin ${a}, membangun langkah dari sana, dan hampir tidak melirik cara ${b}.`
+          `kamu secara fisik melangkah mundur, membiarkan pola reaksi ${b} mengambil seluruh tindakanmu, and menaruh draf ${a} di laci lemari.`,
+          `kamu melirik draf ${b} sekilas, mencoba menyelesaikannya lewat cara itu, and baru menengok draf ${a} jika caramu mampet.`,
+          `kamu mengetuk-ngetukkan jari ke dagu, memandang bergantian ke arah dua pilihan tindakan, lalu melangkah sesuai kondisi paling mendesak.`,
+          `kamu langsung condong memegang pulpen untuk merealisasikan gagasan ${a}, and baru melirik sisi ${b} jika kawanmu berkeras gila.`,
+          `kamu menegakkan pundak, melontarkan jawaban presisi cara kerja tipe ${a} dengan nada mantap, and langsung melangkah menyelesaikan aksi terdepan.`
         ];
         return {
           value: val as any,
           label: labels[val - 1] || "",
           meaning: meanings[val - 1] || "",
-          reaction: `Pas membela diri atau mengambil keputusan penting, ${listReactions[val - 1]}`
+          reaction: listReactions[val - 1]
         };
       });
 
-      ALL_QUESTIONS.push({
-        id: qId,
+      list.push({
+        id,
         kind: "tie-break",
-        element: "Ne", // Baseline comparison cell Ne + producer
+        element: "Ne",
         channel: "producer",
-        context: "decision",
+        context: `Penyeimbang Model A: Penentuan khusus kandidat ${a} vs ${b}`,
         scale: "comparison",
-        statement: state,
-        sourceSituation: `Pembeda antara ${a} dan ${b} #${idx}`,
-        sourceResponse: state,
-        responseFocus: `perbedaan tipe ${a} - ${b}`,
-        options,
-        tieBreak: { a, b }
+        statement: stmt,
+        sourceSituation: `Tie Break pembeda kandidat ${a} - ${b}`,
+        sourceResponse: stmt,
+        responseFocus: `resolusi resolusi ${a}:${b}`,
+        options
       });
     }
   });
-};
+  return list;
+}
 
 function generateOptions(element: InformationElement, channel: MeasurementChannel, scale: ScaleType, situation: string): QuestionOption[] {
   return [1, 2, 3, 4, 5].map((val) => {
+    const customMeaning = getMeaning(element, channel, val);
+    const customReaction = getReaction(element, channel, val, situation);
+
     return {
       value: val as any,
       label: SCALE_LABELS[scale][val - 1] || "",
-      meaning: getMeaning(element, channel, val),
-      reaction: getReaction(element, channel, val, situation)
+      meaning: customMeaning,
+      reaction: customReaction
     };
   });
 }
 
-// EXECUTE systematic builder
-createCoreQuestions();
-createHoldoutQuestions();
-createTieBreakQuestions();
+function getMeaning(element: InformationElement, channel: MeasurementChannel, value: number): string {
+  const chPhrase = CHANNEL_PHRASES[channel] || "";
+  const elPhrase = ELEMENT_PHRASES[element] || "";
+
+  if (channel === "mask" || channel === "dismissive") {
+    if (value === 1) return `Kapasitas ini hampir tidak pernah kamu jadikan jangkar harian. Kepalamu memilih melangkah di koridor lain yang terasa jauh lebih natural. ${chPhrase}`;
+    if (value === 2) return `Kamu sesekali memakai pola ini di forum sosial jika keadaannya mendesak, tapi sesudahnya kamu buru-buru melepasnya kembali. ${chPhrase}`;
+    if (value === 3) return `Kemampuannya lumayan terlatih dalam takaran terbatas. Kadang ${elPhrase}, kadang kamu memilih mengabaikannya begitu saja. ${chPhrase}`;
+    if (value === 4) return `Pola ini cukup sering and konsisten kamu gunakan dalam rutinitas kerja harianmu untuk menjaga kualitas hasil. ${chPhrase}`;
+    return `Pola ini sudah melekat kuat bagai bayangan kedua. Kamu mempraktikkannya dengan sangat fasih tanpa rasa canggung lagi. ${chPhrase}`;
+  }
+
+  if (channel === "producer" || channel === "background" || channel === "flexible") {
+    if (value === 1) return `Proses ini bukan default awal dari sirkuit batinmu. Di situasi seperti ini, ${elPhrase}, tapi biasanya baru tergerak setelah ada dorongan keras dari luar. ${chPhrase}`;
+    if (value === 2) return `Kamu sebenarnya bisa melakukan hal ini, but kepalamu butuh pause, mengambil napas, and menyusun urutan aksi dulu sebelum bergerak. ${chPhrase}`;
+    if (value === 3) return `Mode ini bekerja naik-turun tergantung iklim batin. Kadang kamu langsung bergerak refleks, kadang kamu merasa terlalu malas and lelah. ${chPhrase}`;
+    if (value === 4) return `Pola ini sangat dekat dengan respons spontan pertamamu pas mendapati pemicu di lapangan, sebelum sempat menyusun draf pertahanan. ${chPhrase}`;
+    return `Pola ini sudah kayak autopilot murni. Begitu ada sinyal di lapangan, ${elPhrase}, bergerak tepat pada detiknya tanpa butuh berpikir keras lagi. ${chPhrase}`;
+  }
+
+  if (channel === "threat") {
+    if (value === 1) return `Tuntutan semacam ini sama sekali tidak menyentuh alarm trauma atau kerentanan batinmu. Kamu tetap bisa berpikir and melangkah dengan tenang. ${chPhrase}`;
+    if (value === 2) return `Kamu merasakan sedikit gesekan kecil and kaget di dada, tapi kamu masih gampang mengontrol diri and kembali tersenyum rileks. ${chPhrase}`;
+    if (value === 3) return `Alarm darurat di kepalamu mulai berdering samar. Sebagian energi batinmu terserap untuk memikirkan ketakutan salah atau dipermalukan. ${chPhrase}`;
+    if (value === 4) return `Tuntutan ini gampang menekan tombol sensitifmu. Kamu mulai memasang tameng pelindung batin, gerakmu kaku, and pandanganmu waspada. ${chPhrase}`;
+    return `Tuntutan ini langsung memicu benturan di alarm terdalammu. Otakmu bisa beku mendadak, and kamu hanya pengin melarikan diri and menghilang seketika. ${chPhrase}`;
+  }
+
+  if (channel === "receiver") {
+    if (value === 1) return `Bantuan di wilayah ini terasa biasa saja and tidak banyak menyembuhkan keresahan batinmu. Kamu tetap condong memegangnya sendiri. ${chPhrase}`;
+    if (value === 2) return `Ada sedikit rasa adem, but tidak sampai bikin kepalamu bersedia melepas kendali and menuruti arahan orang tersebut sepenuhnya. ${chPhrase}`;
+    if (value === 3) return `Bantuan orang tersebut lumayan menenangkan jiwamu. Kamu merasa tidak sendirian and bisa mencairkan ketegangan sedikit demi sedikit. ${chPhrase}`;
+    if (value === 4) return `Bantuan ini sangat mencerahkan batinmu. Begitu orang yang mengerti cara kerjanya masuk, awan mendung di kepalamu langsung tersapu bersih. ${chPhrase}`;
+    return `Bantuan ini menyentuh sarang kesembuhan terdalammu. Rasanya bagaikan ada mukjizat yang mengangkat tumpukan batu berat yang selama ini menyiksa batinmu. ${chPhrase}`;
+  }
+
+  if (channel === "aspiration") {
+    if (value === 1) return `Pujian atau sorotan di area ini terasa hambar and lewat begitu saja di telinga tanpa mengubah suasana batin and rencanamu harian. ${chPhrase}`;
+    if (value === 2) return `Opini atau pujian itu enak didengar sekilas, but tidak sampai mengobarkan api ambisi atau membuatmu ingin berlatih melipatgandakan performa. ${chPhrase}`;
+    if (value === 3) return `Pujian ini lumayan merangsang gairah kerjamu. Kadang kamu merasa bangga, kadang kamu bersikap biasa saja and mengabaikan pujian tersebut. ${chPhrase}`;
+    if (value === 4) return `Pujian ini sangat menyentuh bagian dari dirimu yang haus akan pengakuan. Kamu bertekad merawat kemampuan ini and melatihnya lebih giat. ${chPhrase}`;
+    return `Pujian and validasi di area ini masuk ke tingkat batin yang sangat dalam. Kamu bisa mereplay kalimatnya berkali-kali di kepala and merasa luar biasa bangga. ${chPhrase}`;
+  }
+
+  return "";
+}
+
+function getReaction(element: InformationElement, channel: MeasurementChannel, value: number, situation: string): string {
+  if (channel === "mask") {
+    const list = [
+      "kamu memilih menutup wajah datar and bersikap dingin apa adanya tanpa repot memasang topeng hiasan sosial.",
+      "kamu baru mencoba menyembulkan senyum tipis setelah melirik ekspresi orang lain, tapi kata-katamu masih tertahan kaku.",
+      "kamu dengan luwes memainkan peran tangguh itu selama satu jam, lalu langsung pamit pulang and merebahkan tubuh di kamar.",
+      "kamu sangat mahir menjaga intonasi and pilihan kalimat di depan umum agar dinilai hebat meski pundakmu terasa tegang cape.",
+      "kamu langsung memasang mode performa prima, menyalami semua orang, and mempertahankan retorika anggunmu secara konstan berkilau."
+    ];
+    return `Pas lagi menghadapi ${situation.toLowerCase()}, ${list[value - 1]}`;
+  }
+
+  if (channel === "threat") {
+    if (value === 1) return `Pas lagi menghadapi ${situation.toLowerCase()}, kamu tetap tersenyum rileks, bernapas dalam and teratur, and mengambil satu langkah tanpa sibuk membela diri.`;
+    if (value === 2) return `Pas lagi menghadapi ${situation.toLowerCase()}, kamu sempat mengerutkan dahi and menggigit bibir sekilas, but detik berikutnya tetap kembali tenang.`;
+
+    const bases: Record<string, string> = {
+      Ne: "kamu langsung menutup buku, membelalakan mata tegang, and menolak keras mengeluarkan alternatif karena merasa semua celah masa depan terkunci",
+      Ni: "kamu bolak-balik menatap jarum jam berkali-kali, napasmu memburu kaku, and kamu nge-blank setengah mati karena draf waktu tim bergeser kacau",
+      Se: "bahumu langsung membeku kaku, suaramu mendadak bergetar meninggi, and kamu mundur setengah langkah ke sudut pintu karena merasa teritorialmu diinjak kasar",
+      Si: "kamu memegang perut and dahi tegang, napasmu pendek terengah-engah, and kamu tidak sanggup lagi fokus karena seluruh indra sensor ruangan terasa menyiksa tubuh",
+      Te: "pas jemarimu gempar kaku mengetik komputer, kepalamu terasa pusing berat and kamu mendadak menutup spreadsheet karena takut angka kelayakan modalmu hancur salah",
+      Ti: "kamu langsung menghapus coretan panah di papan tulis, menatapi draf dengan pandangan kosong beku, and nge-blank saat ditantang menunjukkan dasar aturan pasal",
+      Fe: "ekspresi senyummu mendadak kaku beku bagai patung lilin, nadamu dibuat-buat gemetar, and kamu menunduk dalam-dalam menghindari sorrot mata kawan yang gaduh",
+      Fi: "kamu menggenggam ponsel erat-erat, matamu menatap tajam dingin defensif, and kamu menutup percakapan secara kilat karena merasa ketulusan moralmu diinjak"
+    };
+    const b = bases[element] || "";
+    if (value === 3) return `Pas lagi menghadapi ${situation.toLowerCase()}, ${b}, meski kamu masih memaksakan diri menyelesaikan langkah pentingnya.`;
+    if (value === 4) return `Pas lagi menghadapi ${situation.toLowerCase()}, ${b}, lalu kamu langsung memundurkan badan and ingin menyerahkan tanggung jawab sepenuhnya.`;
+    return `Pas lagi menghadapi ${situation.toLowerCase()}, ${b}, kemudian kamu langsung melangkah pergi meninggalkan ruangan untuk menyelamatkan batinmu.`;
+  }
+
+  if (channel === "receiver") {
+    if (value === 1) return `Pas lagi menghadapi ${situation.toLowerCase()}, bantuan itu kamu dengar sekilas but kamu tetap melanjutkan mengetik and membereskannya sendiri.`;
+    if (value === 2) return `Pas lagi menghadapi ${situation.toLowerCase()}, kamu mengambil sebagian kecil draf bantuan orang itu, mengangguk sopan, lalu kembali memegang kendali sisa tugas sendirian.`;
+
+    const bases: Record<string, string> = {
+      Ne: "bahumu langsung melemas rileks, kamu membuka binder and lari menunjuk draf alternatif baru dengan antusias gembira",
+      Ni: "tensi kepalamu turun, kamu mengembuskan napas panjang mencerahkan batin, and mengikuti ritme lini masa yang disusun kembali oleh partner setim secara tenang",
+      Se: "postur tegangmu mencair rileks, kamu mundur satu langkah memberikan panggung teritorial secara lego kepada orang kuat yang melindungimu tulus",
+      Si: "rahang and lehermu yang kaku melonggar rileks, kamu menerima cangkir teh hangat and bersandar santai di sofa empuk membiarkan badanmu kembali bertenaga",
+      Te: "kamu langsung menyerahkan semua draf data kotor ke partner tangguh tersebut, and batinmu terasa plong melihat spreadsheets di layar rampung cepat",
+      Ti: "kamu mengangguk takjub, tersenyum lebar menatap bagan hierarki yang dirapikan si partner tepercaya, and merasa tidak perlu lagi mengurai rumus tiada akhir",
+      Fe: "wajahmu langsung ceria bersinar, kamu ikut tertawa kencang and melontarkan banyolan baru, energi mencerahkan batin mengalir deras memenuhi ruangan",
+      Fi: "matamu basah berkaca-kaca karena terharu tulus, kamu menurunkan bahu and mulai bicara jujur empat mata menceritakan seluruh beban komitmenmu"
+    };
+    const b = bases[element] || "";
+    if (value === 3) return `Pas lagi menghadapi ${situation.toLowerCase()}, ${b}, tetapi kamu masih menyimpan draf kendali kecil di tanganmu.`;
+    if (value === 4) return `Pas lagi menghadapi ${situation.toLowerCase()}, ${b}, and kamu gampang mengikuti seluruh arahan partner tanpa resistensi batin lagi.`;
+    return `Pas lagi menghadapi ${situation.toLowerCase()}, ${b}, sampai-sampai kawan di sebelahmu bisa menangkap dengan jelas perubahan melow and legonya batinmu.`;
+  }
+
+  if (channel === "aspiration") {
+    if (value === 1) return `Pas lagi menghadapi ${situation.toLowerCase()}, kamu cuma mengangguk, bilang makasih datar tanpa ekspresi, and langsung beralih membaca draf kerjaan lain.`;
+    if (value === 2) return `Pas lagi menghadapi ${situation.toLowerCase()}, kamu melempar senyuman tipis sekilas and menyimpan draf validasinya di ingatan tanpa mengubah rutinitas harimu.`;
+
+    const bases: Record<string, string> = {
+      Ne: "kamu refleks membuka laci meja kerja, menulis draf skema inovatif baru di binder, and berbisik semangat ke kawan kerja: 'Aku punya ide gila baru lagi!'",
+      Ni: "wajahmu mendongak penuh binar visioner, kamu diam-diam mencatat kalimat pujiannya di diary, and makin yakin dengan insting ramalan arah momentum berikutnya",
+      Se: "punggungmu langsung tegak dominan, kamu memegang meja dengan mantap, and langsung membelah tugas kepemimpinan taktis di krisis dengan nada mantap",
+      Si: "kamu tersenyum lebar penuh harmoni, mengusap leher hangat, and menjadi makin bersemangat merawat detail kesehatan jasmani and kasur santaimu harian",
+      Te: "tanganmu langsung membuka file data excel baru, menaruh target hemat biaya yang lebih ambisius, and pengin membuktikan keahlian efensimu kembali",
+      Ti: "kamu merapikan letak binder, membersihkan whiteboards, and tersenyum bangga meletakkan bagan hierarki penjelasmu di display layar monitor kelompok",
+      Fe: "kamu tertawa lepas penuh pesona, menepuk-nepuk pundak teman setim, and melempar gurauan segar membakar energi keceriaan barisan kelompok harian",
+      Fi: "kamu tertegun haru di bangku, menatap punggung sahabat setiamu penuh cinta tulus, and bertekad menjaga komitmen persahabatan rahasia kalian selamanya"
+    };
+    const b = bases[element] || "";
+    if (value === 3) return `Pas lagi menghadapi ${situation.toLowerCase()}, ${b}, walau dorongan semangatnya bisa surut kembali pas malam sepi tiba.`;
+    if (value === 4) return `Pas lagi menghadapi ${situation.toLowerCase()}, ${b}, lalu kamu sengaja mencari peluang proyek lain untuk mematangkan performamu.`;
+    return `Pas lagi menghadapi ${situation.toLowerCase()}, ${b}, and getaran bangga di dalam dadamu terus terngiang-ngiang mencerahkan batinmu harian.`;
+  }
+
+  // Fallback to dynamic real action list depending on element
+  const actions: Record<InformationElement, string[]> = {
+    Ne: [
+      "kamu menggeleng pasrah, menatap tumpukan binder di hadapanmu, and terdiam kaku malas memikirkan jalan pintas lain harian.",
+      "kamu melirik satu alternatif, mengangguk kecil, and berhenti untuk mencatat draf kecil di pojokan binder.",
+      "kamu mengetuk-ngetuk whiteboard, mengajukan satu draf alternatif baru, and menimbang reaksi tim dengan tenang.",
+      "kamu langsung bergeser condong, merebut pulpen and mencoret draf rencana A, lalu merapikan draf rute cabang B di memo kerja.",
+      "tanganmu gemetar bersemangat membuat peta kemungkinan ormind map bercabang lebar, matamu menyala terang, and suaramu meledak gembira menceritakan peluang baru."
+    ],
+    Ni: [
+      "kamu terus melangkah cepat menubruk target kerjaan tim, mengabaikan aba-aba jeda, sampai urusan harianmu bertabrakan kacau.",
+      "kamu berhenti mengecek layar gawai sekilas, menghela napas pasrah, and memilih menunggu sampai tempo drama reda.",
+      "kamu memejamkan mata tiga detik, mendengarkan detak jam dinding, and menimbang kapan waktu terbaik untuk bersuara tegas.",
+      "kamu menahan tangan teman sekerjamu dengan satu sentuhan mantap, and berkata lirih mantap: 'Sabar, jangan sekarang, bergerak lurus besok fajar'.",
+      "tubuhmu bergeming santai di tengah hiruk-pikuk kepanikan, bibirmu tersenyum tipis meramalkan hasil badai kerja secara akurat, and langkah kakimu meluncur rileks di waktu paling krusial."
+    ],
+    Se: [
+      "kamu memundurkan bahu meliuk pasrah, menunduk menatap alas sepatu, and membiarkan orang keras itu menunjuk-nunjuk wajahmu.",
+      "kamu menggeser tubuh ke balik punggung teman, pura-pura sibuk membolak-balik draf laporan agar luput dari sorot konfrontasi lapang.",
+      "kamu menegakkan dagu sekilas, menaruh tangan tegak di pinggang celana, and berdiri bersiap seandainya tim memintamu bentrok.",
+      "kamu melangkah tegap ke titik tengah barisan kerja, memukul meja satu kali dengan mantap, and membagi draf koordinasi aksi dengan suara berat.",
+      "matamu menatap menusuk langsung ke bola mata penentang, bahumu tegak menguasai batas teritorial fisik, and tanganmu memindahkan kursi penghalang dengan satu sentakan bertenaga."
+    ],
+    Si: [
+      "kamu bertahan duduk membungkuk di kursi kayu yang keras and panas selama tiga jam lembur, and baru sadar setelah punggungmu terasa linu lumpuh.",
+      "kamu mengusap bahu lelah, memutar-mutar pergelangan kaki, and melanjutkan mengetik spreadsheets di ruangan pengap bising.",
+      "kamu berdiri sejenak untuk membetulkan letak bantal kursi, meregangkan lengan, and meminum segelas air hangat agar badan rileks.",
+      "kamu langsung menutup tirai jendela yang menyilaukan mata, menurunkan suhu AC ruangan kerja tim, and bersandar rileks di bantal sofa.",
+      "tanganmu refleks menyingkirkan kertas berantakan, menyalakan diffuser aroma melati, memejamkan mata menikmati pijatan punggung, and tersenyum lega menikmati kesegaran fisik."
+    ],
+    Te: [
+      "kamu hanya mendengar perdebatan panjang tanpa berani membuka kalkulator and menyuarakan kerugian biaya secara riil fungsional.",
+      "kamu meluncurkan spreadsheets sekilas, melihat grafik kerugian, but malas meneruskan karena kepala terasa lelah memikirkan hitungan.",
+      "kamu merapikan kacamata, membuka lembar draf pengeluaran tim rapat, and mulai menjumlahkan margin keuntungan logis.",
+      "kamu menunjuk detail waktu pengerjaan yang tidak efektif langsung di komputer layar monitor, and menuntut direktur memangkas bonus tim.",
+      "jarimu mengetor cepat ringkas tombol angka kalkulator, melemparkan print-out rincian biaya riil langsung ke tengah barisan meja rapat, and memangkas proses pemborosan energi."
+    ],
+    Ti: [
+      "kamu membiarkan puluhan file kerjaan bertumpuk tumpang tindih acak-acakan di layar desktop komputer and mencari manual draf target lewat search.",
+      "kamu mencoret-coret kotak and panah keterkaitan kecil di pinggir memo, lalu menghela dahi lelah and menutup kembali kodenya.",
+      "kamu menyimak diam, mencocokkan pasal and aturan di pikiran autopilot-mu, and menandai bagian alur sistem yang cacat logika.",
+      "kamu mengambil spidol hitam, menggambar peta hierarki bagan and draf taksonomi aturan tim secara presisi and simetris di papan tulis.",
+      "tanganmu langsung membuat tabel and skema urut alfabetis, menyodorkan draf definisi and kategori presisi yang anti-kontradiksi, and langsung merapikan regulasi."
+    ],
+    Fe: [
+      "kamu duduk kaku and dingin tanpa bersuara, membiarkan keheningan ruangan tim kerja terasa mencengkeram and canggung menakutkan.",
+      "kamu memaksakan senyum tipis yang terlihat gemetar and pura-pura membaca binder agar tidak perlu melirik kawan rapat.",
+      "kamu mengangguk ramah, ikut melepas tawa sedang saat ada teman setim melempar guyonan, and menjaga agar ekspresimu tidak murung kaku.",
+      "kamu melontarkan tawa riang mendongak tinggi, menepuk pundak rekan kerja, and menceritakan anekdot hangat yang langsung mencairkan kebekuan batin tim.",
+      "suaramu langsung naik satu oktaf memandu tepuk tangan heboh, tubuh and ekspresi wajahmu menular ceria membara, and semua orang di barisan ikut melompat gembira."
+    ],
+    Fi: [
+      "kamu membiarkan orang luar itu mengorek rahasia pribadimu and baru merasa tidak nyaman setelah batas integritas moralmu telanjur dinjak kasar.",
+      "kamu bergeser sepuluh sentimeter menjauh di sofa, membalas pertanyaan pribadinya secara santun and dingin, berharap ia mengerti batas jarak.",
+      "kamu mendengarkan keluhan teman empat mata secara tenang tanpa buru-buru menghakimi, and memiringkan kepala menjaga keheningan tulus batin.",
+      "kamu langsung membisikkan kata-kata hangat penenang, menggenggam telapak tangan sahabatmu tulus, and meyakinkannya bahwa air matanya aman bersamamu.",
+      "kamu menghentikan tatapan mata seketika, rahang and wajahmu mengeras dingin kaku layaknya es dari kutub, and secara fisik kamu langsung berbalik berdiri melangkah pergi menjauh."
+    ]
+  };
+
+  const currentList = actions[element] || [];
+  const suffixValue = currentList[value - 1] || "";
+
+  if (channel === "dismissive") {
+    const listSuffixes = [
+      ", and batinmu memang tidak punya minat sedikit pun buat memikirkan kegunaannya.",
+      ", but kamu cepat mengoper urusan itu ke sekretariat karena bukan prioritas utamamu.",
+      ", lalu kamu mengecek sekilas seberapa genting situasinya sebelum melengos acuh.",
+      ", kemudian setelah tanggung jawab selesai kamu langsung berpaling memikirkan mimpimu.",
+      ", and kamu menyelesaikan tugas melow itu dengan dingin and rapi tanpa mau membicarakannya kembali."
+    ];
+    const cleanSuffix = suffixValue.endsWith(".") ? suffixValue.slice(0, -1) : suffixValue;
+    return `Pas lagi menghadapi ${situation.toLowerCase()}, ${cleanSuffix}${listSuffixes[value - 1]}`;
+  }
+
+  if (channel === "background") {
+    const listSuffixes = [
+      ", though proses autopilot itu hampir tidak berjalan di belakang layar batinmu.",
+      ", but kamu masih perlu konsentrasi penuh and menyerap energi cadangan demi menstabilkan langkah.",
+      ", and kamu sering baru sadar belakangan bahwa autopilot tubuhmu sudah menyelesaikannya diam-diam.",
+      ", sementara fokus kognitif and pikiran utamamu tetap mengembara bebas di urusan karir besar.",
+      ", bahkan sebelum kepalamu sadar, tangan and raga autopilot-mu sudah bergerak merapikannya secara kilat."
+    ];
+    const cleanSuffix = suffixValue.endsWith(".") ? suffixValue.slice(0, -1) : suffixValue;
+    return `Pas lagi menghadapi ${situation.toLowerCase()}, ${cleanSuffix}${listSuffixes[value - 1]}`;
+  }
+
+  return `Pas lagi menghadapi ${situation.toLowerCase()}, ${suffixValue}`;
+}
+
+export const ALL_QUESTIONS: SocionicsQuestion[] = [];
+
+// Systematic build execution
+const createAllQuestions = () => {
+  const core = generateCoreQuestions();
+  const holdout = generateHoldoutQuestions();
+  const tieBreak = generateTieBreakQuestions();
+  ALL_QUESTIONS.push(...core, ...holdout, ...tieBreak);
+};
+
+createAllQuestions();
 
 export const getCoreQuestions = () => ALL_QUESTIONS.filter((q) => q.kind === "core");
 export const getHoldoutQuestions = () => ALL_QUESTIONS.filter((q) => q.kind === "holdout");
 export const getTieBreakQuestions = () => ALL_QUESTIONS.filter((q) => q.kind === "tie-break");
 export const QUESTION_BY_ID = new Map(ALL_QUESTIONS.map((q) => [q.id, q] as const));
 
-// Original backup mapping variable name for App compatibility
+// Standar backup mapping
 export const SOCIONICS_QUESTIONS = getCoreQuestions();

@@ -462,7 +462,7 @@ ${['base', 'creative', 'role', 'polr', 'suggestive', 'mobilizing', 'ignoring', '
             </div>
 
             <p className="text-[9px] text-stone-400 mt-6 pt-4 border-t border-dashed border-stone-200 dark:border-stone-800/40 leading-relaxed">
-              *Metodologi Filatova v3.5 menghitung kesamaan antara respon alami Anda dengan vektor respon geometris murni dari 16 TIM Model A. Hubungan berimpitan paling tinggi ditabulasikan sebagai tipe utama Anda.
+              *Evaluasi ini berbasis Model A Socionics, terinspirasi oleh tradisi Filatova, dan dikembangkan menggunakan pendekatan saluran perilaku (behavioral) modern dengan menghitung kecocokan respon batin Anda terhadap 16 tipe model metabolisme informasi.
             </p>
           </div>
         </div>
