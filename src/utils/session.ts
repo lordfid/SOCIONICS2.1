@@ -80,7 +80,7 @@ export function createSession(mode: TestMode, nickname = ""): TestSession {
   if (selectedSet.size < target) {
     const remainingCandidates = pool
       .map((q) => q.id)
-      .filter((id) => !selectedSet.add(id)); // Attempt addition and find rest
+      .filter((id) => !selectedSet.has(id));
     const shuffledRemainder = shuffle(remainingCandidates, seed + 999);
     for (const id of shuffledRemainder) {
       if (selectedSet.size >= target) break;

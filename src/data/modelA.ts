@@ -107,14 +107,14 @@ const RELATION_FROM_ILE: Record<SocionicsType, { name: string; tone: string; sym
   ILE: { name: "Identity", tone: "cara dasar kalian sangat mudah dikenali satu sama lain", symmetric: true },
   SEI: { name: "Duality", tone: "saling mengisi kebutuhan inti, tetapi tetap butuh kedewasaan nyata", symmetric: true },
   ESE: { name: "Activation", tone: "mudah menghidupkan energi, kadang juga membuat ritme terlalu cepat", symmetric: true },
-  LII: { name: "Mirror", tone: "Punya kesamaan cara pandang and nilai Quadra, rujukan teorinya mirip tapi eksekusi tindakannya saling mengisi", symmetric: true },
-  EIE: { name: "Activity", tone: "saling merangsang pertumbuhan aktivitas batin", symmetric: true },
-  LSI: { name: "Supervision", tone: "gampang merasa kerdil and dihakimi", symmetric: false },
+  LII: { name: "Mirror", tone: "Punya kesamaan cara pandang dan nilai Quadra, rujukan teorinya mirip tapi eksekusi tindakannya saling mengisi", symmetric: true },
+  EIE: { name: "Activity", tone: "saling merangsang pertumbuhan aktivitas jiwa", symmetric: true },
+  LSI: { name: "Supervision", tone: "gampang merasa kerdil dan dihakimi", symmetric: false },
   SLE: { name: "Supervisee", tone: "kamu peka membantu menjelaskan logikanya secara praktis", symmetric: false },
   IEI: { name: "Beneficiary", tone: "saling menyerap kedalaman emosional", symmetric: false },
-  SEE: { name: "Super-Ego", tone: "saling segan and mengagumi dari jauh", symmetric: true },
-  ILI: { name: "Contrary / Extinguishment", tone: "fungsi terkuat sama tapi terbalik arah batinnya", symmetric: true },
-  LIE: { name: "Quasi-Identity", tone: "tampak mirip dari luar, tapi jalur batin berbeda", symmetric: true },
+  SEE: { name: "Super-Ego", tone: "saling segan dan mengagumi dari jauh", symmetric: true },
+  ILI: { name: "Contrary / Extinguishment", tone: "fungsi terkuat sama tapi terbalik arah jiwanya", symmetric: true },
+  LIE: { name: "Quasi-Identity", tone: "tampak mirip dari luar, tapi jalur jiwa berbeda", symmetric: true },
   ESI: { name: "Conflict", tone: "hubungan melelahkan karena benturan PoLR", symmetric: true },
   IEE: { name: "Mirage", tone: "relasi santai penuh banyolan humoris yang hangat", symmetric: true },
   SLI: { name: "Benefactor", tone: "memberi penyegaran fisik tanpa menuntut", symmetric: false },
@@ -142,7 +142,7 @@ export function relationBetween(a: SocionicsType, b: SocionicsType): { name: str
   };
 
   const getRelationType = (typeX: SocionicsType, typeY: SocionicsType): { name: string; tone: string } => {
-    if (typeX === typeY) return { name: "Identity (Kembaran Spiritual)", tone: "Tipe yang sama persis denganmu. Hubungan cermin batin yang klop." };
+    if (typeX === typeY) return { name: "Identity (Kembaran Spiritual)", tone: "Tipe yang sama persis denganmu. Hubungan cermin jiwa yang klop." };
     const dualityMap: Record<string, string> = {
       ILE: 'SEI', SEI: 'ILE', LII: 'ESE', ESE: 'LII',
       EIE: 'LSI', LSI: 'EIE', SLE: 'IEI', IEI: 'SLE',
@@ -150,7 +150,7 @@ export function relationBetween(a: SocionicsType, b: SocionicsType): { name: str
       LSE: 'EII', EII: 'LSE', IEE: 'SLI', SLI: 'IEE'
     };
     if (dualityMap[typeX] === typeY) {
-      return { name: "Duality (Penyembuh Sempurna)", tone: "Pasangan dual sejati. Elemen terkuatmu mengisi kekosongan batinnya, and sebaliknya." };
+      return { name: "Duality (Penyembuh Sempurna)", tone: "Pasangan dual sejati. Elemen terkuatmu mengisi kekosongan jiwanya, dan sebaliknya." };
     }
     const activationMap: Record<string, string> = {
       ILE: 'ESE', SEI: 'LII', LII: 'SEI', ESE: 'ILE',
@@ -170,7 +170,7 @@ export function relationBetween(a: SocionicsType, b: SocionicsType): { name: str
     if (conflictMap[typeX] === typeY) {
       return { name: "Conflict", tone: "Titik terkuat dia terus-menerus menyengat alarm PoLR paling sensitifmu." };
     }
-    return RELATION_FROM_ILE[typeY] || { name: "Relasi Model A", tone: "Hubungan ini dibaca dari perubahan posisi elemen batin." };
+    return RELATION_FROM_ILE[typeY] || { name: "Relasi Model A", tone: "Hubungan ini dibaca dari perubahan posisi elemen jiwa." };
   };
 
   return getRelationType(realA, realB);

@@ -101,6 +101,7 @@ export interface QuestionOption {
   label: string;
   meaning: string;
   reaction: string;
+  anchor?: string;
 }
 
 export type ScenarioCategory =
@@ -200,6 +201,10 @@ export interface FinalResult {
   responseQuality: ResponseQuality;
   channelProfile: Record<string, number>;
   elementRanking: Array<{ element: InformationElement; score: number }>;
+  elementStrengthRanking?: Array<{ element: InformationElement; score: number }>;
+  elementValuedRanking?: Array<{ element: InformationElement; score: number }>;
+  elementPainRanking?: Array<{ element: InformationElement; score: number }>;
+  elementReliefRanking?: Array<{ element: InformationElement; score: number }>;
   unresolvedPair?: [SocionicsType, SocionicsType];
   auditNotes: string[];
 }

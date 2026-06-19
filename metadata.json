@@ -1,6 +1,6 @@
 {
   "name": "Socionics Dalam Diriku",
-  "description": "Tes Socionics Model A lokal dengan 320 item, scoring 64 kanal, hasil pleasure emotion, dan kartu hasil.",
+  "description": "Tes refleksi Socionics berbasis Model A",
   "requestFramePermissions": [],
   "majorCapabilities": [
     "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"

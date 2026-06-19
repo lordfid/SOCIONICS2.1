@@ -63,7 +63,7 @@ export default function App() {
     setStep('testing');
   };
 
-  // Skip moves a question, recording it as skipped (clearing any old answer) and shifting currentIndex
+  // Skip moves a question, recording it as skipped (clearing any old answer) dan shifting currentIndex
   const handleSkipQuestion = () => {
     if (!session) return;
     const currentQId = session.questionIds[session.currentIndex];
@@ -71,7 +71,7 @@ export default function App() {
     setSession(nextSession);
   };
 
-  // Selector update - records answers and shows detail definitions without forced instant auto-advancing
+  // Selector update - records answers dan shows detail definitions without forced instant auto-advancing
   const handleSelectAnswer = (questionId: string, rating: number) => {
     if (!session) return;
     const nextSession = applyAnswer(session, questionId, rating, false);
@@ -108,7 +108,7 @@ export default function App() {
                 };
                 setSession(updatedSession);
                 saveSession(updatedSession);
-                return; // Stop and continue testing with new tie-breaker questions
+                return; // Stop dan continue testing with new tie-breaker questions
               }
             }
           }
@@ -221,7 +221,7 @@ export default function App() {
       {/* Universal Footer */}
       <footer id="app-global-footer" className="w-full max-w-5xl mx-auto text-center py-6 mt-6 border-t border-dashed border-stone-200 dark:border-stone-800/30 text-[10px] text-stone-400 dark:text-stone-600 font-sans">
         <p>© 2026 Proyek Assesmen Kognitif Socionics Terpimpin Indonesia. Hak Cipta Dilindungi.</p>
-        <p className="mt-1">Dibuat dengan cinta kasih batin untuk kawan-kawan penjelajah jati diri.</p>
+        <p className="mt-1">Dibuat dengan cinta kasih jiwa untuk kawan-kawan penjelajah jati diri.</p>
       </footer>
     </div>
   );

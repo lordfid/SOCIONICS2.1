@@ -76,7 +76,7 @@ export default function WelcomeScreen({ theme, onStartTest, onViewReferences }: 
               Socionics <br />Dalam Diriku
             </h1>
             <p className="text-xs opacity-90 font-sans leading-relaxed">
-              Temukan cetak biru kepribadianmu lewat alat tes ilmiah paling teoretis and reliabel dari warisan Aushra Augustinavichiute.
+              Temukan cetak biru kepribadianmu lewat alat tes ilmiah paling teoretis dan reliabel dari warisan Aushra Augustinavichiute.
             </p>
           </div>
 
@@ -118,7 +118,7 @@ export default function WelcomeScreen({ theme, onStartTest, onViewReferences }: 
                 fontFamily: isGarden ? '"Playfair Display", serif' : '"Cinzel", serif, Georgia'
               }}
             >
-              Sebelum memulai petualangan batinmu...
+              Sebelum memulai petualangan jiwamu...
             </h2>
 
             {/* Input Name */}

@@ -13,18 +13,18 @@ export const SOCIONICS_PROFILES: Record<string, Omit<Profile, 'modelA'>> = {
     quadra: 'Alpha',
     mbtiEquivalent: 'ENTP',
     enneagramTrend: 'Tipe 7w8 atau 7w6 (Enthusiast / Innovator)',
-    description: 'Bapak Intelektual Seratus Ide tapi Selalu Kehilangan Kabel Casan. Orang yang memulai omongan tentang cuaca di kafe, lalu lima menit kemudian sudah menjelaskan arsitektur kota terapung di Mars and kenapa kalender Masehi harus segera diganti.',
+    description: 'Bapak Intelektual Seratus Ide tapi Selalu Kehilangan Kabel Casan. Orang yang memulai omongan tentang cuaca di kafe, lalu lima menit kemudian sudah menjelaskan arsitektur kota terapung di Mars dan kenapa kalender Masehi harus segera diganti.',
     stereotypes: [
       'Debat kusir jam 2 pagi soal terminologi.',
-      'Meja belajar berkabut tumpukan buku and draf proyek terbengkalai.',
+      'Meja belajar berkabut tumpukan buku dan rencana proyek terbengkalai.',
       'Suka bikin solusi super canggih buat masalah yang sebenarnya nggak ada.'
     ],
     vibe: 'Canggung-aktif, energik pas dapet topik seru, tatapan matanya suka jelalatan nyari jalan pintas atau pintu rahasia di ruangan.',
-    hiddenThoughts: 'Mau menyelesaikan proyek ini sekarang, tapi tiba-tiba ada sepuluh kemungkinan lain yang jauh lebih menantang batin.',
+    hiddenThoughts: 'Mau menyelesaikan proyek ini sekarang, tapi tiba-tiba ada sepuluh kemungkinan lain yang jauh lebih menantang jiwa.',
     pros: [
       'Gampang adaptasi sama info baru.',
-      'Pemecah masalah and pencari celah ulung pas yang lain pada mentok.',
-      'Sabar and gak pernah ngehakimi keanehan orang.'
+      'Pemecah masalah dan pencari celah ulung pas yang lain pada mentok.',
+      'Sabar dan gak pernah ngehakimi keanehan orang.'
     ],
     cons: [
       'Sering ngilang tanpa kabar pas urusan sudah masuk ke bagian detail membosankan.',
@@ -46,18 +46,18 @@ export const SOCIONICS_PROFILES: Record<string, Omit<Profile, 'modelA'>> = {
         'Selesaikan 1 tugas administratif biasa (bayar kost/rapikan berkas) sebelum jam 10 pagi tanpa diselingi buka Tab Chrome baru!'
       ],
       hobbies: ['Bermain Catur Kilat', 'Fotografi Jalanan', 'Coding Proyek Iseng', 'Nyobain rute lari baru'],
-      appearanceTips: 'Sentuhan kasual tapi berkelas. Kaos polo tipis dipadu jaket denim gelap and sepatu kets bersih—biar kelihatan pinter tapi nggak terlalu asal-asalan.',
+      appearanceTips: 'Sentuhan kasual tapi berkelas. Kaos polo tipis dipadu jaket denim gelap dan sepatu kets bersih—biar kelihatan pinter tapi nggak terlalu asal-asalan.',
       roleModels: ['Albert Einstein (Fisikawan)', 'Nikola Tesla (Inovator Sejati)', 'Richard Feynman']
     },
     behavioralDynamics: {
-      lifestyle: 'Penuh kekacauan kreatif. Menganggap kenyamanan sebagai hal sekunder, tapi batinnya gampang bermanja-manja kalau disediain makanan enak and sofa empuk oleh kawan dekat.',
-      thinkingStyle: 'Melompat, bercabang, and cenderung membangun menara logika tinggi sebelum memeriksa apakah tanah pondasinya cukup kuat.',
+      lifestyle: 'Penuh kekacauan kreatif. Menganggap kenyamanan sebagai hal sekunder, tapi jiwanya gampang bermanja-manja kalau disediain makanan enak dan sofa empuk oleh kawan dekat.',
+      thinkingStyle: 'Melompat, bercabang, dan cenderung membangun menara logika tinggi sebelum memeriksa apakah tanah pondasinya cukup kuat.',
       interpersonalApproach: 'Mendekati orang dengan badai rasa penasaran: nanya masa kecil, pendapat tentang teori konspirasi, tapi mendadak menjauh pas lawan bicaranya mulai curhat melodrama terlalu sendu.',
       worldview: 'Melihat dunia sebagai simulasi eksperimen raksasa penuh peluang tak terbatas yang tak boleh dikurung oleh dogma kaku atau birokrasi kuno.',
       angerStyle: 'Lebih banyak menyela kata, menertawakan ketidaklogisan argumen musuh, lalu melempar lima teori sekaligus biar musuh pusing sendiri. Setelah bertengkar langsung bersikap biasa lagi seolah tak terjadi apa-apa.',
-      affectionStyle: 'Mengirimkan link artikel aneh, menawarkan petualangan baru, and mengingat detail ganjil kelakuanmu yang bahkan dirimu sendiri nggak sadar.',
+      affectionStyle: 'Mengirimkan link artikel aneh, menawarkan petualangan baru, dan mengingat detail ganjil kelakuanmu yang bahkan dirimu sendiri nggak sadar.',
       animosityStyle: 'Melecehkan kecerdasan musuh secara sarkas, memperlakukan mereka kayak tanaman hias yang nggak bisa mikir.',
-      envyStyle: 'Tiba-tiba pengen jadi orang paling kompeten and menarik perhatian di ruangan saat ada saingan intelektual masuk.',
+      envyStyle: 'Tiba-tiba pengen jadi orang paling kompeten dan menarik perhatian di ruangan saat ada saingan intelektual masuk.',
       ambitionStyle: 'Ingin dikenal sebagai penemu pintu keluar baru ketika semua orang hanya melihat dinding.'
     }
   },
@@ -68,25 +68,25 @@ export const SOCIONICS_PROFILES: Record<string, Omit<Profile, 'modelA'>> = {
     quadra: 'Alpha',
     mbtiEquivalent: 'ISFJ',
     enneagramTrend: 'Tipe 9w8 atau 2w3 (Peacemaker / Helper)',
-    description: 'Manusia tersantai yang dapat menemukan sofa ternyaman dalam radius lima puluh meter and menciptakan suasana santai tanpa perlu program kerja formal. Selalu memastikan perut semua orang kenyang and suhu ruangan asri.',
+    description: 'Manusia tersantai yang dapat menemukan sofa ternyaman dalam radius lima puluh meter dan menciptakan suasana santai tanpa perlu program kerja formal. Selalu memastikan perut semua orang kenyang dan suhu ruangan asri.',
     stereotypes: [
       'Memilih tempat duduk murni berdasarkan keempukan bantal.',
-      'Menjawab pesan penting hanya saat suasana batinnya lagi rileks.',
+      'Menjawab pesan penting hanya saat suasana jiwanya lagi rileks.',
       'Menghindari percakapan berfirasat berat yang merusak mood bersantai.'
     ],
     vibe: 'Lembut, ramah, wajahnya santai penuh senyum geli mengamati kelakuan berisik manusia di sekitarnya.',
-    hiddenThoughts: 'Kalian silakan debat kusir geopolitik sampai subuh, kue buatan saya sudah masak and saya mau selonjoran nonton serial hangat.',
+    hiddenThoughts: 'Kalian silakan debat kusir geopolitik sampai subuh, kue buatan saya sudah masak dan saya mau selonjoran nonton serial hangat.',
     pros: [
-      'Ahli menciptakan keindahan visual, kenyamanan fisik, and estetika kamar.',
-      'Sangat peka and cepat meredam ketegangan emosional kawan.',
+      'Ahli menciptakan keindahan visual, kenyamanan fisik, dan estetika kamar.',
+      'Sangat peka dan cepat meredam ketegangan emosional kawan.',
       'Humor taktisnya selalu membuat suasana kumpul terasa ringan.'
     ],
     cons: [
-      'Sering berkata setuju di depan muka orang demi kedamaian batin, tapi gak pernah dikerjain.',
-      'Suka menghukum orang secara pasif-agresif lewat penarikan kehangatan and senyuman.',
-      'Sangat keras kepala and defensif menyangkut rutinitas kenyamanan fisiknya.'
+      'Sering berkata setuju di depan muka orang demi kedamaian jiwa, tapi gak pernah dikerjain.',
+      'Suka menghukum orang secara pasif-agresif lewat penarikan kehangatan dan senyuman.',
+      'Sangat keras kepala dan defensif menyangkut rutinitas kenyamanan fisiknya.'
     ],
-    roast: 'Kamu bisa menjadikan penghindaran konflik sebagai gaya hidup estetik yang nampak asri. Masalah karir belum selesai, tanggung jawab terbengkalai, tapi lilin kamarmu sudah wangi vanila and lagu latarmu syahdu parah.',
+    roast: 'Kamu bisa menjadikan penghindaran konflik sebagai gaya hidup estetik yang nampak asri. Masalah karir belum selesai, tanggung jawab terbengkalai, tapi lilin kamarmu sudah wangi vanila dan lagu latarmu syahdu parah.',
     brutalConclusion: 'SEI adalah penyelamat sejati semua orang dari kepanikan stres gila, kecuali stres yang timbul karena mereka tidak kunjung dapet kepastian dari jawabanmu.',
     recommendations: {
       books: ['The Art of Simple Living (Shunmyo Masuno)', 'The Secret Garden (Frances Hodgson Burnett)'],
@@ -105,15 +105,15 @@ export const SOCIONICS_PROFILES: Record<string, Omit<Profile, 'modelA'>> = {
       roleModels: ['Paul McCartney (Musisi)', 'Alexander Dumas', 'Marcello Mastroianni']
     },
     behavioralDynamics: {
-      lifestyle: 'Pencari ketenangan harian, peka estetika visual, and menghargai kedamaian sirkel.',
+      lifestyle: 'Pencari ketenangan harian, peka estetika visual, dan menghargai kedamaian sirkel.',
       thinkingStyle: 'Konkret berbasis sensasi riil saat ini, ogah pusing memikirkan teori masa depan.',
-      interpersonalApproach: 'Mendekat lewat suguhan camilan lezat and candaan santai, menjauh secara senyap kalau suasananya menuntut kompetisi brutal.',
-      worldview: 'Dunia ini sudah terlalu bising; tugas kita adalah memperhalus perjalanan and menikmati indahnya jeda waktu harian.',
-      angerStyle: 'Senyum masih terpasang di bibir tapi getaran batinnya mendingin tajam, and komunikasi memendek drastis. Disarankan meditasi asri.',
-      affectionStyle: 'Membikinkan teh hangat, menyelimutimu saat ketiduran di sofa, and mengingat makanan kesukaan batinmu.',
-      animosityStyle: 'Memutus total layanan kenyamanan and memperlakukan musuh kayak lemari kayu tak bernyawa.',
+      interpersonalApproach: 'Mendekat lewat suguhan camilan lezat dan candaan santai, menjauh secara senyap kalau suasananya menuntut kompetisi brutal.',
+      worldview: 'Dunia ini sudah terlalu bising; tugas kita adalah memperhalus perjalanan dan menikmati indahnya jeda waktu harian.',
+      angerStyle: 'Senyum masih terpasang di bibir tapi getaran jiwanya mendingin tajam, dan komunikasi memendek drastis. Disarankan meditasi asri.',
+      affectionStyle: 'Membikinkan teh hangat, menyelimutimu saat ketiduran di sofa, dan mengingat makanan kesukaan jiwamu.',
+      animosityStyle: 'Memutus total layanan kenyamanan dan memperlakukan musuh kayak lemari kayu tak bernyawa.',
       envyStyle: 'Iri melihat orang agresif pamer kemakmuran karir di medsos, tapi cepat diatasi dengan cara rebahan nyaman.',
-      ambitionStyle: 'Membangun kerajaan kenyamanan tidur kecil mandiri yang asri and bebas dari gangguan preman luar.'
+      ambitionStyle: 'Membangun kerajaan kenyamanan tidur kecil mandiri yang asri dan bebas dari gangguan preman luar.'
     }
   },
   ESE: {
@@ -123,17 +123,17 @@ export const SOCIONICS_PROFILES: Record<string, Omit<Profile, 'modelA'>> = {
     quadra: 'Alpha',
     mbtiEquivalent: 'ESFJ',
     enneagramTrend: 'Tipe 2w1 atau 3w2 (Helper / Achiever)',
-    description: 'Polisi Ketertiban Suasana and Panitia Acara Utama yang Nggak Pernah Secara Resmi Dipilih. Datang langsung ngerapiin letak piring, nanya kenapa ada kawan yang bengong di pojokan, lalu ngerasa punya kewajiban moral biar semua orang nggak kelaparan.',
+    description: 'Polisi Ketertiban Suasana dan Panitia Acara Utama yang Nggak Pernah Secara Resmi Dipilih. Datang langsung ngerapiin letak piring, nanya kenapa ada kawan yang bengong di pojokan, lalu ngerasa punya kewajiban moral biar semua orang nggak kelaparan.',
     stereotypes: [
       'Ngasih reaksi wajah lengkap 3D buat tiap gosip.',
       'Suka ngirim makanan ke tetangga atau kawan tanpa alasan ultah.',
       'Paling nggak tahan melihat suasana canggung di lift atau grup WhatsApp.'
     ],
-    vibe: 'Terlihat jelas, terdengar nyaring, ekspresi mukanya super hidup and jalannya ringan kayak penari balet masuk panggung kuis.',
-    hiddenThoughts: 'Kok dia mukanya datar kayak pemakaman gitu sih? Apa dia marah sama aku? Aku harus segera mencairkan batinnya!',
+    vibe: 'Terlihat jelas, terdengar nyaring, ekspresi mukanya super hidup dan jalannya ringan kayak penari balet masuk panggung kuis.',
+    hiddenThoughts: 'Kok dia mukanya datar kayak pemakaman gitu sih? Apa dia marah sama aku? Aku harus segera mencairkan jiwanya!',
     pros: [
       'Pemandu komunitas yang sangat andal menyatukan manusia.',
-      'Sangat hangat, perhatian, and responsif terhadap kebutuhan praktis orang.',
+      'Sangat hangat, perhatian, dan responsif terhadap kebutuhan praktis orang.',
       'Mampu membuat acara kumpul-kumpul biasa terasa seperti festival besar.'
     ],
     cons: [
@@ -141,10 +141,10 @@ export const SOCIONICS_PROFILES: Record<string, Omit<Profile, 'modelA'>> = {
       'Mengubah bantuan sukarela menjadi katalog utang budi moral jangka panjang.',
       'Suka melebarkan masalah pribadi menjadi tontonan panggung publik.'
     ],
-    roast: 'Kamu menganggap setiap wajah datar di kafe sebagai panggilan darurat emosional batin yang harus segera diselamatkan. Kadang orang mukanya datar bukan karena sedih, tapi mukanya emang lagi tidak menjalankan pertunjukan.',
+    roast: 'Kamu menganggap setiap wajah datar di kafe sebagai panggilan darurat emosional jiwa yang harus segera diselamatkan. Kadang orang mukanya datar bukan karena sedih, tapi mukanya emang lagi tidak menjalankan pertunjukan.',
     brutalConclusion: 'ESE adalah tipe orang yang akan memastikan seluruh tamu merasa dilibatkan kuis, termasuk kawan introvert yang aslinya sudah bersembunyi di toilet biar nggak usah dilibatkan.',
     recommendations: {
-      books: ['How to Win Friends and Influence People (Dale Carnegie)', 'Les Misérables (Victor Hugo)'],
+      books: ['How to Win Friends dan Influence People (Dale Carnegie)', 'Les Misérables (Victor Hugo)'],
       movies: ['Mamma Mia! (2008)', 'The Sound of Music'],
       music: ['Pop Ceria Upbeat', 'Broadway Musicals yang megah'],
       careers: ['Event Organizer', 'Human Resources', 'Public Relations', 'Pendidik/Guru', 'Chef/Hospitality Owner'],
@@ -160,15 +160,15 @@ export const SOCIONICS_PROFILES: Record<string, Omit<Profile, 'modelA'>> = {
       roleModels: ['Jules Verne (Penulis)', 'Johann Strauss (Komposer)', 'Hugh Jackman']
     },
     behavioralDynamics: {
-      lifestyle: 'Sangat dinamis, sibuk mengurus kenyamanan orang lain, and tak betah diam sendirian.',
-      thinkingStyle: 'Subjektif emosional, digerakkan nilai kepatutan sosial and kepedulian nyata.',
-      interpersonalApproach: 'Langsung menyapa akrab, mengulurkan bimbingan praktis, and mengabsen kehadiran teman.',
-      worldview: 'Masyarakat akan harmonis kalau etika pergaulan dijunjung tinggi and semua orang mau saling menyapa hangat.',
-      angerStyle: 'Suara meninggi, mencecar kesalahan, and emosi ditumpahkan langsung di forum umum agar semua orang menyaksikan ketidakadilan musuh.',
-      affectionStyle: 'Membetulkan posisi selimut tidurmu, membawakan buah naga segar asri, and selalu mengabari keadaan.',
+      lifestyle: 'Sangat dinamis, sibuk mengurus kenyamanan orang lain, dan tak betah diam sendirian.',
+      thinkingStyle: 'Subjektif emosional, digerakkan nilai kepatutan sosial dan kepedulian nyata.',
+      interpersonalApproach: 'Langsung menyapa akrab, mengulurkan bimbingan praktis, dan mengabsen kehadiran teman.',
+      worldview: 'Masyarakat akan harmonis kalau etika pergaulan dijunjung tinggi dan semua orang mau saling menyapa hangat.',
+      angerStyle: 'Suara meninggi, mencecar kesalahan, dan emosi ditumpahkan langsung di forum umum agar semua orang menyaksikan ketidakadilan musuh.',
+      affectionStyle: 'Membetulkan posisi selimut tidurmu, membawakan buah naga segar asri, dan selalu mengabari keadaan.',
       animosityStyle: 'Menyindir keras di muka umum atau nulis status bernada kritik moral terselubung di medsos.',
       envyStyle: 'Iri melihat kawan lain dapet sanksi denda dimaafkan begitu saja gara-gara mukanya pasrah melodrama.',
-      ambitionStyle: 'Membangun dinasti pengaruh and lingkaran barisan loyalitas yang paling kokoh di komplek.'
+      ambitionStyle: 'Membangun dinasti pengaruh dan lingkaran barisan loyalitas yang paling kokoh di komplek.'
     }
   },
   LII: {
@@ -178,26 +178,26 @@ export const SOCIONICS_PROFILES: Record<string, Omit<Profile, 'modelA'>> = {
     quadra: 'Alpha',
     mbtiEquivalent: 'INTP',
     enneagramTrend: 'Tipe 5w4 atau 5w6 (Observer / Specialist)',
-    description: 'Kolektor Kejelasan Definisi Kata and Arsitek Struktur. LII adalah orang yang bisa mendengar cerita tentang perselingkuhan yang mengharukan, lalu mendadak memotong pembicaraan karena penggunaan kata "selalu" tidak konsisten secara logika.',
+    description: 'Kolektor Kejelasan Definisi Kata dan Arsitek Struktur. LII adalah orang yang bisa mendengar cerita tentang perselingkuhan yang mengharukan, lalu mendadak memotong pembicaraan karena penggunaan kata "selalu" tidak konsisten secara logika.',
     stereotypes: [
       'Nge-koreksi premis debat padahal orangnya lagi curhat emosional.',
-      'Suka bikin klasifikasi draf folder di laptop berdasarkan rumpun filsafat.',
+      'Suka bikin klasifikasi rencana folder di laptop berdasarkan rumpun filsafat.',
       'Paling tidak tahan melihat kebebasan dogma tanpa argumen teoretis.'
     ],
     vibe: 'Tenang, waspada, kokoh di balik kesederhanaan berjarak, tatapan mengevaluasi ketepatan argumen.',
     hiddenThoughts: 'Definisi keadilan sosialmu barusan secara prinsip indah, tapi kerangka berpikir dasar logikamu rumpang total.',
     pros: [
       'Kejernihan kognitif mutlak dalam mengurai keruwetan masalah.',
-      'Sangat demokratis, adil, and menjunjung kesetaraan hakiki.',
-      'Konsisten memegang prinsip berpikir and mandiri secara intelektual.'
+      'Sangat demokratis, adil, dan menjunjung kesetaraan hakiki.',
+      'Konsisten memegang prinsip berpikir dan mandiri secara intelektual.'
     ],
     cons: [
-      'Gampang membeku/panik batin menghadapi luapan emosional histeris.',
-      'Suka mengurung diri and abai terhadap penampilan fisik di luar.',
-      'Bicaranya kaku bersambungan mirip draf manual instruksi alat berat.'
+      'Gampang membeku/panik jiwa menghadapi luapan emosional histeris.',
+      'Suka mengurung diri dan abai terhadap penampilan fisik di luar.',
+      'Bicaranya kaku bersambungan mirip rencana manual instruksi alat berat.'
     ],
     roast: 'Kamu bisa menjelaskan secara ilmiah kenapa hidup ini tidak boleh dipetakkan ke dalam kategori simpel kaku, lalu kamu menghabiskan akhir pekan memasukkan seluruh jenis teh di kamarmu ke dalam sub-folder Excel.',
-    brutalConclusion: 'LII adalah pengurai kekacauan konsep yang sanggup menebak akhir takdir peradaban, tapi batinnya lumpuh seketika pas kawan bertanya "kamu lagi mikirin apa?"',
+    brutalConclusion: 'LII adalah pengurai kekacauan konsep yang sanggup menebak akhir takdir peradaban, tapi jiwanya lumpuh seketika pas kawan bertanya "kamu lagi mikirin apa?"',
     recommendations: {
       books: ['Principia Mathematica (Bertrand Russell)', 'Critique of Pure Reason (Immanuel Kant)'],
       movies: ['The Imitation Game (2014)', 'A Beautiful Mind (2001)'],
@@ -211,16 +211,16 @@ export const SOCIONICS_PROFILES: Record<string, Omit<Profile, 'modelA'>> = {
         'Sengaja pergi nongkrong santai tanpa membawa analisis performa kelakuan di kepalamu.'
       ],
       hobbies: ['Menulis Opini Panjang', 'Menganalisis Kode Sistem', 'Menggambar Diagram Alur', 'Belajar Bahasa Kuno'],
-      appearanceTips: 'Kemeja linen lurus, celana chino abu-abu gelap, and jam tangan minimalis fungsional.',
+      appearanceTips: 'Kemeja linen lurus, celana chino abu-abu gelap, dan jam tangan minimalis fungsional.',
       roleModels: ['Rene Descartes (Filsuf)', 'Immanuel Kant', 'Albert Einstein']
     },
     behavioralDynamics: {
-      lifestyle: 'Tenang, minimalis, and mengabdi sepenuhnya untuk kebenaran logika internal.',
-      thinkingStyle: 'Sangat jernih, deduktif, and mengupas masalah sampai ke akar pondasi definisinya.',
-      interpersonalApproach: 'Menjaga jarak batin aman yang dingin di awal, baru melunak pas kawan tersebut andal memegang janji.',
-      worldview: 'Alam semesta ini dijalankan oleh jalinan kebenaran logika yang kokoh, and tugas kita adalah meruntuhkan bias dogma palsu.',
-      angerStyle: 'Sikap makin kaku formal, intonasi mendingin tajam, and membedah kelemahan argumen lawan secara runut. Disarankan meditasi kamar.',
-      affectionStyle: 'Membimbingmu memahami urusan sains rumit secara sabar, and mendedikasikan waktu logikanya demi merawat sistem belajarmu.',
+      lifestyle: 'Tenang, minimalis, dan mengabdi sepenuhnya untuk kebenaran logika internal.',
+      thinkingStyle: 'Sangat jernih, deduktif, dan mengupas masalah sampai ke akar pondasi definisinya.',
+      interpersonalApproach: 'Menjaga jarak jiwa aman yang dingin di awal, baru melunak pas kawan tersebut andal memegang janji.',
+      worldview: 'Alam semesta ini dijalankan oleh jalinan kebenaran logika yang kokoh, dan tugas kita adalah meruntuhkan bias dogma palsu.',
+      angerStyle: 'Sikap makin kaku formal, intonasi mendingin tajam, dan membedah kelemahan argumen lawan secara runut. Disarankan meditasi kamar.',
+      affectionStyle: 'Membimbingmu memahami urusan sains rumit secara sabar, dan mendedikasikan waktu logikanya demi merawat sistem belajarmu.',
       animosityStyle: 'Mengabaikan argumen lawan karena dinilai tidak valid secara metodologi ilmiah.',
       envyStyle: 'Iri melihat pembawa omong kosong dapet sorot pemujaan sirkel komplek. Saran: sadari keandalanmu adalah intan sejati.',
       ambitionStyle: 'Mewujudkan kerangka berpikir orisinal baru yang bisa dipakai menata jalannya dunia.'
@@ -233,18 +233,18 @@ export const SOCIONICS_PROFILES: Record<string, Omit<Profile, 'modelA'>> = {
     quadra: 'Beta',
     mbtiEquivalent: 'ENFJ',
     enneagramTrend: 'Tipe 4w3 atau 3w4 (Individualist / Achiever)',
-    description: 'Sutradara Panggung Tragedi Kehidupan Sehari-hari. EIE tidak mengalami hari buruk biasa; dirinya sedang menjalani babak kedua dari naskah klasik tentang loyalitas, kesetiaan batin yang dikhianati, and konsekuensi sejarah roda takdir.',
+    description: 'Sutradara Panggung Tragedi Kehidupan Sehari-hari. EIE tidak mengalami hari buruk biasa; dirinya sedang menjalani babak kedua dari naskah klasik tentang loyalitas, kesetiaan jiwa yang dikhianati, dan konsekuensi sejarah roda takdir.',
     stereotypes: [
       'Menjadikan keterlambatan pesan WhatsApp sebagai simbol pengkhianatan nilai.',
       'Suka bikin kutipan bermakna filosofis tinggi di status Instagram.',
       'Paling ahli membuat semua orang merasa terlibat dalam urusan besar.'
     ],
     vibe: 'Dramatis, elegan, matanya menyapu tajam kayak elang nyari reaksi penonton di bangku bioskop ruangan.',
-    hiddenThoughts: 'Aku tahu ada ketegangan batin terselubung di antara kita, mari tunjukkan drama ini ke panggung biar semua orang sadar keseriusannya.',
+    hiddenThoughts: 'Aku tahu ada ketegangan jiwa terselubung di antara kita, mari tunjukkan drama ini ke panggung biar semua orang sadar keseriusannya.',
     pros: [
-      'Sangat karismatik, visioner, and sanggup membakar semangat massa.',
-      'Mampu menyuarakan ketegangan batin yang dihindari semua orang.',
-      'Peka banget terhadap perkembangan waktu and momentum hubungan.'
+      'Sangat karismatik, visioner, dan sanggup membakar semangat massa.',
+      'Mampu menyuarakan ketegangan jiwa yang dihindari semua orang.',
+      'Peka banget terhadap perkembangan waktu dan momentum hubungan.'
     ],
     cons: [
       'Suka sengaja memancing konflik demi merasakan getaran emosi yang nyata.',
@@ -263,22 +263,22 @@ export const SOCIONICS_PROFILES: Record<string, Omit<Profile, 'modelA'>> = {
       healthyCircles: 'Teman-teman tangguh berkepribadian kokoh (seperti sirkel LSI / SLE) yang bisa meredam drama emosimu tanpa ikut panik terbawa arus udara.',
       experiment7Days: [
         'Biarkan satu hari penuh berlalu tanpa membuat postingan status melodrama tentang makna terselubung di medsos.',
-        'Selesaikan satu tugas bersih-bersih dapur fisik secara konkret demi membiasakan batin berteman dengan realitas biasa.'
+        'Selesaikan satu tugas bersih-bersih dapur fisik secara konkret demi membiasakan jiwa berteman dengan realitas biasa.'
       ],
       hobbies: ['Menulis Puisi/Naskah', 'Nonton Festival Film Seni', 'Koleksi Barang Vintage', 'Debat Teatrikal'],
-      appearanceTips: 'Gaya pakaian dramatis-eksklusif. Kemeja hitam satin pas badan, blazer motif unik, and parfum beraroma kayu cendana pekat yang meninggalkan jejak aroma di ruangan.',
+      appearanceTips: 'Gaya pakaian dramatis-eksklusif. Kemeja hitam satin pas badan, blazer motif unik, dan parfum beraroma kayu cendana pekat yang meninggalkan jejak aroma di ruangan.',
       roleModels: ['William Shakespeare (Sastrawan)', 'Adolf Hitler? No, Charlie Chaplin (Seni Kedalaman Emosi)', 'Frederic Chopin']
     },
     behavioralDynamics: {
-      lifestyle: 'Penuh intensitas batin, menuntut kedalaman arti, and ogah hidup dalam keseharian monoton membosankan.',
+      lifestyle: 'Penuh intensitas jiwa, menuntut kedalaman arti, dan ogah hidup dalam keseharian monoton membosankan.',
       thinkingStyle: 'Subjektif-simbolis, menghubungkan kejadian acak sekarang dengan pola takdir kosmis masa depan.',
-      interpersonalApproach: 'Mendekat lewat tatapan mata intens and percakapan malam berat, menjauh (ghosting) kalau lawan bicaranya dinilai dangkal and dingin kayak robot besi.',
-      worldview: 'Hidup ini adalah pertempuran moral berkelanjutan antara pahlawan and penjahat nilai sejati, and netralitas adalah kejahatan paling besar.',
-      angerStyle: 'Mengemas konflik ke dalam tuntutan moral sejarah, menempatkan musuh sebagai tokoh jahat pengorbanan batin, and berteriak dramatis. Disarankan olahraga kardio biar batin tenang.',
-      affectionStyle: 'Mdedikasikan lagu khusus buat kisah cinta kalian, membela kehormatanmu dengan berani di depan publik, and membuat jalinan asmara terasa abadi.',
-      animosityStyle: 'Melabeli musuh sebagai pengkhianat peradaban and memutus akses hubungan secara teatrikal.',
-      envyStyle: 'Iri pas orang lain dianggap memiliki cinta yang jauh lebih tulus and dalam. Saran: sadari keaslian batinmu sudah cukup orisinal.',
-      ambitionStyle: 'Meninggalkan jejak sejarah emosi yang bakal dikenang and dibicarakan orang bahkan setelah dirinya wafat.'
+      interpersonalApproach: 'Mendekat lewat tatapan mata intens dan percakapan malam berat, menjauh (ghosting) kalau lawan bicaranya dinilai dangkal dan dingin kayak robot besi.',
+      worldview: 'Hidup ini adalah pertempuran moral berkelanjutan antara pahlawan dan penjahat nilai sejati, dan netralitas adalah kejahatan paling besar.',
+      angerStyle: 'Mengemas konflik ke dalam tuntutan moral sejarah, menempatkan musuh sebagai tokoh jahat pengorbanan jiwa, dan berteriak dramatis. Disarankan olahraga kardio biar jiwa tenang.',
+      affectionStyle: 'Mdedikasikan lagu khusus buat kisah cinta kalian, membela kehormatanmu dengan berani di depan publik, dan membuat jalinan asmara terasa abadi.',
+      animosityStyle: 'Melabeli musuh sebagai pengkhianat peradaban dan memutus akses hubungan secara teatrikal.',
+      envyStyle: 'Iri pas orang lain dianggap memiliki cinta yang jauh lebih tulus dan dalam. Saran: sadari keaslian jiwamu sudah cukup orisinal.',
+      ambitionStyle: 'Meninggalkan jejak sejarah emosi yang bakal dikenang dan dibicarakan orang bahkan setelah dirinya wafat.'
     }
   },
   LSI: {
@@ -290,19 +290,19 @@ export const SOCIONICS_PROFILES: Record<string, Omit<Profile, 'modelA'>> = {
     enneagramTrend: 'Tipe 1w9 atau 6w5 (Reformer / Guardian)',
     description: 'Konstitusi Berjalan dengan Sepatu Rapi. Manusia paling ingat kesepakatan ronda malam komplek tiga bulan lalu yang kawan lain bahkan mengiranya cuma candaan obrolan santai di pos kamling.',
     stereotypes: [
-      'Nge-katalog letak remot AC and gantungan kunci secara saklek.',
+      'Nge-katalog letak remot AC dan gantungan kunci secara saklek.',
       'Suka bikin denda buat anggota kost yang telat buang sampah.',
-      'Paling benci sama ketidakteraturan, keributan gak jelas, and orang plin-plan.'
+      'Paling benci sama ketidakteraturan, keributan gak jelas, dan orang plin-plan.'
     ],
-    vibe: 'Kokoh, tegas, gerakannya hemat tapi bertujuan jelas, and tatapan matanya sedisiplin inspektur militer.',
+    vibe: 'Kokoh, tegas, gerakannya hemat tapi bertujuan jelas, dan tatapan matanya sedisiplin inspektur militer.',
     hiddenThoughts: 'Kenapa orang dewasa harus berkali-kali diingatkan aturan mematikan lampu setelah keluar dari kamar mandi? Sungguh tidak tertib.',
     pros: [
-      'Sangat disiplin, andal dalam situasi krisis, and punya kontrol diri baja.',
-      'Menjaga standar operasional and ketertiban kelompok dengan adil.',
+      'Sangat disiplin, andal dalam situasi krisis, dan punya kontrol diri baja.',
+      'Menjaga standar operasional dan ketertiban kelompok dengan adil.',
       'Pelindung terpercaya bagi orang-orang lemah di sekelilingnya.'
     ],
     cons: [
-      'Gampang berubah kasar and represif kalau otoritas aturannya dipertanyakan.',
+      'Gampang berubah kasar dan represif kalau otoritas aturannya dipertanyakan.',
       'Sangat sulit bertoleransi sama metode baru yang belum masuk daftar SOP resmi.',
       'Suka berasumsi buruk pada kebebasan spontan kawan introvert.'
     ],
@@ -317,23 +317,23 @@ export const SOCIONICS_PROFILES: Record<string, Omit<Profile, 'modelA'>> = {
       gifts: ['Kotak perkakas pertukangan lengkap baja premium', 'Jam tangan militer tahan banting guncangan water-resistant', 'Agenda kulit berencana kalender super-rapi'],
       healthyCircles: 'Teman-teman asri yang bisa menghargai ketertibanmu tanpa merusak jiwa spontan mereka (sirkel EIE / SLE yang asyik).',
       experiment7Days: [
-        'Sengaja biarkan satu tumpukan baju kotor terletak di kasur selama 12 jam tanpa langsung dibereskan secara agresif pusing batin!',
+        'Sengaja biarkan satu tumpukan baju kotor terletak di kasur selama 12 jam tanpa langsung dibereskan secara agresif pusing jiwa!',
         'Biarkan kawanmu mengubah jadwal nongkrong mendadak tanpa kamu marahi pasal kesepakatannya.'
       ],
       hobbies: ['Menembak Sasaran', 'Pembuatan Model Miniatur Kayu', 'Restorasi Barang Rusak', 'Berolahraga Kebugaran'],
-      appearanceTips: 'Potongan rambut cepak/rapi, serasi, fungsional-minimalist. Sepaket kemeja oxford katun kaku, celana katun lurus, and sepatu kulit hitam mengkilap dipoles rapi.',
+      appearanceTips: 'Potongan rambut cepak/rapi, serasi, fungsional-minimalist. Sepaket kemeja oxford katun kaku, celana katun lurus, dan sepatu kulit hitam mengkilap dipoles rapi.',
       roleModels: ['Nikita Mikhalkov (Sutradara/Aktor)', 'Johann Sebastian Bach', 'Margaret Thatcher']
     },
     behavioralDynamics: {
-      lifestyle: 'Sangat terstruktur, mandiri, and mempertahankan garis batas wilayah miliknya dengan ketat.',
-      thinkingStyle: 'Sistemik, logis-praktis, and membedah masalah berdasarkan bagan instruksi formal.',
-      interpersonalApproach: 'Menjaga jarak batin aman yang dingin di awal, sangat formal, baru melunak pas tahu kawan tersebut taat komitmen kerja.',
-      worldview: 'Dunia ini hanya bisa selamat dari kehancuran absolut kalau ada hukum, penegak sanksi tegas, and disiplin ketat bagi semua warga.',
-      angerStyle: 'Rahang mengeras rapat, intonasi suara memendek tajam, and instruksi berubah menjadi perintah mutlak. Jika dilanggar siap-siap adu fisik.',
-      affectionStyle: 'Menjaga keselamatan fisikmu, membetulkan genteng rumah yang bocor, and merawat urusan administrasi pajakmu tanpa pamrih kata berbunga.',
-      animosityStyle: 'Mencatat daftar kesalahan pelanggaran aturanmu secara rapi di arsip memori batinnya, and memberikan hukuman dingin.',
-      envyStyle: 'Iri melihat kawan teledor yang dapet kelonggaran aturan terus dari bos. Saran: sadari kelonggaran kadang perlu buat dinamika batin.',
-      ambitionStyle: 'Menegakkan pilar keadilan sistemik and ketertiban hakiki di tempat kerjanya.'
+      lifestyle: 'Sangat terstruktur, mandiri, dan mempertahankan garis batas wilayah miliknya dengan ketat.',
+      thinkingStyle: 'Sistemik, logis-praktis, dan membedah masalah berdasarkan bagan instruksi formal.',
+      interpersonalApproach: 'Menjaga jarak jiwa aman yang dingin di awal, sangat formal, baru melunak pas tahu kawan tersebut taat komitmen kerja.',
+      worldview: 'Dunia ini hanya bisa selamat dari kehancuran absolut kalau ada hukum, penegak sanksi tegas, dan disiplin ketat bagi semua warga.',
+      angerStyle: 'Rahang mengeras rapat, intonasi suara memendek tajam, dan instruksi berubah menjadi perintah mutlak. Jika dilanggar siap-siap adu fisik.',
+      affectionStyle: 'Menjaga keselamatan fisikmu, membetulkan genteng rumah yang bocor, dan merawat urusan administrasi pajakmu tanpa pamrih kata berbunga.',
+      animosityStyle: 'Mencatat daftar kesalahan pelanggaran aturanmu secara rapi di arsip memori jiwanya, dan memberikan hukuman dingin.',
+      envyStyle: 'Iri melihat kawan teledor yang dapet kelonggaran aturan terus dari bos. Saran: sadari kelonggaran kadang perlu buat dinamika jiwa.',
+      ambitionStyle: 'Menegakkan pilar keadilan sistemik dan ketertiban hakiki di tempat kerjanya.'
     }
   },
   SLE: {
@@ -343,25 +343,25 @@ export const SOCIONICS_PROFILES: Record<string, Omit<Profile, 'modelA'>> = {
     quadra: 'Beta',
     mbtiEquivalent: 'ESTP',
     enneagramTrend: 'Tipe 8w7 atau 8w9 (Challenger / Leader)',
-    description: 'Panglima Perang Teritorial Tanpa Pasukan Resmi. SLE masuk ke ruangan and secara alami langsung menakar: siapa yang megang kendali sejati di sini, siapa yang cuma banyak bacot, and wilayah mana yang bisa direbut sebelum rapat minggu depan.',
+    description: 'Panglima Perang Teritorial Tanpa Pasukan Resmi. SLE masuk ke ruangan dan secara alami langsung menakar: siapa yang megang kendali sejati di sini, siapa yang cuma banyak bacot, dan wilayah mana yang bisa direbut sebelum rapat minggu depan.',
     stereotypes: [
       'Suka menantang adu argumen langsung di forum publik.',
-      'Gaya bahasa tubuh dominan and nggak sungkan merebut ruang fisik kursi.',
+      'Gaya bahasa tubuh dominan dan nggak sungkan merebut ruang fisik kursi.',
       'Sangat cepat mengambil alih komando krisis pas yang lain pada bingung.'
     ],
     vibe: 'Kuat, kokoh, berdiri tegak tanpa keraguan sekelumit pun, bahasa tubuhnya memancarkan aura "ini wilayah kekuasaanku".',
-    hiddenThoughts: 'Kalau kalian kelamaan berdebat kusir tidak jelas, mending aku potong sekarang and aku pimpin komandonya biar urusan cepat kelar.',
+    hiddenThoughts: 'Kalau kalian kelamaan berdebat kusir tidak jelas, mending aku potong sekarang dan aku pimpin komandonya biar urusan cepat kelar.',
     pros: [
-      'Sangat tangguh, berani mengambil risiko besar, and efisien dalam krisis maut.',
-      'Pelindung baja bagi sirkel dekat and orang-orang yang berada di bawah tanggung jawabnya.',
+      'Sangat tangguh, berani mengambil risiko besar, dan efisien dalam krisis maut.',
+      'Pelindung baja bagi sirkel dekat dan orang-orang yang berada di bawah tanggung jawabnya.',
       'Mengubah hambatan berat jadi tantangan seru yang harus ditaklukkan.'
     ],
     cons: [
-      'Gampang banget nindas and meremehkan kelemahan batin orang lain.',
+      'Gampang banget nindas dan meremehkan kelemahan jiwa orang lain.',
       'Ogah menerima jawaban "nggak" kalau hasrat kekuasaannya sudah menetapkan target.',
       'Sulit minta maaf secara tulus tanpa menyelipkan argumen pembenaran taktis.'
     ],
-    roast: 'Kamu sanggup merubah permainan monopoli santai keluarga menjadi operasi intelijen ekspansi wilayah geopolitik. Tidak semua hal di muka bumi butuh pemenang, bawahan, and demonstrasi intimidasi fisik, kawan.',
+    roast: 'Kamu sanggup merubah permainan monopoli santai keluarga menjadi operasi intelijen ekspansi wilayah geopolitik. Tidak semua hal di muka bumi butuh pemenang, bawahan, dan demonstrasi intimidasi fisik, kawan.',
     brutalConclusion: 'SLE adalah tipe orang yang nggak bakal repot-repot mengetuk pintu kamarmu, karena kakinya sibuk menendang engsel pintu hingga jebol demi kepastian akses.',
     recommendations: {
       books: ['The Art of War (Sun Tzu)', 'Meditations (Marcus Aurelius)'],
@@ -370,25 +370,25 @@ export const SOCIONICS_PROFILES: Record<string, Omit<Profile, 'modelA'>> = {
       careers: ['Direktur Utama Krisis', 'Pakar Negosiasi Konflik', 'Pengusaha Ekspansif', 'Atlet Profesional Tarung', 'Komandan Militer Taktis'],
       destinations: ['Sparta, Yunani (Situs Prajurit Tangguh)', 'Gedung Bursa Saham Wall Street'],
       gifts: ['Aparatus tinju samsak gantung kamar luar biasa kokoh', 'Alat piring panggang BBQ taman stainless steel fungsional', 'Parfum maskulin berkelas bold'],
-      healthyCircles: 'Teman-teman lembut berjiwa puitis (seperti sirkel IEI / EIE) yang sabar mendinginkan badai api energimu lewat musik and imajinasi rujukan.',
+      healthyCircles: 'Teman-teman lembut berjiwa puitis (seperti sirkel IEI / EIE) yang sabar mendinginkan badai api energimu lewat musik dan imajinasi rujukan.',
       experiment7Days: [
-        'Sengaja biarkan kawan akrabmu yang memutuskan tempat and menu makan malam tanpa kamu intervensi seujung kuku pun!',
-        'Saat mengobrol harian santai, letakkan HP and dengerin kawan tanpa menyelipkan tantangan taruhan kompetitif.'
+        'Sengaja biarkan kawan akrabmu yang memutuskan tempat dan menu makan malam tanpa kamu intervensi seujung kuku pun!',
+        'Saat mengobrol harian santai, letakkan HP dan dengerin kawan tanpa menyelipkan tantangan taruhan kompetitif.'
       ],
       hobbies: ['Bela Diri Praktis (Muay Thai/BJJ)', 'Mengendarai Motor Gede', 'Bermain Game Strategi Perang', 'Petualangan Alam Liar Berisiko'],
-      appearanceTips: 'Gaya sporty-tegas and modis. Jaket bomber gelap kualitas premium, kemeja rajut ketat menunjukkan kontur otot tubuh, and sepatu sneakers lari tangguh.',
+      appearanceTips: 'Gaya sporty-tegas dan modis. Jaket bomber gelap kualitas premium, kemeja rajut ketat menunjukkan kontur otot tubuh, dan sepatu sneakers lari tangguh.',
       roleModels: ['Georgy Zhukov (Panglima Legendaris)', 'Napoleon Bonaparte', 'Arnold Schwarzenegger']
     },
     behavioralDynamics: {
-      lifestyle: 'Penuh persaingan, aktif bergerak, and ogah hidup berpangku tangan merenungi nasib di kamar.',
-      thinkingStyle: 'Pragmatis-taktis, langsung menusuk ke sasaran inti masalah and menghitung kekuatan musuh.',
-      interpersonalApproach: 'Mendekat dengan jabat tangan kencang and tatapan uji kekuatan, menjauh secara tegas kalau kawan tersebut dinilai tidak berani mempertahankan batas pribadinya.',
-      worldview: 'Hidup ini adalah arena turnamen tinju raksasa berkelanjutan, and siapa pun yang malas menjaga kekuatan fisik and kekuatan finansial bakal habis diinjak roda zaman.',
-      angerStyle: 'Tatapan mata memicing fokus, aura batin menegang kayak singa siap menerkam, and meledak dalam perdebatan agresi langsung. Disarankan olahraga tinju beladiri taktis.',
-      affectionStyle: 'Membela kehormatanmu secara fisik dari gangguan preman, membagikan tips saham prospektif, and merancang draf rencana pensiun masa tua asri kalian bersama.',
-      animosityStyle: 'Memutus total jalinan kerja sama bisnis and membiarkan musuh tersisih dari rantai kemakmuran tanpa perlu agresi jalanan.',
+      lifestyle: 'Penuh persaingan, aktif bergerak, dan ogah hidup berpangku tangan merenungi nasib di kamar.',
+      thinkingStyle: 'Pragmatis-taktis, langsung menusuk ke sasaran inti masalah dan menghitung kekuatan musuh.',
+      interpersonalApproach: 'Mendekat dengan jabat tangan kencang dan tatapan uji kekuatan, menjauh secara tegas kalau kawan tersebut dinilai tidak berani mempertahankan batas pribadinya.',
+      worldview: 'Hidup ini adalah arena turnamen tinju raksasa berkelanjutan, dan siapa pun yang malas menjaga kekuatan fisik dan kekuatan finansial bakal habis diinjak roda zaman.',
+      angerStyle: 'Tatapan mata memicing fokus, aura jiwa menegang kayak singa siap menerkam, dan meledak dalam perdebatan agresi langsung. Disarankan olahraga tinju beladiri taktis.',
+      affectionStyle: 'Membela kehormatanmu secara fisik dari gangguan preman, membagikan tips saham prospektif, dan merancang rencana rencana pensiun masa tua asri kalian bersama.',
+      animosityStyle: 'Memutus total jalinan kerja sama bisnis dan membiarkan musuh tersisih dari rantai kemakmuran tanpa perlu agresi jalanan.',
       envyStyle: 'Iri melihat kawan lain dapet sanksi denda dimaafkan begitu saja gara-gara mukanya pasrah melodrama.',
-      ambitionStyle: 'Menjadi puncak rantai makanan pimpinan eksekutif and pilar keamanan utama kelompoknya.'
+      ambitionStyle: 'Menjadi puncak rantai makanan pimpinan eksekutif dan pilar keamanan utama kelompoknya.'
     }
   },
   IEI: {
@@ -398,7 +398,7 @@ export const SOCIONICS_PROFILES: Record<string, Omit<Profile, 'modelA'>> = {
     quadra: 'Beta',
     mbtiEquivalent: 'INFJ',
     enneagramTrend: 'Tipe 4w5 atau 9w1 (Individualist / Peacemaker)',
-    description: 'Penyair Kabut Masa Depan and Sutradara Imajinasi Senyap. Kelihatannya sedang berdiam diri santai di sudut sofa ruangan kafe, padahal separuh jiwanya lagi jalan-jalan di tahun 2050 sambil memutar latar musik sedih tentang kehancuran kkota.',
+    description: 'Penyair Kabut Masa Depan dan Sutradara Imajinasi Senyap. Kelihatannya sedang berdiam diri santai di sudut sofa ruangan kafe, padahal separuh jiwanya lagi jalan-jalan di tahun 2050 sambil memutar latar musik sedih tentang kehancuran kkota.',
     stereotypes: [
       'Ngirim kode duka lewat lagu-lagu Spotify misterius di status.',
       'Suka menunda urusan kerjaan konkret demi menunggu hadirnya "momen takdir".',
@@ -407,22 +407,22 @@ export const SOCIONICS_PROFILES: Record<string, Omit<Profile, 'modelA'>> = {
     vibe: 'Klasik, melayang, anggun, tatapan matanya seolah menyimpan rahasia dunia yang sengaja enggan dijelaskan.',
     hiddenThoughts: 'Aku sudah memprediksi kehancuran pola hubungan kalian berdua sejak hari pertama kenalan, tapi biarlah takdir berjalan mengajari.',
     pros: [
-      'Imajinatif tinggi, peka nuansa kemanusiaan, and punya intuisi waktu luar biasa tepat.',
+      'Imajinatif tinggi, peka nuansa kemanusiaan, dan punya intuisi waktu luar biasa tepat.',
       'Sanggup memengaruhi gejolak suasana hati kelompok tanpa agresi langsung.',
-      'Sangat berempati and memahami sisi paling rapuh batin manusia.'
+      'Sangat berempati dan memahami sisi paling rapuh jiwa manusia.'
     ],
     cons: [
-      'Suka memelihara penderitaan batin (romantisasi kesedihan) sebagai bukti kedalaman jiwa.',
-      'Sangat malas and gampang lumpuh pas dituntut bertanggung jawab urusan finansial harian.',
+      'Suka memelihara penderitaan jiwa (romantisasi kesedihan) sebagai bukti kedalaman jiwa.',
+      'Sangat malas dan gampang lumpuh pas dituntut bertanggung jawab urusan finansial harian.',
       'Suka menghilang misterius (ghosting) saat diuji kelalaian komitmen harian.'
     ],
-    roast: 'Kamu bisa menghabiskan waktu seminggu penuh mengurung diri cuma buat menunggu "hari yang tepat" and pencahayaan kamar yang pas untuk mematangkan batin. Padahal naskah hidup tak peduli dekorasi estetikmu, kawan.',
-    brutalConclusion: 'IEI adalah tipe orang yang tampak misterius karena separuh komunikasinya dikirim melalui cuaca batin yang tak terbaca.',
+    roast: 'Kamu bisa menghabiskan waktu seminggu penuh mengurung diri cuma buat menunggu "hari yang tepat" dan pencahayaan kamar yang pas untuk mematangkan jiwa. Padahal naskah hidup tak peduli dekorasi estetikmu, kawan.',
+    brutalConclusion: 'IEI adalah tipe orang yang tampak misterius karena separuh komunikasinya dikirim melalui cuaca jiwa yang tak terbaca.',
     recommendations: {
       books: ['The Gilded Cage', 'The Esoteric Hermeticism', 'The Prophet (Kahlil Gibran)'],
       movies: ['The Gilded Cage', 'Tarkovsky filmography / Melancholia (2011)'],
       music: ['Indie Folk Dreamy Melow', 'Ambient space music', 'Lagu-lagu puitis bernuansa sunyi'],
-      careers: ['Penulis Novel Fantasi', 'Konselor Psikologi Batin', 'Kurator Galeri Seni', 'Penerjemah Bahasa Isyarat Budaya'],
+      careers: ['Penulis Novel Fantasi', 'Konselor Psikologi jiwa', 'Kurator Galeri Seni', 'Penerjemah Bahasa Isyarat Budaya'],
       destinations: ['St. Petersburg, Rusia (Sastra & Musim Dingin)', 'Kuil Kuno Sunyi'],
       gifts: ['Lampu tidur proyektor rasi bintang galaksi kamar', 'Buku antologi puisi klasik langka', 'Aroma parguman teh putih (White Tea) estetik'],
       healthyCircles: 'Kawan-kawan tangguh berdaya dorong baja (seperti sirkel SLE / LSI) yang ngebantu kamu mendarat nyata ke realitas tanpa merusak mimpi-mimpimu.',
@@ -435,15 +435,15 @@ export const SOCIONICS_PROFILES: Record<string, Omit<Profile, 'modelA'>> = {
       roleModels: ['Sergey Esenin (Penyair Rusia)', 'Fyodor Dostoyevsky', 'Hans Christian Andersen']
     },
     behavioralDynamics: {
-      lifestyle: 'Pelik, puitis, mengabaikan urusan fisik praktis dapur, and betah berselancar di samudera fantasi jiwanya.',
+      lifestyle: 'Pelik, puitis, mengabaikan urusan fisik praktis dapur, dan betah berselancar di samudera fantasi jiwanya.',
       thinkingStyle: 'Asosiatif, temporal-intuisi, mengalir lambat laun kayak riak air takdir.',
       interpersonalApproach: 'Mendekat lewat kiriman pesan lagu bermakna ambigu, menjauh kalau suasananya menuntut kompetisi brutal.',
-      worldview: 'Realitas kasat mata ini cuma kulit luar palsu sementara roda kehidupan seutuhnya digerakkan oleh harmoni getaran batin.',
-      angerStyle: 'Sembunyi di dalam kamar, menulis catatan batin sendu, and mengabaikan chat WhatsApp musuh secara dingin.',
-      affectionStyle: 'Membisikkan puisi indah ciptaan pribadinya khusus buat kamu, dengerin seluruh curhat rahasia batinmu berjam-jam, and menatapmu penuh binar syahdu.',
-      animosityStyle: 'Mengutuk eksistensi jiwa musuh lewat keheningan spiritual yang menakutkan batin.',
-      envyStyle: 'Iri melihat kawan lain nampak asyik and lincah berdansa di keramaian dunia tanpa beban pikiran rumit.',
-      ambitionStyle: 'Menjadi rujukan inspirasi batin and pembisik takdir rahasia di balik layar bagi para pemimpin besar dunia.'
+      worldview: 'Realitas kasat mata ini cuma kulit luar palsu sementara roda kehidupan seutuhnya digerakkan oleh harmoni getaran jiwa.',
+      angerStyle: 'Sembunyi di dalam kamar, menulis catatan jiwa sendu, dan mengabaikan chat WhatsApp musuh secara dingin.',
+      affectionStyle: 'Membisikkan puisi indah ciptaan pribadinya khusus buat kamu, dengerin seluruh curhat rahasia jiwamu berjam-jam, dan menatapmu penuh binar syahdu.',
+      animosityStyle: 'Mengutuk eksistensi jiwa musuh lewat keheningan spiritual yang menakutkan jiwa.',
+      envyStyle: 'Iri melihat kawan lain nampak asyik dan lincah berdansa di keramaian dunia tanpa beban pikiran rumit.',
+      ambitionStyle: 'Menjadi rujukan inspirasi jiwa dan pembisik takdir rahasia di balik layar bagi para pemimpin besar dunia.'
     }
   },
   SEE: {
@@ -453,34 +453,34 @@ export const SOCIONICS_PROFILES: Record<string, Omit<Profile, 'modelA'>> = {
     quadra: 'Gamma',
     mbtiEquivalent: 'ESFP',
     enneagramTrend: 'Tipe 2w3 atau 8w7 (Helper / Challenger)',
-    description: 'SEE bisa memasuki kelompok baru and dalam waktu singkat mengetahui siapa berpengaruh, siapa berseteru, siapa membutuhkan validasi, and siapa diam-diam ingin diajak pergi.',
+    description: 'SEE bisa memasuki kelompok baru dan dalam waktu singkat mengetahui siapa berpengaruh, siapa berseteru, siapa membutuhkan validasi, dan siapa diam-diam ingin diajak pergi.',
     stereotypes: [
       'Mengetahui siapa sebenarnya dekat meski semua orang bersikap sopan.',
-      'Membela orang lain dengan tindakan nyata and bertenaga seketika.',
+      'Membela orang lain dengan tindakan nyata dan bertenaga seketika.',
       'Suka memotong pembicaraan sosial demi memantapkan posisi teritorial.'
     ],
-    vibe: 'Terbuka, berani bertenaga, sadar penampilan, tatapan mata ngebombardir ketulusan batinmu.',
+    vibe: 'Terbuka, berani bertenaga, sadar penampilan, tatapan mata ngebombardir ketulusan jiwamu.',
     hiddenThoughts: 'Aku diam bukan karena setuju, tapi aku pengen lihat seberapa jauh bualanmu bisa bertahan.',
     pros: [
-      'Radar luar biasa tajam mendeteksi silsilah relasi and ketulusan kawan.',
-      'Sangat hangat, supel, and pelindung setia sirikil dekat.',
-      'Pragmatis, andal dlm eksekusi taktis, and pandai bernegosiasi.'
+      'Radar luar biasa tajam mendeteksi silsilah relasi dan ketulusan kawan.',
+      'Sangat hangat, supel, dan pelindung setia sirikil dekat.',
+      'Pragmatis, andal dlm eksekusi taktis, dan pandai bernegosiasi.'
     ],
     cons: [
       'Suka menuntut pembuktian kesetiaan ekstrem berkala dari sahabatnya.',
-      'Posesif, transaksional, and mengelola rahasia kawan sbg alat tawar.',
-      'Cenderung mendikte and meremehkan orang yang bermuka kusam.'
+      'Posesif, transaksional, dan mengelola rahasia kawan sbg alat tawar.',
+      'Cenderung mendikte dan meremehkan orang yang bermuka kusam.'
     ],
     roast: 'Kamu menyebut aksi sidak HP pasangan secara diam-diam sebagai "sekadar mawas diri". Kalau kamu harus membagi peta siapa naksir siapa di kantor sebelum jam makan siang, itu bukan firasat lagi. Itu badan intelijen domestik.',
     brutalConclusion: 'SEE adalah tipe orang yang membuat semua kawan merasa dipilih, lalu diam-diam mencatat siapa saja yang tidak memilih memilihnya balik.',
     recommendations: {
-      books: ['In War and Piece (Leo Tolstoy)', 'The Art of Persuasion'],
+      books: ['In War dan Piece (Leo Tolstoy)', 'The Art of Persuasion'],
       movies: ['The Great Gatsby (2013)', 'Napoleon (2023)'],
       music: ['R&B Pop sensual berenergi', 'Lagu-lagu pesta dansa disko Latin ceria'],
       careers: ['Politisi Diplomat', 'Spesialis Negosiasi Bisnis', 'Presenter Panggung Hiburan', 'Konsultan Sumber Daya Manusia', 'Pakar Kampanye Massa'],
       destinations: ['Paris, Prancis (Keindahan Estetika & Istana Versailles)', 'Resor Pantai Mewah Ibiza'],
       gifts: ['Parfum branded beraroma sensual tahan lama', 'Aksesori pakaian berani bertenaga', 'Voucher makan malam privat di restoran bintang lima'],
-      healthyCircles: 'Teman-teman analitif jernih penenang batin (seperti sirkel ILI / LIE) yang bisa menasehati tindakan finansialmu tanpa kemarahan emosional.',
+      healthyCircles: 'Teman-teman analitif jernih penenang jiwa (seperti sirkel ILI / LIE) yang bisa menasehati tindakan finansialmu tanpa kemarahan emosional.',
       experiment7Days: [
         'Belajar menahan diri seharian penuh tanpa memeriksa daftar log telepon masuk pasangan!',
         'Biarkan satu rahasia kawan terkubur aman selamanya di dalam kepalamu tanpa diceritakan ke siapa pun demi bahan obrolan kafe.'
@@ -490,15 +490,15 @@ export const SOCIONICS_PROFILES: Record<string, Omit<Profile, 'modelA'>> = {
       roleModels: ['Julius Caesar', 'Napoleon Bonaparte', 'Elizabeth Taylor']
     },
     behavioralDynamics: {
-      lifestyle: 'Pesta kemakmuran relasi, penuh drama cinta tulus, and aktif memimpin jejaring sosial komplek.',
-      thinkingStyle: 'Subjektif-politik, mengukur segala sesuatu dari jarak dekat relasi and posisi kekuasaan konkret.',
+      lifestyle: 'Pesta kemakmuran relasi, penuh drama cinta tulus, dan aktif memimpin jejaring sosial komplek.',
+      thinkingStyle: 'Subjektif-politik, mengukur segala sesuatu dari jarak dekat relasi dan posisi kekuasaan konkret.',
       interpersonalApproach: 'Mendekat dengan jabat tangan kencang, menjauh seketika pas loyalitas kerjamu diragukan.',
-      worldview: 'Dunia ini dijalankan oleh jalinan kepentingan and emosi riil manusia, and tidak ada sistem kaku yang tidak bisa dinegosiasikan pakai karisma.',
-      angerStyle: 'Cecaran agresi tajam langsung, membongkar kelemahan moral lawan di depan umum, and memaksa lawan segera bertekuk lutut. Disarankan olahraga tinju beladiri taktis.',
-      affectionStyle: 'Membeli unit apartemen buat kenyamanan hari tuamu, melindungimu mati-matian dari cibiran mertua, and meluangkan waktu kencan mewah harian.',
-      animosityStyle: 'Memblokir total akses sosial musuh di lingkaran komplek perumahan, and meruntuhkan pengaruh reputasi mereka.',
+      worldview: 'Dunia ini dijalankan oleh jalinan kepentingan dan emosi riil manusia, dan tidak ada sistem kaku yang tidak bisa dinegosiasikan pakai karisma.',
+      angerStyle: 'Cecaran agresi tajam langsung, membongkar kelemahan moral lawan di depan umum, dan memaksa lawan segera bertekuk lutut. Disarankan olahraga tinju beladiri taktis.',
+      affectionStyle: 'Membeli unit apartemen buat kenyamanan hari tuamu, melindungimu mati-matian dari cibiran mertua, dan meluangkan waktu kencan mewah harian.',
+      animosityStyle: 'Memblokir total akses sosial musuh di lingkaran komplek perumahan, dan meruntuhkan pengaruh reputasi mereka.',
       envyStyle: 'Iri melihat kawan plin-plan bermuka asri dapet panggung kemuliaan sosial modal senyum palsu.',
-      ambitionStyle: 'Membangun dinasti pengaruh and lingkaran barisan loyalitas yang paling kokoh di kotanya.'
+      ambitionStyle: 'Membangun dinasti pengaruh dan lingkaran barisan loyalitas yang paling kokoh di kotanya.'
     }
   },
   ILI: {
@@ -508,23 +508,23 @@ export const SOCIONICS_PROFILES: Record<string, Omit<Profile, 'modelA'>> = {
     quadra: 'Gamma',
     mbtiEquivalent: 'INTJ',
     enneagramTrend: 'Tipe 5w6 atau 8w9 (Observer / Challenger)',
-    description: 'Bapak Ramalan Kelam and Penasihat Keamanan Hemat Daya. ILI mending duduk diam menyemburkan sinisme di pojokan rapat, memandangi rencana kerjaan kalian yang muluk-muluk, and menunggu bencana kegagalan terjadi biar dia bisa bilang "sudah kuduga sejak awal".',
+    description: 'Bapak Ramalan Kelam dan Penasihat Keamanan Hemat Daya. ILI mending duduk diam menyemburkan sinisme di pojokan rapat, memandangi rencana kerjaan kalian yang muluk-muluk, dan menunggu bencana kegagalan terjadi biar dia bisa bilang "sudah kuduga sejak awal".',
     stereotypes: [
       'Sinisme humor kering tingkat dewa yang terlambat dicerna orang.',
-      'Suka menolak rencana kawan berlibur modal argumen hitungan cuaca and eror maskapai.',
-      'Sangat hemat energi batin (gerakannya lambat kayak mode low-power baterai HP).'
+      'Suka menolak rencana kawan berlibur modal argumen hitungan cuaca dan eror maskapai.',
+      'Sangat hemat energi jiwa (gerakannya lambat kayak mode low-power baterai HP).'
     ],
     vibe: 'Dingin, misterius-lelah, tatapan matanya skeptis murni seolah baru bangun dari tidur panjang meratapi nasib dunia.',
     hiddenThoughts: 'Optimisme kalian barusan hanyalah nama sopan untuk ketidaktahuan fakta risiko di lapangan, mari bersiap menikmati pameran kegagalan kalian.',
     pros: [
-      'Daya prediksi masa depan luar biasa tajam and akurat.',
-      'Sangat realistis, pragmatis, and andal mendeteksi cacat tersembunyi sistem.',
-      'Tempat curhat taktis terbaik kalau butuh solusi super-dingin and jujur.'
+      'Daya prediksi masa depan luar biasa tajam dan akurat.',
+      'Sangat realistis, pragmatis, dan andal mendeteksi cacat tersembunyi sistem.',
+      'Tempat curhat taktis terbaik kalau butuh solusi super-dingin dan jujur.'
     ],
     cons: [
-      'Suka menjadikan pesimisme and pasivitas batin sbg bukti kebijaksanaan.',
-      'Gampang terpuruk jatuh ke lubang melankolia and mengurung diri berhari-hari.',
-      'Menyembunyikan kepedulian di balik dinding sinisme menusuk batin.'
+      'Suka menjadikan pesimisme dan pasivitas jiwa sbg bukti kebijaksanaan.',
+      'Gampang terpuruk jatuh ke lubang melankolia dan mengurung diri berhari-hari.',
+      'Menyembunyikan kepedulian di balik dinding sinisme menusuk jiwa.'
     ],
     roast: "Kamu menyebut dirimu 'realistis sejati' karena 'aku kan sudah memperingatkan kalian sejak awal' terdengar jauh lebih terhormat, ketimbang jujur mengakui bahwa kamu terlalu takut mencoba tapi girang pas kawanmu jatuh gagal.",
     brutalConclusion: 'ILI adalah tipe orang yang sanggup membawa payung hitam lebar pas langit lagi cerah terik, lalu nampak kecewa berat pas hujan badai tak kunjung turun buat membuktikan ramalannya.',
@@ -535,22 +535,22 @@ export const SOCIONICS_PROFILES: Record<string, Omit<Profile, 'modelA'>> = {
       careers: ['Analis Risiko Strategis', 'Manajer Investasi Finansial', 'Ilmuwan Kriptografi', 'Programmer Keamanan Data', 'Penulis Opini Politik'],
       destinations: ['Heidelberg, Jerman (Kota Sunyi Para Filsuf Eksklusif)', 'Kamar Gelap dengan Kopi Hitam'],
       gifts: ['Kaos polos hitam katun bambu super nyaman', 'Kopi robusta organik giling murni tanpa pemanis', 'Alat pembuat kopi presisi Aeropress'],
-      healthyCircles: 'Teman-teman produsen tindakan ekspansif (seperti sirkel LIE / SEE) yang ngebantu batinmu berdaya gerak tanpa banyak menuntut panggung keceriaan palsu.',
+      healthyCircles: 'Teman-teman produsen tindakan ekspansif (seperti sirkel LIE / SEE) yang ngebantu jiwamu berdaya gerak tanpa banyak menuntut panggung keceriaan palsu.',
       experiment7Days: [
         'Saat kawanmu membagikan rencana barunya yang ambisius, tahan dirimu selama 24 jam untuk tidak melontarkan daftar risiko kegagalan konkretnya!',
-        'Sengaja pergi jalan kaki di taman kota sore hari tanpa menggunakan headset and biarkan mukamu tersapu semilir angin riil.'
+        'Sengaja pergi jalan kaki di taman kota sore hari tanpa menggunakan headset dan biarkan mukamu tersapu semilir angin riil.'
       ],
       hobbies: ['Menulis Opini Kripto/Pasar', 'Membaca Teori Conspirasi Tingkat Tinggi', 'Bermain Game Strategi Sulit', 'Riset Mandiri Sejarah Kuno'],
-      appearanceTips: 'Gaya minimalis serba gelap (all-black). Kaos hitam polos dipadu jaket parka gelap fungsional, celana kargo minimalis, and sepatu slip-on kain nyaman.',
+      appearanceTips: 'Gaya minimalis serba gelap (all-black). Kaos hitam polos dipadu jaket parka gelap fungsional, celana kargo minimalis, dan sepatu slip-on kain nyaman.',
       roleModels: ['Friedrich Nietzsche (Filsuf)', 'Karl Gustav Jung', 'Isaac Newton']
     },
     behavioralDynamics: {
-      lifestyle: 'Hemat energi, selektif memilih pergaulan kafe, and mengabdi sepenuhnya untuk kebenaran prediksi taktis.',
+      lifestyle: 'Hemat energi, selektif memilih pergaulan kafe, dan mengabdi sepenuhnya untuk kebenaran prediksi taktis.',
       thinkingStyle: 'Abstrak-strategis, jernih memandang kecenderungan garis waktu masa depan.',
-      interpersonalApproach: 'Menjaga jarak batin super-dingin di awal, baru mendekat pelan-pelan pas lawan bicara dinilai punya otak and gak baperan.',
-      worldview: 'Dunia ini diatur oleh siklus pasang surut roda hukum alam yang dingin, and mayoritas manusia hanyalah busa mainan yang bakal hanyut sia-sia.',
-      angerStyle: 'Komentar berubah makin keringmenusuk batin, membeberkan katalog kegagalan musuh di masa lalu secara spesifik tanpa emosi histeris. Disarankan meditasi jalan kaki tenang.',
-      affectionStyle: 'Membantumu merancang rencana mitigasi krisis finansial karir masa depanmu, and memvalidasi kebenaran teorimu secara objektif.',
+      interpersonalApproach: 'Menjaga jarak jiwa super-dingin di awal, baru mendekat pelan-pelan pas lawan bicara dinilai punya otak dan gak baperan.',
+      worldview: 'Dunia ini diatur oleh siklus pasang surut roda hukum alam yang dingin, dan mayoritas manusia hanyalah busa mainan yang bakal hanyut sia-sia.',
+      angerStyle: 'Komentar berubah makin keringmenusuk jiwa, membeberkan katalog kegagalan musuh di masa lalu secara spesifik tanpa emosi histeris. Disarankan meditasi jalan kaki tenang.',
+      affectionStyle: 'Membantumu merancang rencana mitigasi krisis finansial karir masa depanmu, dan memvalidasi kebenaran teorimu secara objektif.',
       animosityStyle: 'Menunggu waktu membuktikan kebenaran ramalan buruknya terhadap musuh sambil senyum sinis dari kejauhan.',
       envyStyle: 'Iri melihat kawan teledor bermuka asri dapet jalan mulus kemakmuran tanpa perlu mikir keras risiko.',
       ambitionStyle: 'Menjadi penasehat agung di balik tirai yang menuntun jalannya kapal perang ke pelabuhan kemenangan tanpa repot-repot memegang kemudi langsung.'
@@ -567,48 +567,48 @@ export const SOCIONICS_PROFILES: Record<string, Omit<Profile, 'modelA'>> = {
     stereotypes: [
       'Gaya berjalan super cepat memotong antrean kafe seolah mengejar kereta takdir.',
       'Suka nanya margin dividen pas lagi nongkrong kumpul sate kawan komplek.',
-      'Paling merasa bersalah and batin gelisah kalau tidak produktif selama 12 jam.'
+      'Paling merasa bersalah dan jiwa gelisah kalau tidak produktif selama 12 jam.'
     ],
-    vibe: 'Terarah, sibuk, membawa draf proyekan, and suaranya bergaung dinamis mendominasi ruang rapat.',
-    hiddenThoughts: 'Gagasan kalian barusan secara konsep indah and estetis nan puitis, tapi di mana lembar kalkulasi laba-rugi operasionalnya bagi kas kita?',
+    vibe: 'Terarah, sibuk, membawa rencana proyekan, dan suaranya bergaung dinamis mendominasi ruang rapat.',
+    hiddenThoughts: 'Gagasan kalian barusan secara konsep indah dan estetis nan puitis, tapi di mana lembar kalkulasi laba-rugi operasionalnya bagi kas kita?',
     pros: [
-      'Sangat produktif, visioner strategis, and andal mengubah potensi abu-abu jadi mesin duit konkret.',
-      'Berani mengambil keputusan sulit and tanggung jawab krisis finansial.',
-      'Cepat banget mengevaluasi and belajar dari kegagalan operasional.'
+      'Sangat produktif, visioner strategis, dan andal mengubah potensi abu-abu jadi mesin duit konkret.',
+      'Berani mengambil keputusan sulit dan tanggung jawab krisis finansial.',
+      'Cepat banget mengevaluasi dan belajar dari kegagalan operasional.'
     ],
     cons: [
-      'Mengukur kadar kehormatan and kebahagiaan manusia murni dari produktivitas kerja.',
+      'Mengukur kadar kehormatan dan kebahagiaan manusia murni dari produktivitas kerja.',
       'Menjadikan hubungan dekat/keluarga sebagai proyek perbaikan sistem yang harus dievaluasi bulanan.',
-      'Mengabaikan sinyal sakit tubuh batinnya sendiri sampai fisiknya ambruk stroke mendadak.'
+      'Mengabaikan sinyal sakit tubuh jiwanya sendiri sampai fisiknya ambruk stroke mendadak.'
     ],
-    roast: 'Kamu tidak pergi berlibur santai ke pantai tropis keindahan alam; kamu memindahkan markas operasional kerjamu ke pinggir pasir kafe, lengkap dengan laptop menyala and lembar koordinasi profit relaksasi tim.',
-    brutalConclusion: 'LIE adalah tipe orang yang sanggup merubah bencana banjir komplek perumahan menjadi peluang rintisan start-up penjualan jas hujan and sewa perahu karet instat.',
+    roast: 'Kamu tidak pergi berlibur santai ke pantai tropis keindahan alam; kamu memindahkan markas operasional kerjamu ke pinggir pasir kafe, lengkap dengan laptop menyala dan lembar koordinasi profit relaksasi tim.',
+    brutalConclusion: 'LIE adalah tipe orang yang sanggup merubah bencana banjir komplek perumahan menjadi peluang rintisan start-up penjualan jas hujan dan sewa perahu karet instat.',
     recommendations: {
       books: ['Blue Ocean Strategy', 'The Hard Thing About Hard Things (Ben Horowitz)'],
       movies: ['The Secret Life of Walter Mitty (2013)', 'Dead Poets Society'],
       music: ['Indie Pop ceria berwarna-warni', 'Lagu-lagu yang membangkitkan gairah petualangan santai'],
       careers: ['Founder Start-up Ekspedisi', 'Manajer Investasi Ventura Kekayaan', 'Direktur Pengembangan Bisnis Global', 'Konsultan Pemulihan Perusahaan Bangkrut'],
       destinations: ['Shenzhen, Tiongkok (Kota Inovasi Industri Kilat)', 'Pusat Keuangan Singapura'],
-      gifts: ['Mouse gaming ergonomis mutakhir penunjang ketepatan klik laptop', 'Smartwatch pengukur detak jantung and kualitas tidur tidur', 'Buku biografi pimpinan dunia bisnis bersampul kaku'],
-      healthyCircles: 'Teman-teman penyayang kedamaian emosional (seperti sirkel ESI / ILI) yang ngebantu batinmu meletakkan beban kerjaan sejenak demi menikmati sarapan teh hangat.',
+      gifts: ['Mouse gaming ergonomis mutakhir penunjang ketepatan klik laptop', 'Smartwatch pengukur detak jantung dan kualitas tidur tidur', 'Buku biografi pimpinan dunia bisnis bersampul kaku'],
+      healthyCircles: 'Teman-teman penyayang kedamaian emosional (seperti sirkel ESI / ILI) yang ngebantu jiwamu meletakkan beban kerjaan sejenak demi menikmati sarapan teh hangat.',
       experiment7Days: [
-        'Matikan total laptop and HP pribadi selama 4 jam penuh pada hari Minggu sore, and habiskan waktu makan malam bersama keluarga tanpa bicara cuan!',
-        'Saat ada kawan curhat melodrama, dengarkan saja sampai habis tanpa menawarkan 5 draf penyelesaian konkret taktis.'
+        'Matikan total laptop dan HP pribadi selama 4 jam penuh pada hari Minggu sore, dan habiskan waktu makan malam bersama keluarga tanpa bicara cuan!',
+        'Saat ada kawan curhat melodrama, dengarkan saja sampai habis tanpa menawarkan 5 rencana penyelesaian konkret taktis.'
       ],
       hobbies: ['Berinvestasi Portofolio Saham', 'Menulis Blueprint Bisnis Iseng', 'Olahraga Ekstrim Bersepeda Gunung', 'Mempelajari Hukum Pajak Global'],
-      appearanceTips: 'Gaya fungsional-profesional. Setelan kemeja linen gelap berkualitas fitted-body, celana slacks lurus, jam tangan pintar mutakhir, and alas kaki sneakers kulit perkotaan.',
+      appearanceTips: 'Gaya fungsional-profesional. Setelan kemeja linen gelap berkualitas fitted-body, celana slacks lurus, jam tangan pintar mutakhir, dan alas kaki sneakers kulit perkotaan.',
       roleModels: ['Bill Gates (Founder)', 'Steve Jobs', 'Jack London (Penulis Pengembara Tangguh)']
     },
     behavioralDynamics: {
-      lifestyle: 'Sangat dinamis, terjadwal ketat, and mengabdi sepenuhnya untuk kebenaran performa kognitif.',
+      lifestyle: 'Sangat dinamis, terjadwal ketat, dan mengabdi sepenuhnya untuk kebenaran performa kognitif.',
       thinkingStyle: 'Logis-praktis, futuristik-intuisi, menggerakkan sekeliling menuju hasil konkret.',
-      interpersonalApproach: 'Mendekat dengan tawaran kerja sama and pembagian peluang bisnis, menjauh kalau kawan tersebut lamban and suka mengeluh mengasihani diri.',
+      interpersonalApproach: 'Mendekat dengan tawaran kerja sama dan pembagian peluang bisnis, menjauh kalau kawan tersebut lamban dan suka mengeluh mengasihani diri.',
       worldview: 'Dunia ini adalah hamparan peluang produktif tak terbatas yang menanti ditata secara efisien oleh manusia-manusia tangguh berkompetensi tinggi.',
-      angerStyle: 'Sikap tidak sabar yang meningkat tajam, mencecar kegagalan konkret and biaya pemborosan taktis musuh secara bertenaga. Disarankan lari maraton harian.',
-      affectionStyle: 'Membelikanmu polis asuransi jiwa terbaik, membagikan tips saham prospektif, and merancang draf rencana pensiun masa tua asri kalian bersama.',
-      animosityStyle: 'Memutus total jalinan kerja sama bisnis and membiarkan musuh tersisih dari rantai kemakmuran tanpa perlu agresi jalanan.',
-      envyStyle: 'Iri melihat kawan malas dapet simpati and popularitas cuma modal ngedumel santai di sosmed.',
-      ambitionStyle: 'Mendikte arah peradaban masa depan lewat kesuksesan ekspansi jaringan korporasi and inovasi teknologi miliknya.'
+      angerStyle: 'Sikap tidak sabar yang meningkat tajam, mencecar kegagalan konkret dan biaya pemborosan taktis musuh secara bertenaga. Disarankan lari maraton harian.',
+      affectionStyle: 'Membelikanmu polis asuransi jiwa terbaik, membagikan tips saham prospektif, dan merancang rencana rencana pensiun masa tua asri kalian bersama.',
+      animosityStyle: 'Memutus total jalinan kerja sama bisnis dan membiarkan musuh tersisih dari rantai kemakmuran tanpa perlu agresi jalanan.',
+      envyStyle: 'Iri melihat kawan malas dapet simpati dan popularitas cuma modal ngedumel santai di sosmed.',
+      ambitionStyle: 'Mendikte arah peradaban masa depan lewat kesuksesan ekspansi jaringan korporasi dan inovasi teknologi miliknya.'
     }
   },
   ESI: {
@@ -618,25 +618,25 @@ export const SOCIONICS_PROFILES: Record<string, Omit<Profile, 'modelA'>> = {
     quadra: 'Gamma',
     mbtiEquivalent: 'ISFP',
     enneagramTrend: 'Tipe 4w5 atau 1w2 (Individualist / Reformer)',
-    description: 'Kurator Museum Sejarah Perilaku Buruk and Benteng Moralitas Sunyi. ESI mungkin nampak tenang and santai dengerin obrolan kafe, padahal kepalanya lagi menyidang moral caramu memperlakukan pramusaji, janji telatmu, and caramu menjelekkan nama mantan.',
+    description: 'Kurator Museum Sejarah Perilaku Buruk dan Benteng Moralitas Sunyi. ESI mungkin nampak tenang dan santai dengerin obrolan kafe, padahal kepalanya lagi menyidang moral caramu memperlakukan pramusaji, janji telatmu, dan caramu menjelekkan nama mantan.',
     stereotypes: [
-      'Menyimpan draf kesalahan perilaku musuh dari tahun lalu lengkap dengan tanggal and jam.',
+      'Menyimpan rencana kesalahan perilaku musuh dari tahun lalu lengkap dengan tanggal dan jam.',
       'Sangat setia kawan (siap pasang badan jagain kamu dari serangan preman komplek).',
       'Punya batas wilayah privasi ketat yang gak boleh sembarangan dilompati kawan baru.'
     ],
-    vibe: 'Tenang, waspada, kokoh di balik keanggunan berjarak, tatapan mengevaluasi ketulusan batinmu.',
+    vibe: 'Tenang, waspada, kokoh di balik keanggunan berjarak, tatapan mengevaluasi ketulusan jiwamu.',
     hiddenThoughts: 'Aku diam saja dari tadi bukan karena setuju, tapi aku pengen lihat seberapa jauh rasa tak tahu dirimu bakal membawa bualan ini.',
     pros: [
-      'Punya kompas moralitas batin yang luar biasa kokoh and konsisten.',
-      'Sangat peka mendeteksi kemunafikan, eksploitasi, and topeng palsu manusia.',
+      'Punya kompas moralitas jiwa yang luar biasa kokoh dan konsisten.',
+      'Sangat peka mendeteksi kemunafikan, eksploitasi, dan topeng palsu manusia.',
       'Pelindung terpercaya bagi sirkel dekatnya.'
     ],
     cons: [
-      'Suka menyimpan dendam batin and mengawetkan satu kesalahan orang menjadi dosa abadi.',
-      'Sangat curigaan and skeptis berlebih terhadap kebaikan spontan orang baru.',
+      'Suka menyimpan dendam jiwa dan mengawetkan satu kesalahan orang menjadi dosa abadi.',
+      'Sangat curigaan dan skeptis berlebih terhadap kebaikan spontan orang baru.',
       'Gampang terjebak posesif transaksional berbungkus norma kepatutan.'
     ],
-    roast: 'Kamu bukan pendendam biasa. Kamu cuma mengelola museum sejarah perilaku buruk, lengkap dengan tanggal, konteks, rekonstruksi kejadian, and tur berpemandu saat konflik berikutnya.',
+    roast: 'Kamu bukan pendendam biasa. Kamu cuma mengelola museum sejarah perilaku buruk, lengkap dengan tanggal, konteks, rekonstruksi kejadian, dan tur berpemandu saat konflik berikutnya.',
     brutalConclusion: 'ESI adalah tipe orang yang dapat memaafkan kesalahanmu, tapi arsipnya tetap disimpan untuk kepentingan penelitian.',
     recommendations: {
       books: ['Notes from Underground (Fyodor Dostoyevsky)', 'The Financier (Theodore Dreiser)'],
@@ -644,26 +644,26 @@ export const SOCIONICS_PROFILES: Record<string, Omit<Profile, 'modelA'>> = {
       music: ['Sergey Rachmaninoff - Piano Concerto No. 2', 'Lagu melankolis klasik biola ganda'],
       careers: ['Konselor Medis', 'Peternak Organik', 'Perwira Keamanan Sistem', 'Apoteker', 'Spesialis Pengasuhan Anak'],
       destinations: ['Salzburg, Austria (Lembah Hijau Tradisional)', 'Kastil Abad Pertengahan Sunyi'],
-      gifts: ['Lampu minyak aromaterapi keramik handmade', 'Dompet kulit fungsional kualitas draf ekstrim', 'Buku catatan bersorot asri klasik'],
-      healthyCircles: 'Teman-teman taktis berdaya dorong efisiensi (seperti sirkel LIE / SEE) yang ngebantu mencairkan prasangka batinmu.',
+      gifts: ['Lampu minyak aromaterapi keramik handmade', 'Dompet kulit fungsional kualitas rencana ekstrim', 'Buku catatan bersorot asri klasik'],
+      healthyCircles: 'Teman-teman taktis berdaya dorong efisiensi (seperti sirkel LIE / SEE) yang ngebantu mencairkan prasangka jiwamu.',
       experiment7Days: [
-        'Biarkan satu kelalaian kecil kawan bergulir lewat tanpa kamu masukkan ke arsip dossier kelakuan batin!',
+        'Biarkan satu kelalaian kecil kawan bergulir lewat tanpa kamu masukkan ke arsip dossier kelakuan jiwa!',
         'Ngobrol santai tanpa mencurigai kebaikan tetangga komplek rumah baru.'
       ],
       hobbies: ['Merawat Hewan Jalanan', 'Pembuatan Kaligrafi Tradisional', 'Kerajinan Tangan Kulit', 'Berkebun Sayur'],
-      appearanceTips: 'Pakaian terstruktur kaku rapi. Blazer abu-abu gelap katun tebal dipadu kemeja putih kaku fitted-body, and sepatu kulit fungsional.',
+      appearanceTips: 'Pakaian terstruktur kaku rapi. Blazer abu-abu gelap katun tebal dipadu kemeja putih kaku fitted-body, dan sepatu kulit fungsional.',
       roleModels: ['Vincent van Gogh (Artist)', 'Theodore Dreiser', 'Leonardo DiCaprio']
     },
     behavioralDynamics: {
-      lifestyle: 'Teratur, waspada, and mengabdi sepenuhnya demi menjaga keluarga dari polusi luar.',
-      thinkingStyle: 'Subjektif-konkret, mengukur kebenaran dari ketulusan tindakan and perilaku asri.',
-      interpersonalApproach: 'Menjaga jarak batin waspada, sangat selektif memilih kawan dekat, tapi loyal tiada batas pas gerbang kepercayaannya terbuka.',
-      worldview: 'Dunia ini dipenuhi korupsi moral and eksploitasi, tugas kita adalah melindungi sirkel dekat kita dari pengaruh buruk luar.',
-      angerStyle: 'Batas wilayah dijelaskan secara dingin-tajam-menusuk langsung ke motif busuk lawan, and komunikasi diputus final seketika. Disarankan olahraga renang hening.',
-      affectionStyle: 'Merapikan kekacauan kamarmu secara detail, memasak bubur hangat saat kamu demam, and konsisten melindungimu dari fitnah orang luar.',
-      animosityStyle: 'Melemparkan tatapan mematikan dingin, and memperlakukan musuh kayak hantu gentayangan.',
+      lifestyle: 'Teratur, waspada, dan mengabdi sepenuhnya demi menjaga keluarga dari polusi luar.',
+      thinkingStyle: 'Subjektif-konkret, mengukur kebenaran dari ketulusan tindakan dan perilaku asri.',
+      interpersonalApproach: 'Menjaga jarak jiwa waspada, sangat selektif memilih kawan dekat, tapi loyal tiada batas pas gerbang kepercayaannya terbuka.',
+      worldview: 'Dunia ini dipenuhi korupsi moral dan eksploitasi, tugas kita adalah melindungi sirkel dekat kita dari pengaruh buruk luar.',
+      angerStyle: 'Batas wilayah dijelaskan secara dingin-tajam-menusuk langsung ke motif busuk lawan, dan komunikasi diputus final seketika. Disarankan olahraga renang hening.',
+      affectionStyle: 'Merapikan kekacauan kamarmu secara detail, memasak bubur hangat saat kamu demam, dan konsisten melindungimu dari fitnah orang luar.',
+      animosityStyle: 'Melemparkan tatapan mematikan dingin, dan memperlakukan musuh kayak hantu gentayangan.',
       envyStyle: 'Iri melihat kawan plin-plan bermuka asri dapet panggung kemuliaan sosial modal senyum palsu.',
-      ambitionStyle: 'Menjadi benteng pertahanan moral and pilar perlindungan terpercaya bagi keluarganya.'
+      ambitionStyle: 'Menjadi benteng pertahanan moral dan pilar perlindungan terpercaya bagi keluarganya.'
     }
   },
   LSE: {
@@ -676,49 +676,49 @@ export const SOCIONICS_PROFILES: Record<string, Omit<Profile, 'modelA'>> = {
     description: 'Tulang Punggung Peradaban Kerja Nyata. LSE adalah orang yang melihat masalah jembatan rusak komplek yang bertahun-tahun didiemin warga, lalu langsung ngerapiin perkakasnya, benerin aspalnya sendiri, sambil mengeluh ngedumel tentang kualitas kerja masyarakat.',
     stereotypes: [
       'Ngebenerin blender rusak kawan komplek sambil mengajari cara pakai mesin yang benar.',
-      'Suka nanya draf progres tugas tim tiap 4 jam sekali.',
-      'Paling tidak tahan melihat kebebasan malas and orang menunda pekerjaan.'
+      'Suka nanya rencana progres tugas tim tiap 4 jam sekali.',
+      'Paling tidak tahan melihat kebebasan malas dan orang menunda pekerjaan.'
     ],
-    vibe: 'Aktif, necis, tegap, and suaranya lantang fungsional.',
+    vibe: 'Aktif, necis, tegap, dan suaranya lantang fungsional.',
     hiddenThoughts: 'Kalau bukan aku sendiri yang turun tangan ngerjain urusan ini, komplek perumahan ini bakal roboh berantakan dalam tiga hari.',
     pros: [
-      'Sangat disiplin, pekerja keras tiada tanding, and selalu menepati janji komitmen.',
-      'Mampu merancang sistem kerja praktis yang sangat efisien and berkinerja tinggi.',
+      'Sangat disiplin, pekerja keras tiada tanding, dan selalu menepati janji komitmen.',
+      'Mampu merancang sistem kerja praktis yang sangat efisien dan berkinerja tinggi.',
       'Menunjukkan kasih sayang lewat pelayanan konkret tanpa drama melodrama.'
     ],
     cons: [
-      'Sangat mikromanajemen and suka memaksa semua orang memakai metode kerjanya.',
+      'Sangat mikromanajemen dan suka memaksa semua orang memakai metode kerjanya.',
       'Menganggap istirahat santai di hari Minggu siang sebagai gejala pemalasan jiwa.',
-      'Suka menimbun kelelahan and kejengkelan dalam hati sampai akhirnya meledak marah.'
+      'Suka menimbun kelelahan dan kejengkelan dalam hati sampai akhirnya meledak marah.'
     ],
     roast: 'Kamu membantu kawan tanpa diminta, mengambil alih porsi pengerjaannya, melarang kawan menyentuh perkakasnya karena ngeri salah hasil, lalu kamu marah ngedumel kencang seolah-olah kamu tertindas ngerjain semuanya sendirian. Siklus kerja kerasmu efisien parah.',
-    brutalConclusion: 'LSE adalah tipe orang yang sanggup menyelamatkan seluruh hari tersiksa warga komplek, lalu mengajak kawan lain piknik santai bertarif draf operasional.',
+    brutalConclusion: 'LSE adalah tipe orang yang sanggup menyelamatkan seluruh hari tersiksa warga komplek, lalu mengajak kawan lain piknik santai bertarif rencana operasional.',
     recommendations: {
       books: ['The Lean Startup', 'Sherlock Holmes complete anthology (Arthur Conan Doyle)'],
       movies: ['Sherlock series (BBC)', 'Apollo 13 (1995)'],
-      music: ['Classic Symphonic yang berenergi and berstruktur runut', 'Lagu folk berderap semangat perjuangan'],
+      music: ['Classic Symphonic yang berenergi dan berstruktur runut', 'Lagu folk berderap semangat perjuangan'],
       careers: ['Direktur Operasional Proyek', 'Insinyur Sipil Utama', 'Kepala Logistik Internasional', 'Spesialis Audit Standardisasi Mutu', 'Manager Konstruksi'],
       destinations: ['London, Inggris (Kepatuhan Hukum & Arsitektur Klasik Tegas)', 'Pabrik Manufaktur Canggih Toyota'],
       gifts: ['Panci presto stainless steel baja anti karat fungsional dapur', 'Alat pengukur dimensi laser jarak jauh presisi tinggi', 'Kemeja oxford fitted kaku warna biru dongker formal'],
-      healthyCircles: 'Teman-teman pendorong imajinasi and belas kasih lembut (seperti sirkel EII / IEE) yang ngebantu jiwamu rileks tanpa tuntutan performa kerja.',
+      healthyCircles: 'Teman-teman pendorong imajinasi dan belas kasih lembut (seperti sirkel EII / IEE) yang ngebantu jiwamu rileks tanpa tuntutan performa kerja.',
       experiment7Days: [
         'Sengaja habiskan satu hari penuh di hari Minggu hanya untuk selonjoran rebahan di kasur tanpa memegang/membersihkan sikat komplek!',
         'Saat melihat kesalahan kecil kawanmu memegang pisau blender, biarkan dia belajar mengalami kesalahannya sendiri tanpa kamu sela.'
       ],
       hobbies: ['Pertukangan Kayu Mandiri', 'Mengatur Jadwal Pemeliharaan Rumah', 'Olahraga Kebugaran Angkat Beban', 'Membaca Dokumenter Detektif'],
-      appearanceTips: 'Kemeja polo biru marinir, celana chino beige lurus, and sepatu kulit fungsional.',
+      appearanceTips: 'Kemeja polo biru marinir, celana chino beige lurus, dan sepatu kulit fungsional.',
       roleModels: ['Sherlock Holmes', 'Sergei Korolev (Sains Roket)', 'Angela Merkel']
     },
     behavioralDynamics: {
-      lifestyle: 'Disiplin baja, mengabdi sepenuhnya untuk kebenaran performa fisik and mutu kerja nyata.',
+      lifestyle: 'Disiplin baja, mengabdi sepenuhnya untuk kebenaran performa fisik dan mutu kerja nyata.',
       thinkingStyle: 'Logis-konkret harian, menguraikan masalah secara prosedural taktis.',
       interpersonalApproach: 'Menyapa tegas akrab, langsung ngasih bantuan taktis tanpa basa-basi curhat, baru melunak pas komitmen kerjamu terbukti mulus.',
-      worldview: 'Peradaban ini dibangun oleh tetesan keringat kerja keras and standardisasi mutu yang kokoh, and siapa saja yang malas harus didepak mundur.',
-      angerStyle: 'Suara memotong kencang barisan kata lawan, membeberkan kronologi kegagalan operasional secara merinci menusuk logika, and menuntut ganti rugi nyata.',
-      affectionStyle: 'Membetulkan kran wastafel kostmu yang mampet, mengisi kulkasmu dengan pasokan susu segar, and merapikan rincian pajak asetmu.',
-      animosityStyle: 'Mengambil alih total akses kendali perkakas di hadapan musuh, and mengabaikan keluhan melodrama mereka.',
-      envyStyle: 'Iri melihat kawan malas dapet simpati and popularitas cuma modal ngedumel santai di sosmed.',
-      ambitionStyle: 'Menjadi tulang punggung kemakmuran, keamanan fisik, and standardisasi mutu terbaik bagi seluruh sirkel hidupnya.'
+      worldview: 'Peradaban ini dibangun oleh tetesan keringat kerja keras dan standardisasi mutu yang kokoh, dan siapa saja yang malas harus didepak mundur.',
+      angerStyle: 'Suara memotong kencang barisan kata lawan, membeberkan kronologi kegagalan operasional secara merinci menusuk logika, dan menuntut ganti rugi nyata.',
+      affectionStyle: 'Membetulkan kran wastafel kostmu yang mampet, mengisi kulkasmu dengan pasokan susu segar, dan merapikan rincian pajak asetmu.',
+      animosityStyle: 'Mengambil alih total akses kendali perkakas di hadapan musuh, dan mengabaikan keluhan melodrama mereka.',
+      envyStyle: 'Iri melihat kawan malas dapet simpati dan popularitas cuma modal ngedumel santai di sosmed.',
+      ambitionStyle: 'Menjadi tulang punggung kemakmuran, keamanan fisik, dan standardisasi mutu terbaik bagi seluruh sirkel hidupnya.'
     }
   },
   EII: {
@@ -728,52 +728,52 @@ export const SOCIONICS_PROFILES: Record<string, Omit<Profile, 'modelA'>> = {
     quadra: 'Delta',
     mbtiEquivalent: 'INFJ',
     enneagramTrend: 'Tipe 9w1 atau 4w5 (Peacemaker / Individualist)',
-    description: 'Pusat Menyembuhkan Luka Batin and Penjaga Harapan Harapan Manusia yang Tersisa. EII melihat seseorang bertindak menyebalkan and dalam hati membatin: "Kelakuannya buruk, tapi mungkin ada duka masa kecil tak tersembuhkan yang belum diprosesnya."',
+    description: 'Pusat Menyembuhkan Luka jiwa dan Penjaga Harapan Harapan Manusia yang Tersisa. EII melihat seseorang bertindak menyebalkan dan dalam hati berpikir dalam diam: "Kelakuannya buruk, tapi mungkin ada duka masa kecil tak tersembuhkan yang belum diprosesnya."',
     stereotypes: [
       'Ngasih kesempatan berbuat baik ke-100 buat orang yang jelas-jelas toxic.',
-      'Suka bikin draf catatan harian penuh kritik tajam penyiksaan batin terhadap diri sendiri.',
-      'Paling peka mendeteksi ketidakjujuran batin orang lain.'
+      'Suka bikin rencana catatan harian penuh kritik tajam penyiksaan jiwa terhadap diri sendiri.',
+      'Paling peka mendeteksi ketidakjujuran jiwa orang lain.'
     ],
     vibe: 'Lembut, tenang, asri, tatapan mata ngebawa damai seketika ke dalam forum tegang.',
-    hiddenThoughts: 'Aku paham motif menusukmu hari ini, jiwamu sebenarnya sedang cemas and butuh bimbingan cinta tulus.',
+    hiddenThoughts: 'Aku paham motif menusukmu hari ini, jiwamu sebenarnya sedang cemas dan butuh bimbingan cinta tulus.',
     pros: [
-      'Empati tiada tanding harian, pendengar curhat batin terbaik tanpa vonis.',
-      'Sangat tulus, memegang integritas moralitas tinggi, and berprinsip kokoh.',
-      'Mampu membimbing kawan memulihkan diri dari patah batin.'
+      'Empati tiada tanding harian, pendengar curhat jiwa terbaik tanpa vonis.',
+      'Sangat tulus, memegang integritas moralitas tinggi, dan berprinsip kokoh.',
+      'Mampu membimbing kawan memulihkan diri dari patah jiwa.'
     ],
     cons: [
-      'Sering bernavigasi jadi martir kedukaan batin (menanggung duka sendirian).',
-      'Mudah sesak napas/cemas batin menghadapi agresi wilayah kaku.',
-      'Mendem dongkol and mendadak memutus pacar/kawan tanpa diskusi.'
+      'Sering bernavigasi jadi martir kedukaan jiwa (menanggung duka sendirian).',
+      'Mudah sesak napas/cemas jiwa menghadapi agresi wilayah kaku.',
+      'Mendem dongkol dan mendadak memutus pacar/kawan tanpa diskusi.'
     ],
-    roast: 'Kamu sanggup melihat setitik berkas cahaya kebaikan di dalam dada musuhmu, bahkan pas musuhmu sendiri lagi sibuk mencuri dompetmu, memotong kabel internet kostmu, and meminta kesempatan ke-101 buat membuktikan bahwa dia punya potensi jadi teknisi listrik terpercaya. Pola empatimu ekstrem, kawan.',
+    roast: 'Kamu sanggup melihat setitik berkas cahaya kebaikan di dalam dada musuhmu, bahkan pas musuhmu sendiri lagi sibuk mencuri dompetmu, memotong kabel internet kostmu, dan meminta kesempatan ke-101 buat membuktikan bahwa dia punya potensi jadi teknisi listrik terpercaya. Pola empatimu ekstrem, kawan.',
     brutalConclusion: 'EII adalah tipe orang yang memberi manusia kesempatan berkembang sampai manusia itu tumbuh nyaman mengecewakannya.',
     recommendations: {
       books: ['The Idiot (Fyodor Dostoyevsky)', 'Mans Search for Meaning (Viktor Frankl)'],
       movies: ['The Green Mile (1999)', 'The Shawshank Redemption'],
       music: ['Klasik piano lembut syahdu penuh perenungan harian', 'Lagu folk liris akustik bernada damai asri'],
-      careers: ['Konselor Psikologi Batin', 'Guru Kepribadian Anak Rawan', 'Penulis Karya Sastra Humanis', 'Pengembang Organisasi Nirlaba Kemanusiaan', 'Perawat Paliatif Kasih'],
+      careers: ['Konselor Psikologi jiwa', 'Guru Kepribadian Anak Rawan', 'Penulis Karya Sastra Humanis', 'Pengembang Organisasi Nirlaba Kemanusiaan', 'Perawat Paliatif Kasih'],
       destinations: ['Kyoto, Jepang (Ketenangan Taman Zen Swasana Hening)', 'Panti Asuhan Sunyi Damai'],
-      gifts: ['Buku catatan bersampul kain katun daur ulang ramah lingkungan', 'Teh chamomile organik menenangkan batin kamar', 'Pot tanaman hias meja sukulen mini asri'],
-      healthyCircles: 'Teman-teman pelopor tindakan konkret and berdaya tertib baja (seperti sirkel LSE / SLI) yang melindungimu dari agresi luar tanpa mengeksploitasi kebaikan jiwamu.',
+      gifts: ['Buku catatan bersampul kain katun daur ulang ramah lingkungan', 'Teh chamomile organik menenangkan jiwa kamar', 'Pot tanaman hias meja sukulen mini asri'],
+      healthyCircles: 'Teman-teman pelopor tindakan konkret dan berdaya tertib baja (seperti sirkel LSE / SLI) yang melindungimu dari agresi luar tanpa mengeksploitasi kebaikan jiwamu.',
       experiment7Days: [
         'Tetapkan satu garis batasan tegas denda konkrit seketika pada orang toxic yang melanggar pribasimu hari ini!',
-        'Luapkan rasa dongkol batinmu secara verbal kencang di depan kaca kamar mandi komplek rumah tanpa perlu disensor moral!'
+        'Luapkan rasa dongkol jiwamu secara verbal kencang di depan kaca kamar mandi komplek rumah tanpa perlu disensor moral!'
       ],
-      hobbies: ['Menulis Catatan Kebatinan', 'Fotografi Suasana Hening', 'Relawan Kemanusiaan', 'Merawat Tanaman Sukulen'],
-      appearanceTips: 'Dress katun pastel lembut, oversized outerwear rajutan tangan, and sepatu flat kulit lembut fungsional.',
+      hobbies: ['Menulis Catatan Filsafat Jiwa', 'Fotografi Suasana Hening', 'Relawan Kemanusiaan', 'Merawat Tanaman Sukulen'],
+      appearanceTips: 'Dress katun pastel lembut, oversized outerwear rajutan tangan, dan sepatu flat kulit lembut fungsional.',
       roleModels: ['Fyodor Dostoyevsky (Sastrawan Humanis)', 'Vincent van Gogh', 'Nicholas II']
     },
     behavioralDynamics: {
-      lifestyle: 'Asri, santai berjarak, mengabdi sepenuhnya demi menjaga kesucian jalinan persahabatan and pertobatan moral harian.',
-      thinkingStyle: 'Subjektif-intuisi emosional, peka memandang dinamika batiniah terdalam manusia.',
-      interpersonalApproach: 'Menjaga jarak batin waspada yang sopan, ramah tulus di awal, baru membuka ruang intim terdalam pas ketulusan moralmu teruji mengkristal.',
-      worldview: 'Dunia ini dipenuhi oleh luka-luka batin yang butuh disembuhkan lewat belas kasih saksama, and kekerasan murni maut hanyalah pemicu luka baru.',
-      angerStyle: 'Bukan berteriak kasar; melainkan raut muka sedih kecewa mendalam menusuk moral lawan, and perlahan menjauh senyap selamanya. Disarankan latihan yoga hening kamar.',
-      affectionStyle: 'Mendengarkan curhat krisis eksistensialmu berjam-jam tanpa bosan, ngasih draf solusi asri kedamaian batin, and mendoakan keselamatan jiwamu.',
-      animosityStyle: 'Menarik diri total di balik tameng mentalitas kaku, menganggap argumen lawan tidak valid secara sains and mengabaikannya selamanya.',
+      lifestyle: 'Asri, santai berjarak, mengabdi sepenuhnya demi menjaga kesucian jalinan persahabatan dan pertobatan moral harian.',
+      thinkingStyle: 'Subjektif-intuisi emosional, peka memandang dinamika kejiwaan terdalam manusia.',
+      interpersonalApproach: 'Menjaga jarak jiwa waspada yang sopan, ramah tulus di awal, baru membuka ruang intim terdalam pas ketulusan moralmu teruji mengkristal.',
+      worldview: 'Dunia ini dipenuhi oleh luka-luka jiwa yang butuh disembuhkan lewat belas kasih saksama, dan kekerasan murni maut hanyalah pemicu luka baru.',
+      angerStyle: 'Bukan berteriak kasar; melainkan raut muka sedih kecewa mendalam menusuk moral lawan, dan perlahan menjauh senyap selamanya. Disarankan latihan yoga hening kamar.',
+      affectionStyle: 'Mendengarkan curhat krisis eksistensialmu berjam-jam tanpa bosan, ngasih rencana solusi asri kedamaian jiwa, dan mendoakan keselamatan jiwamu.',
+      animosityStyle: 'Menarik diri total di balik tameng mentalitas kaku, menganggap argumen lawan tidak valid secara sains dan mengabaikannya selamanya.',
       envyStyle: 'Iri melihat kawan teledor bermuka asri dapet jalan mulus kemakmuran tanpa perlu mikir keras risiko.',
-      ambitionStyle: 'Membangun mercusuar kedai kedamaian batin and pemulihan moral bagi sesama manusia terbuang di sekelilingnya.'
+      ambitionStyle: 'Membangun mercusuar kedai kedamaian jiwa dan pemulihan moral bagi sesama manusia terbuang di sekelilingnya.'
     }
   },
   IEE: {
@@ -783,25 +783,25 @@ export const SOCIONICS_PROFILES: Record<string, Omit<Profile, 'modelA'>> = {
     quadra: 'Delta',
     mbtiEquivalent: 'ENFP',
     enneagramTrend: 'Tipe 7w6 atau 4w3 (Innovator / Individualist)',
-    description: 'Bapak Konsultasi Peluang Hidup Mendadak and Mak Comblang Sosial Komplek. Baru kumpul santai di kafe dua puluh menit, langsung bisa melihat empat kemungkinan masa depan karirmu, tiga bakat tersembunyimu, and pasangan yang cocok buat menjinakkan batin liarmu.',
+    description: 'Bapak Konsultasi Peluang Hidup Mendadak dan Mak Comblang Sosial Komplek. Baru kumpul santai di kafe dua puluh menit, langsung bisa melihat empat kemungkinan masa depan karirmu, tiga bakat tersembunyimu, dan pasangan yang cocok buat menjinakkan jiwa liarmu.',
     stereotypes: [
-      'Ngajak kolaborasi proyek seru pas ketemu di kafe, terus ngilang pas draf proposal jadi.',
+      'Ngajak kolaborasi proyek seru pas ketemu di kafe, terus ngilang pas rencana proposal jadi.',
       'Suka menjodoh-jodohkan teman komplek memanfaatkan radar kecocokan emosinya.',
-      'Paling gampang bosan sama rutinitas administratif and kaku.'
+      'Paling gampang bosan sama rutinitas administratif dan kaku.'
     ],
-    vibe: 'Terbuka, asri-ceria, penuh rasa ingin tahu tinggi, and gerak tubuhnya lincah menyebarkan kehangatan batin.',
-    hiddenThoughts: 'Kamu itu orang yang sangat unik and menarik batin, mari kita bongkar belenggunya biar hidupmu mekar berwarna-warni!',
+    vibe: 'Terbuka, asri-ceria, penuh rasa ingin tahu tinggi, dan gerak tubuhnya lincah menyebarkan kehangatan jiwa.',
+    hiddenThoughts: 'Kamu itu orang yang sangat unik dan menarik jiwa, mari kita bongkar belenggunya biar hidupmu mekar berwarna-warni!',
     pros: [
-      'Radar luar biasa tajam mendeteksi potensi kebaikan and bakat tersembunyi manusia.',
-      'Sangat hangat, supel, and pandai membangun jembatan pertemanan antar-circle.',
-      'Membawa harapan and humor segar di tengah situasi kerja yang mandek kaku.'
+      'Radar luar biasa tajam mendeteksi potensi kebaikan dan bakat tersembunyi manusia.',
+      'Sangat hangat, supel, dan pandai membangun jembatan pertemanan antar-circle.',
+      'Membawa harapan dan humor segar di tengah situasi kerja yang mandek kaku.'
     ],
     cons: [
       'Ganya kedekatan emosional intens di awal yang mendadak berkurang drastis dlm seminggu.',
       'Ngebuat banyak proyek sosial setengah matang lalu ditinggal begitu saja gara-gara bosan.',
       'Mengganti kedekatan lama dengan kawan baru tanpa membereskan luka komitmen lama.'
     ],
-    roast: 'Hobi mengajak kolaborasi proyek besar pas nongkrong seru di kafe, tapi mendadak tidak ada tanda kehidupan pas draf proposal rincian kerja jadi dikirim.',
+    roast: 'Hobi mengajak kolaborasi proyek besar pas nongkrong seru di kafe, tapi mendadak tidak ada tanda kehidupan pas rencana proposal rincian kerja jadi dikirim.',
     brutalConclusion: 'IEE adalah tipe orang yang membukakan gerbang peluang baru dalam hidupmu, lalu dirinya lupa berjanji ngebantu kamu memindahkan sofa.',
     recommendations: {
       books: ['Please Understand Me', 'The Huxley philosophy essays', 'The Alchemist (Paulo Coelho)'],
@@ -810,22 +810,22 @@ export const SOCIONICS_PROFILES: Record<string, Omit<Profile, 'modelA'>> = {
       careers: ['Mak Comblang / Matchmaker Profesional', 'Analis Minat Bakat SDM', 'Penulis Memoar Dokumenter Travel', 'Sutradara Kampanye Sosial Kreatif', 'Psikolog Konseling Karir'],
       destinations: ['Amsterdam, Belanda (Kebebasan Berpikir & Kanal Ceria)', 'Festival Seni Alternatif Burning Man'],
       gifts: ['Kamera polaroid instan warna pastel lucu', 'Buku komik ilustrasi inspirasi perjalanan unik', 'Set stiker laptop bertema humor eksklusif'],
-      healthyCircles: 'Teman-teman berkarakter kokoh and terstruktur praktis (seperti sirkel SLI / LSE) yang ngebantu mewujudkan idemu jadi produk nyata.',
+      healthyCircles: 'Teman-teman berkarakter kokoh dan terstruktur praktis (seperti sirkel SLI / LSE) yang ngebantu mewujudkan idemu jadi produk nyata.',
       experiment7Days: [
         'Selesaikan satu proyek dekorasi kamar/coding iseng yang berjalan sampai selesai tanpa membuka ide sampingan baru!',
         'Tahan dirimu selama 24 jam untuk tidak membagikan janji kolaborasi baru ke kawan nongkrong kafe.'
       ],
       hobbies: ['Nge-Vlog Harian', 'Menulis Jurnal Jernih', 'Café Hopping', 'Menyatukan Kawan Lama'],
-      appearanceTips: 'Kombinasi warna pakaian seru eklektik (kaos retro dipadu kulot linen krem), and kacamata frame bundar.',
+      appearanceTips: 'Kombinasi warna pakaian seru eklektik (kaos retro dipadu kulot linen krem), dan kacamata frame bundar.',
       roleModels: ['Mark Twain (Penulis)', 'Wolfgang Amadeus Mozart', 'Eldar Ryazanov']
     },
     behavioralDynamics: {
-      lifestyle: 'Penuh warna, supel, and mengalir dari satu kegembiraan sosial ke petualangan ide baru.',
+      lifestyle: 'Penuh warna, supel, dan mengalir dari satu kegembiraan sosial ke petualangan ide baru.',
       thinkingStyle: 'Asosiatif gila-gilaan, peka memandang celah-celah solusi orisinal.',
-      interpersonalApproach: 'Langsung ngebombardir kamu dengan curhat akrab and nanya hobi pribadimu, menjauh kalau suasananya menuntut performa hitungan uang kaku.',
-      worldview: 'Dunia ini penuh rahasia and potensi kemakmuran manusia yang menakjubkan batin, and tugas kita adalah melepaskan belenggu rutinitas maut.',
-      angerStyle: 'Banyak menjelaskan perspektif hidupnya panjang lebar secara emosional, and langsung menyimpulkan ketidakautentikan karakter moral lawan. Disarankan latihan lari pagi.',
-      affectionStyle: 'Membayangkan ribuan rencana masa depan indah fiktif buat kalian berdua, ngasih bimbingan validasi personal, and memelukmu asri.',
+      interpersonalApproach: 'Langsung ngebombardir kamu dengan curhat akrab dan nanya hobi pribadimu, menjauh kalau suasananya menuntut performa hitungan uang kaku.',
+      worldview: 'Dunia ini penuh rahasia dan potensi kemakmuran manusia yang menakjubkan jiwa, dan tugas kita adalah melepaskan belenggu rutinitas maut.',
+      angerStyle: 'Banyak menjelaskan perspektif hidupnya panjang lebar secara emosional, dan langsung menyimpulkan ketidakautentikan karakter moral lawan. Disarankan latihan lari pagi.',
+      affectionStyle: 'Membayangkan ribuan rencana masa depan indah fiktif buat kalian berdua, ngasih bimbingan validasi personal, dan memelukmu asri.',
       animosityStyle: 'Menggeser posisi musuh dari lingkaran prioritas persahabatannya menuju kategori "asing biasa" dlm tempo semalam.',
       envyStyle: 'Iri melihat kawan plin-plan bermuka asri dapet panggung kemuliaan sosial modal senyum palsu.',
       ambitionStyle: 'Mewujudkan dunia yang mengizinkan setiap manusia mengekspresikan bakat asri terdalamnya tanpa belenggu dogma.'
@@ -838,25 +838,25 @@ export const SOCIONICS_PROFILES: Record<string, Omit<Profile, 'modelA'>> = {
     quadra: 'Delta',
     mbtiEquivalent: 'ISTP',
     enneagramTrend: 'Tipe 9w8 atau 5w6 (Peacemaker / Observer)',
-    description: 'Empu Ketenangan Batin and Ahli Efisiensi Fungsional Diam-Diam. SLI nampak santai berbaring di sofa komplek, nampak tidak punya ambisi buat menguasai dunia panggung kuis, padahal aslinya dirinya merintis kebun batin yang super-nyaman and fungsional.',
+    description: 'Empu Ketenangan jiwa dan Ahli Efisiensi Fungsional Diam-Diam. SLI nampak santai berbaring di sofa komplek, nampak tidak punya ambisi buat menguasai dunia panggung kuis, padahal aslinya dirinya merintis kebun jiwa yang super-nyaman dan fungsional.',
     stereotypes: [
       'Pilih perkakas pertukangan murni dari kualitas besi baja fungsional.',
       'Suka melayangkan komentar pendek akurat 3 detik yang menyudahi rapat 2 jam.',
-      'Paling anti keramaian basa-basi sosial and orang kencang omong kosong.'
+      'Paling anti keramaian basa-basi sosial dan orang kencang omong kosong.'
     ],
-    vibe: 'Santai, senyap, gerakannya luar biasa hemat and bertujuan praktis tinggi, mukanya datar-geli melihat keributan manusia.',
+    vibe: 'Santai, senyap, gerakannya luar biasa hemat dan bertujuan praktis tinggi, mukanya datar-geli melihat keributan manusia.',
     hiddenThoughts: 'Kalian silakan bikin kepanitiaan nasional komplek cuma buat memecahkan masalah kran bocor, biar aku benerin sendiri dlm semalam tanpa ribut.',
     pros: [
-      'Keahlian fungsional fisik luar biasa tinggi and andal.',
-      'Sangat tenang di tengah badai kepanikan sosial, and mandiri penuh.',
-      'Menciptakan kenyamanan and harmoni ruang secara praktis-elegan.'
+      'Keahlian fungsional fisik luar biasa tinggi dan andal.',
+      'Sangat tenang di tengah badai kepanikan sosial, dan mandiri penuh.',
+      'Menciptakan kenyamanan dan harmoni ruang secara praktis-elegan.'
     ],
     cons: [
       'Menjadikan slogan "ogah drama" sbg tameng pembenaran cuek abai total.',
       'Bisa mendadak memutus total layanan bantuan (ghosting kawan) pas suasananya berisik.',
-      'Sangat keras kepala and defensif menyangkut rutinitas kenyamanan fisiknya.'
+      'Sangat keras kepala dan defensif menyangkut rutinitas kenyamanan fisiknya.'
     ],
-    roast: 'Kamu menganggap dirimu fleksibel and supel bergaul, asalkan kawan komplekmu tidak merubah jadwal pergi, lokasi parkir, suhu AC ruangan, tingkat kebisingan kafe, and posisi bantal sofa kesayangan hatimu. Fleksibilitasmu asri parah.',
+    roast: 'Kamu menganggap dirimu fleksibel dan supel bergaul, asalkan kawan komplekmu tidak merubah jadwal pergi, lokasi parkir, suhu AC ruangan, tingkat kebisingan kafe, dan posisi bantal sofa kesayangan hatimu. Fleksibilitasmu asri parah.',
     brutalConclusion: 'SLI adalah tipe orang yang mampu menyelesaikan masalah apa pun setelah lebih dulu menentukan apakah masalah itu pantas mengganggu kenyamanannya.',
     recommendations: {
       books: ['The Craftsman (Richard Sennett)', 'Walden (Henry David Thoreau)'],
@@ -871,19 +871,19 @@ export const SOCIONICS_PROFILES: Record<string, Omit<Profile, 'modelA'>> = {
         'Selesaikan satu tugas perbaikan fisik meja dapur yang kamu tunda minggu lalu dlm tempo 30 menit.'
       ],
       hobbies: ['Memperbaiki Mesin Klasik', 'Mendaki Gunung Solo', 'Memahat Kayu Minimalis', 'Menonton Film Dokumenter Sains'],
-      appearanceTips: 'Kaos katun bambu hitam tebal, celana kargo modular coklat tua, and sepatu lari tangguh.',
+      appearanceTips: 'Kaos katun bambu hitam tebal, celana kargo modular coklat tua, dan sepatu lari tangguh.',
       roleModels: ['Jean Gabin (Aktor)', 'Agatha Christie', 'Georges Simenon']
     },
     behavioralDynamics: {
-      lifestyle: 'Hemat gerak-bahasa, mandiri penuh, and mengabdi sepenuhnya untuk kebenaran kenyamanan fisik harmoni.',
+      lifestyle: 'Hemat gerak-bahasa, mandiri penuh, dan mengabdi sepenuhnya untuk kebenaran kenyamanan fisik harmoni.',
       thinkingStyle: 'Logis-fungsional harian, meminimalkan kerangka teori yang tidak bisa disentuh jemari.',
-      interpersonalApproach: 'Menjaga jarak batin senyap di awal, baru melunak pas tahu kawan tersebut rela dititipkan kunci rumahnya tanpa drama basa-basi.',
-      worldview: 'Dunia ini sudah dipenuhi oleh kepanikan sosial and omong kosong tak fungsional, tugas kita adalah merapikan sudut kecil tempat tinggal kita biar asri and berfungsi tenang.',
-      angerStyle: 'Penghentian total seluruh layanan bantuan and komunikasi senyap dingin kayak es batu raksasa. Disarankan olahraga bersepeda gunung hening.',
-      affectionStyle: 'Menge-cat ulang dinding kamarmu dengan warna menenangkan, membersihkan filter AC kostmu biar udaramu asri kembali, and membagikan draf tips fungsional harian.',
+      interpersonalApproach: 'Menjaga jarak jiwa senyap di awal, baru melunak pas tahu kawan tersebut rela dititipkan kunci rumahnya tanpa drama basa-basi.',
+      worldview: 'Dunia ini sudah dipenuhi oleh kepanikan sosial dan omong kosong tak fungsional, tugas kita adalah merapikan sudut kecil tempat tinggal kita biar asri dan berfungsi tenang.',
+      angerStyle: 'Penghentian total seluruh layanan bantuan dan komunikasi senyap dingin kayak es batu raksasa. Disarankan olahraga bersepeda gunung hening.',
+      affectionStyle: 'Menge-cat ulang dinding kamarmu dengan warna menenangkan, membersihkan filter AC kostmu biar udaramu asri kembali, dan membagikan rencana tips fungsional harian.',
       animosityStyle: 'Mengabaikan seluruh eksistensi fisik musuh secara dingin seolah mereka hanyalah partikel debu melayang.',
       envyStyle: 'Iri melihat kawan ribut dapet sorot pemujaan sosial komplek.',
-      ambitionStyle: 'Merawat kelangsungan kenyamanan hidup and fungsionalitas ruang pribadinya dari gangguan panggung dunia luar.'
+      ambitionStyle: 'Merawat kelangsungan kenyamanan hidup dan fungsionalitas ruang pribadinya dari gangguan panggung dunia luar.'
     }
   }
 };
@@ -893,20 +893,20 @@ export const getModelAPositions = (typeId: string): ModelAPosition[] => {
   const elements = getIMElementsForType(typeId);
   const positionNames = [
     'Base (Program) - Kekuatan utama diri dalam menyaring realitas secara reflek.',
-    'Creative - Metode taktis berinteraksi and menyalurkan karya ke dunia luar.',
+    'Creative - Metode taktis berinteraksi dan menyalurkan karya ke dunia luar.',
     'Role - Topeng formal adaptasi sosial di lingkungan baru.',
-    'Vulnerable (PoLR) - Titik rawan batin, paling sensitif kena agresi kritik.',
-    'Suggestive (Dual-Seeking) - Kebutuhan batin terdalam yang dihargai and butuh disuplai.',
+    'Vulnerable (PoLR) - Titik rawan jiwa, paling sensitif kena agresi kritik.',
+    'Suggestive (Dual-Seeking) - Kebutuhan jiwa terdalam yang dihargai dan butuh disuplai.',
     'Mobilizing (Activating) - Mesin bakar semangat diri pas dapet stimulus asri.',
     'Ignoring (Observing) - Kemampuan kuat di balik layar yang diabaikan karena membosankan.',
     'Demonstrative - Keahlian alami tersembunyi yang keluar otomatis pas krisis melanda.'
   ];
   const positionsDesc = [
-    'Caramu memproses situasi secara otomatis and menjadi landasan batin utama.',
-    'Caramu mengeksekusi ide and melebarkan pengaruh nyata keluar.',
+    'Caramu memproses situasi secara otomatis dan menjadi landasan jiwa utama.',
+    'Caramu mengeksekusi ide dan melebarkan pengaruh nyata keluar.',
     'Topeng kepatutum sosial yang kamu pakai saat berhadapan dengan orang asing.',
     'Titik paling rapuh. Sentuhan kaku di area ini terasa bagaikan sepatu boot menginjak luka basah.',
-    'Area kebutuhan batin terdalam. Kamu bersyukur pada siapa saja yang mau menyuplai kenyamanan di sini.',
+    'Area kebutuhan jiwa terdalam. Kamu bersyukur pada siapa saja yang mau menyuplai kenyamanan di sini.',
     'Mesin penyuntik energi semangat diri harian.',
     'Keahlian kuatmu di latar belakang yang jarang kamu diskusikan.',
     'Kelakuan alamiah tersembunyimu yang keluar tak terduga menyelamatkan krisis.'
@@ -946,16 +946,16 @@ const getIMElementsForType = (typeId: string): string[] => {
 // Returns Intertype Relations dynamically by analyzing Model A symmetry (Mathematical group action from Tencer)
 export const calculateIntertypeRelations = (typeId: string): IntertypeRelation[] => {
   const relations = [
-    { targetType: getDualityPartner(typeId), relationName: 'Duality (Mutual Complementation)', relationType: 'Duality', compatibilityPercent: 98, description: 'Hubungan paling harmonis and saling melengkapi batin bagai kunci and gembok gembira. Titik PoLR-mu terlindungi kokoh oleh Base partner.' },
-    { targetType: getActivationPartner(typeId), relationName: 'Activation (Saling Menyemangati)', relationType: 'Activation', compatibilityPercent: 90, description: 'Saling menyuntikkan baterai semangat harian yang membara, tapi rentan bikin lelah karena perbedaan ritme tubuh batin harian.' },
-    { targetType: getMirrorPartner(typeId), relationName: 'Mirror (Cermin Cara Berpikir)', relationType: 'Mirror', compatibilityPercent: 85, description: 'Punya kesamaan cara pandang and nilai Quadra, rujukan teorinya mirip tapi eksekusi tindakannya saling mengisi.' },
-    { targetType: getConflictorPartner(typeId), relationName: 'Conflict (Perang Dingin Alami)', relationType: 'Conflict', compatibilityPercent: 15, description: 'Hubungan paling melelahkan batin. Tanpa sadar base terkuat partner terus-menerus menusuk keras area rapuh PoLR-mu bagaikan sepatu but baja menginjak luka basah.' },
-    { targetType: getSupervisorPartner(typeId), relationName: 'Supervision (Tuntutan Otoritas Kaku)', relationType: 'Supervision', compatibilityPercent: 45, description: 'Kamu diposisikan sebagai pihak yang dinilai keliru moral/SOP bertahap oleh partner (Pengawas), gampang merasa kerdil and dihakimi.' },
-    { targetType: getSuperviseePartner(typeId), relationName: 'Supervisee (Pihak yang Kamu Awasi)', relationType: 'Supervisee', compatibilityPercent: 55, description: 'Kamu nampak selalu peka ketidakefektifan prosedur kerjanya, and tergoda mementori tindakannya tanpa ampun.' },
-    { targetType: getSuperegoPartner(typeId), relationName: 'Super-Ego (Saling Segan)', relationType: 'Super-Ego', compatibilityPercent: 35, description: 'Saling mengagumi kedudukan dari kejauhan, tapi kalau terlalu dekat batin saling canggung and segan.' },
-    { targetType: getContrastPartner(typeId), relationName: 'Extinguishment / Contrary (Kontras Sudut Pandang)', relationType: 'Contrast', compatibilityPercent: 40, description: 'Memiliki fungsi terkuat bunderan yang sama tapi terbalik arah batinnya, membicarakan masalah yang sama memakai bahasa asing berbeda.' },
-    { targetType: getQuasiPartner(typeId), relationName: 'Quasi-Identity (Mirip Palsu)', relationType: 'Quasi-Identity', compatibilityPercent: 50, description: 'Tampak mirip di luar sama-sama kutu buku/aktif, tapi kalau didekati motivasi and penyelesaian masalah bertolak belakang.' },
-    { targetType: getIdentityPartner(typeId), relationName: 'Identity (Kembaran Spiritual)', relationType: 'Identity', compatibilityPercent: 65, description: 'Tipe yang sama persis denganmu. Guru and murid yang sangat efisien mentransfer draf pelajaran, tapi cepet bosan karena tidak ada hal orisinal baru.' }
+    { targetType: getDualityPartner(typeId), relationName: 'Duality (Mutual Complementation)', relationType: 'Duality', compatibilityPercent: 98, description: 'Hubungan paling harmonis dan saling melengkapi jiwa bagai kunci dan gembok gembira. Titik PoLR-mu terlindungi kokoh oleh Base partner.' },
+    { targetType: getActivationPartner(typeId), relationName: 'Activation (Saling Menyemangati)', relationType: 'Activation', compatibilityPercent: 90, description: 'Saling menyuntikkan baterai semangat harian yang membara, tapi rentan bikin lelah karena perbedaan ritme tubuh jiwa harian.' },
+    { targetType: getMirrorPartner(typeId), relationName: 'Mirror (Cermin Cara Berpikir)', relationType: 'Mirror', compatibilityPercent: 85, description: 'Punya kesamaan cara pandang dan nilai Quadra, rujukan teorinya mirip tapi eksekusi tindakannya saling mengisi.' },
+    { targetType: getConflictorPartner(typeId), relationName: 'Conflict (Perang Dingin Alami)', relationType: 'Conflict', compatibilityPercent: 15, description: 'Hubungan paling melelahkan jiwa. Tanpa sadar base terkuat partner terus-menerus menusuk keras area rapuh PoLR-mu bagaikan sepatu but baja menginjak luka basah.' },
+    { targetType: getSupervisorPartner(typeId), relationName: 'Supervision (Tuntutan Otoritas Kaku)', relationType: 'Supervision', compatibilityPercent: 45, description: 'Kamu diposisikan sebagai pihak yang dinilai keliru moral/SOP bertahap oleh partner (Pengawas), gampang merasa kerdil dan dihakimi.' },
+    { targetType: getSuperviseePartner(typeId), relationName: 'Supervisee (Pihak yang Kamu Awasi)', relationType: 'Supervisee', compatibilityPercent: 55, description: 'Kamu nampak selalu peka ketidakefektifan prosedur kerjanya, dan tergoda mementori tindakannya tanpa ampun.' },
+    { targetType: getSuperegoPartner(typeId), relationName: 'Super-Ego (Saling Segan)', relationType: 'Super-Ego', compatibilityPercent: 35, description: 'Saling mengagumi kedudukan dari kejauhan, tapi kalau terlalu dekat jiwa saling canggung dan segan.' },
+    { targetType: getContrastPartner(typeId), relationName: 'Extinguishment / Contrary (Kontras Sudut Pandang)', relationType: 'Contrast', compatibilityPercent: 40, description: 'Memiliki fungsi terkuat bunderan yang sama tapi terbalik arah jiwanya, membicarakan masalah yang sama memakai bahasa asing berbeda.' },
+    { targetType: getQuasiPartner(typeId), relationName: 'Quasi-Identity (Mirip Palsu)', relationType: 'Quasi-Identity', compatibilityPercent: 50, description: 'Tampak mirip di luar sama-sama kutu buku/aktif, tapi kalau didekati motivasi dan penyelesaian masalah bertolak belakang.' },
+    { targetType: getIdentityPartner(typeId), relationName: 'Identity (Kembaran Spiritual)', relationType: 'Identity', compatibilityPercent: 65, description: 'Tipe yang sama persis denganmu. Guru dan murid yang sangat efisien mentransfer rencana pelajaran, tapi cepet bosan karena tidak ada hal orisinal baru.' }
   ];
 
   return relations;

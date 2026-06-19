@@ -26,7 +26,7 @@ export function slotInterpretation(type: SocionicsType, slot: ModelASlot): strin
 
 export function reliefCopy(type: SocionicsType): string {
   const { polr, suggestive } = TIM_MODELS[type].slots;
-  return `Kalau bagian ${polr} sering terasa terlalu menekan, itu tidak perlu langsung dibaca sebagai kegagalan batin. Dalam Model A, area rentan memang sering terasa tidak sebanding dengan tuntutan dunia. Yang jauh lebih membantu adalah mengenali bantuan ${suggestive}: bentuk dukungan yang memberi ruang kenyamanan, arah, atau pegangan tanpa membuatmu merasa kerdil atau direndahkan.`;
+  return `Kalau bagian ${polr} sering terasa terlalu menekan, itu tidak perlu langsung dibaca sebagai kegagalan jiwa. Dalam Model A, area rentan memang sering terasa tidak sebanding dengan tuntutan dunia. Yang jauh lebih membantu adalah mengenali bantuan ${suggestive}: bentuk dukungan yang memberi ruang kenyamanan, arah, atau pegangan tanpa membuatmu merasa kerdil atau direndahkan.`;
 }
 
 export function tensionCopy(type: SocionicsType): string {

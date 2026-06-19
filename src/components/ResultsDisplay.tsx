@@ -108,7 +108,7 @@ export default function ResultsDisplay({ theme, userName, result, onRestart }: R
       await downloadCanvas(hiddenCanvasRef.current, `KTP_Socionics_${profileId}_${userName}`);
     } catch (err) {
       console.error(err);
-      alert('Gagal membuat kartu KTP hasil batin.');
+      alert('Gagal membuat kartu KTP hasil jiwa.');
     } finally {
       setGeneratingKtp(false);
     }
@@ -157,7 +157,7 @@ export default function ResultsDisplay({ theme, userName, result, onRestart }: R
       link.click();
     } catch (err) {
       console.error(err);
-      alert('Gagal mengekspor Bento batin, silakan gunakan tangkapan layar (screenshot) biasa.');
+      alert('Gagal mengekspor Bento jiwa, silakan gunakan tangkapan layar (screenshot) biasa.');
     } finally {
       (window as any).getComputedStyle = originalGetComputedStyle;
       setExporting(false);
@@ -479,7 +479,7 @@ ${['base', 'creative', 'role', 'polr', 'suggestive', 'mobilizing', 'ignoring', '
           <div className="flex items-center gap-2.5 mb-3">
             <Eye size={18} className="text-amber-500" />
             <h3 className="text-sm font-serif font-bold tracking-wider uppercase text-amber-600 dark:text-amber-400">
-              Cermin Kebatinan Pembuka (Mirror Reflection)
+              Cermin Filsafat Jiwa Pembuka (Mirror Reflection)
             </h3>
           </div>
           <p className="text-xs sm:text-sm font-serif italic leading-relaxed text-stone-800 dark:text-stone-200">
@@ -495,7 +495,7 @@ ${['base', 'creative', 'role', 'polr', 'suggestive', 'mobilizing', 'ignoring', '
               style={{ color: isGarden ? '#4A3333' : '#F5E6D3' }}
             >
               <User size={16} className={isGarden ? 'text-rose-450' : 'text-amber-400'} />
-              <span>Cetak Biru Kebatinan & Fitur Alamiah</span>
+              <span>Cetak Biru Filsafat Jiwa & Fitur Alamiah</span>
             </h3>
             <p className={`text-xs sm:text-sm leading-relaxed p-5 rounded-2xl ${isGarden ? 'bg-white border border-rose-100' : 'bg-[#1F1411] border border-amber-950/20'} text-stone-600 dark:text-stone-300`}>
               {profile.description}
@@ -534,7 +534,7 @@ ${['base', 'creative', 'role', 'polr', 'suggestive', 'mobilizing', 'ignoring', '
               <div className="flex items-center gap-2 mb-3">
                 <Flame size={16} className="text-rose-500 animate-pulse" />
                 <span className="text-[10px] uppercase font-extrabold tracking-wider text-rose-400">
-                  Kejujuran Terang: Roast Kebatinan-mu 🔥
+                  Kejujuran Terang: Roast Filsafat Jiwa-mu 🔥
                 </span>
               </div>
               <p className="text-xs font-serif leading-relaxed italic text-stone-700 dark:text-stone-200">
@@ -630,7 +630,7 @@ ${['base', 'creative', 'role', 'polr', 'suggestive', 'mobilizing', 'ignoring', '
           <div className="lg:col-span-7 p-6 rounded-2xl border space-y-4 bg-stone-50/50 dark:bg-[#1E1410]/20 border-stone-100 dark:border-stone-850">
             <div className="flex items-center justify-between">
               <span className="text-xs uppercase font-bold text-stone-400 tracking-wider">
-                Indeks Resonansi Elemen Informasi
+                Indeks keselarasan Elemen Informasi
               </span>
               <span className="text-[9px] font-mono text-stone-550">Sinyal kognitif bersih</span>
             </div>
@@ -699,7 +699,7 @@ ${['base', 'creative', 'role', 'polr', 'suggestive', 'mobilizing', 'ignoring', '
               style={{ color: isGarden ? '#4A3333' : '#F5E6D3' }}
             >
               <Sparkles size={16} className={isGarden ? 'text-rose-400' : 'text-amber-400'} />
-              <span>Panduan Asisten Pribadi Kebatinan</span>
+              <span>Panduan Asisten Pribadi Filsafat Jiwa</span>
             </h3>
           </div>
 
@@ -800,7 +800,7 @@ ${['base', 'creative', 'role', 'polr', 'suggestive', 'mobilizing', 'ignoring', '
             >
               Kompatibilitas Relasi Inter-Dinamis (Matriks Symmetris)
             </h3>
-            <p className="text-[11px] text-stone-450 italic">Korelasinya dihitung otomatis menggunakan teori grup isomorfis batin</p>
+            <p className="text-[11px] text-stone-450 italic">Korelasinya dihitung otomatis menggunakan teori grup isomorfis jiwa</p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">

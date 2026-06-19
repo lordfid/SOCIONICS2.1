@@ -1,7 +1,8 @@
 {
-  "name": "react-example",
+  "name": "socionics-dalam-diriku",
   "private": true,
   "version": "0.0.0",
+  "description": "Tes refleksi Socionics berbasis Model A",
   "type": "module",
   "scripts": {
     "dev": "vite --port=3000 --host=0.0.0.0",

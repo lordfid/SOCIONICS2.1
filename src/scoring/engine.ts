@@ -1,6 +1,17 @@
-import type { Answers, CandidateScore, CoverageReport, FinalResult, InformationElement, MeasurementChannel, ResponseQuality, SocionicsType, TestSession } from "../types";
+import type { Answers, CandidateScore, CoverageReport, FinalResult, InformationElement, MeasurementChannel, ResponseQuality, SocionicsType, TestSession, ModelASlot } from "../types";
 import { ALL_QUESTIONS, QUESTION_BY_ID } from "../data/questions";
 import { CHANNELS, CHANNEL_TO_SLOT, ELEMENTS, getModelCellKey, SLOT_TO_CHANNEL, TIM_MODELS, TIM_ORDER } from "../data/modelA";
+
+const SLOT_PROTOTYPES: Record<ModelASlot, Record<MeasurementChannel, number>> = {
+  base: { producer: 1.00, flexible: 0.45, mask: -0.15, threat: -0.75, receiver: -0.45, aspiration: 0.10, dismissive: -0.15, background: 0.35 },
+  creative: { producer: 0.55, flexible: 1.00, mask: -0.10, threat: -0.55, receiver: -0.25, aspiration: 0.20, dismissive: 0.05, background: 0.40 },
+  role: { producer: -0.15, flexible: -0.10, mask: 1.00, threat: -0.15, receiver: -0.45, aspiration: -0.20, dismissive: -0.30, background: -0.15 },
+  polr: { producer: -0.75, flexible: -0.55, mask: -0.15, threat: 1.00, receiver: -0.15, aspiration: -0.45, dismissive: -0.45, background: -0.55 },
+  suggestive: { producer: -0.45, flexible: -0.25, mask: -0.45, threat: -0.15, receiver: 1.00, aspiration: 0.35, dismissive: -0.10, background: -0.25 },
+  mobilizing: { producer: 0.10, flexible: 0.20, mask: -0.15, threat: -0.45, receiver: 0.35, aspiration: 1.00, dismissive: -0.15, background: 0.15 },
+  ignoring: { producer: -0.15, flexible: 0.05, mask: -0.30, threat: -0.45, receiver: -0.10, aspiration: -0.15, dismissive: 1.00, background: 0.55 },
+  demonstrative: { producer: 0.35, flexible: 0.40, mask: -0.15, threat: -0.55, receiver: -0.25, aspiration: 0.15, dismissive: 0.55, background: 1.00 }
+};
 
 const VERSION = "3.5.0";
 const CORE_WEIGHT = 0.88;
@@ -56,11 +67,17 @@ function collectProfile(answers: Answers, kinds: Array<"core" | "holdout">) {
 function expectedVector(type: SocionicsType): Record<string, number> {
   const model = TIM_MODELS[type];
   const expected: Record<string, number> = {};
-  for (const element of ELEMENTS) for (const channel of CHANNELS) expected[getModelCellKey(element, channel)] = 0;
-  const slotStrength = { base: 1, creative: 0.92, role: 0.68, polr: 1, suggestive: 0.9, mobilizing: 0.82, ignoring: 0.62, demonstrative: 0.78 } as const;
+  for (const element of ELEMENTS) {
+    for (const channel of CHANNELS) {
+      expected[getModelCellKey(element, channel)] = 0;
+    }
+  }
   for (const [slot, element] of Object.entries(model.slots)) {
-    const channel = SLOT_TO_CHANNEL[slot as keyof typeof SLOT_TO_CHANNEL];
-    expected[getModelCellKey(element, channel)] = slotStrength[slot as keyof typeof slotStrength];
+    const slotName = slot as ModelASlot;
+    const prototype = SLOT_PROTOTYPES[slotName];
+    for (const channel of CHANNELS) {
+      expected[getModelCellKey(element, channel)] = prototype[channel];
+    }
   }
   return expected;
 }
@@ -128,6 +145,45 @@ function elementRanking(profile: Record<string, number>) {
       }
     }
     return { element, score: count ? sum / count : 0 };
+  });
+  return rows.sort((a, b) => b.score - a.score);
+}
+
+function elementStrengthRanking(profile: Record<string, number>) {
+  const rows = ELEMENTS.map((element) => {
+    const producerVal = Math.max(0, profile[getModelCellKey(element, "producer")] ?? 0);
+    const flexibleVal = Math.max(0, profile[getModelCellKey(element, "flexible")] ?? 0);
+    const backgroundVal = Math.max(0, profile[getModelCellKey(element, "background")] ?? 0);
+    const score = (producerVal + flexibleVal + backgroundVal) / 3;
+    return { element, score };
+  });
+  return rows.sort((a, b) => b.score - a.score);
+}
+
+function elementValuedRanking(profile: Record<string, number>) {
+  const rows = ELEMENTS.map((element) => {
+    const producerVal = Math.max(0, profile[getModelCellKey(element, "producer")] ?? 0);
+    const flexibleVal = Math.max(0, profile[getModelCellKey(element, "flexible")] ?? 0);
+    const receiverVal = Math.max(0, profile[getModelCellKey(element, "receiver")] ?? 0);
+    const aspirationVal = Math.max(0, profile[getModelCellKey(element, "aspiration")] ?? 0);
+    const score = (producerVal + flexibleVal + receiverVal + aspirationVal) / 4;
+    return { element, score };
+  });
+  return rows.sort((a, b) => b.score - a.score);
+}
+
+function elementPainRanking(profile: Record<string, number>) {
+  const rows = ELEMENTS.map((element) => {
+    const score = Math.max(0, profile[getModelCellKey(element, "threat")] ?? 0);
+    return { element, score };
+  });
+  return rows.sort((a, b) => b.score - a.score);
+}
+
+function elementReliefRanking(profile: Record<string, number>) {
+  const rows = ELEMENTS.map((element) => {
+    const score = Math.max(0, profile[getModelCellKey(element, "receiver")] ?? 0);
+    return { element, score };
   });
   return rows.sort((a, b) => b.score - a.score);
 }
@@ -201,6 +257,10 @@ export function calculateFinalResult(session: TestSession): FinalResult {
     responseQuality: quality,
     channelProfile: core.profile,
     elementRanking: elementRanking(core.profile),
+    elementStrengthRanking: elementStrengthRanking(core.profile),
+    elementValuedRanking: elementValuedRanking(core.profile),
+    elementPainRanking: elementPainRanking(core.profile),
+    elementReliefRanking: elementReliefRanking(core.profile),
     unresolvedPair: gap < 0.035 && second ? [primary.type, second.type] : undefined,
     auditNotes,
   };

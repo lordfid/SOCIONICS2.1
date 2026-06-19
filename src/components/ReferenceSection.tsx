@@ -14,12 +14,12 @@ export default function ReferenceSection({ theme, onBack }: ReferenceSectionProp
     {
       title: 'Understanding the People Around You: An Introduction to Socionics',
       author: 'Ekaterina Filatova, PhD (2006)',
-      desc: 'Buku rujukan utama penulisan profil and metode pengujian dikotomi numerik 1-9. Dr. Filatova merupakan psikolog Rusia pelopor draf visualisasi/foto kepribadian and penyelarasan bahasa teoretis ke dalam kelakuannya.'
+      desc: 'Buku rujukan utama penulisan profil dan metode pengujian dikotomi numerik 1-9. Dr. Filatova merupakan psikolog Rusia pelopor rencana visualisasi/foto kepribadian dan penyelarasan bahasa teoretis ke dalam kelakuannya.'
     },
     {
       title: 'The Mathematics of Socionics',
       author: 'Ibrahim Tencer (2012)',
-      desc: 'Membahas pemetaan matematika relasi antartipe berbasis teori aljabar abstrak. Relasi didefinisikan sebagai fungsi transisi dari grup R isomorfis dengan grup simetri D4 x Z2 (rotasi and refleksi Model A).'
+      desc: 'Membahas pemetaan matematika relasi antartipe berbasis teori aljabar abstrak. Relasi didefinisikan sebagai fungsi transisi dari grup R isomorfis dengan grup simetri D4 x Z2 (rotasi dan refleksi Model A).'
     },
     {
       title: 'Socionics, Vol 1 & 2',
@@ -81,7 +81,7 @@ export default function ReferenceSection({ theme, onBack }: ReferenceSectionProp
             Menciptakan Alat Tes yang Reliabel & Sahih
           </h3>
           <p className={`text-xs leading-relaxed ${isGarden ? 'text-stone-500' : 'text-[#D8C7C0]'}`}>
-            Proyek ini merupakan komitmen serius untuk merancang tes kebatinan kepribadian komparatif biner pertama di Indonesia yang mengacu pada draf matematika and hukum aljabar Socionics orisinal Rusia, memitigasi tumpang tindih dengan teori pseudo-sains.
+            Proyek ini merupakan komitmen serius untuk merancang tes evaluasi kepribadian komparatif biner pertama di Indonesia yang mengacu pada rencana matematika dan hukum aljabar Socionics orisinal Rusia, memitigasi tumpang tindih dengan teori pseudo-sains.
           </p>
         </div>
 
@@ -145,8 +145,8 @@ export default function ReferenceSection({ theme, onBack }: ReferenceSectionProp
                   R ≅ D₄ × ℤ₂
                 </div>
                 <p className="text-[11px] leading-relaxed">
-                  Di mana <strong>D₄</strong> represents grup simetri delapan elemen (rotasi and refleksi) dari 8 posisi Model A, and <strong>ℤ₂</strong> represents inversi E/I (Extravert/Introvert). 
-                  Artinya, relasi asimetris seperti <em>Supervision</em> and <em>Rentetan Sosial</em> dapat dihitung and dipetakan ke dalam siklus orde matematika 4 yang stabil and andal!
+                  Di mana <strong>D₄</strong> represents grup simetri delapan elemen (rotasi dan refleksi) dari 8 posisi Model A, dan <strong>ℤ₂</strong> represents inversi E/I (Extravert/Introvert). 
+                  Artinya, relasi asimetris seperti <em>Supervision</em> dan <em>Rentetan Sosial</em> dapat dihitung dan dipetakan ke dalam siklus orde matematika 4 yang stabil dan andal!
                 </p>
               </div>
 
