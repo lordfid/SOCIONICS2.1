@@ -1,26 +1,37 @@
 import React, { useState, useEffect } from 'react';
-import { SOCIONICS_QUESTIONS } from './data/questions';
+import { ALL_QUESTIONS, QUESTION_BY_ID } from './data/questions';
 import { getFullSocionicsProfile } from './data/socionicsData';
-import { ThemeType, Question, Profile } from './types';
+import { ThemeType, TestSession, FinalResult } from './types';
 import ThemeToggle from './components/ThemeToggle';
 import WelcomeScreen from './components/WelcomeScreen';
 import TestEngine from './components/TestEngine';
 import ResultsDisplay from './components/ResultsDisplay';
 import ReferenceSection from './components/ReferenceSection';
+import { createSession, applyAnswer, applySkip, completeSession, loadSession, clearSession } from './utils/session';
+import { calculateFinalResult } from './scoring/engine';
 
 export default function App() {
   const [theme, setTheme] = useState<ThemeType>('light-garden');
   const [step, setStep] = useState<'welcome' | 'testing' | 'results' | 'references'>('welcome');
-  const [userName, setUserName] = useState('');
-  const [testType, setTestType] = useState<'ringkas' | 'sedang' | 'penuh'>('sedang');
-  
-  // Custom sliced questions
-  const [activeQuestions, setActiveQuestions] = useState<Question[]>([]);
-  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
-  const [answers, setAnswers] = useState<Record<string, number>>({});
-  const [computedProfile, setComputedProfile] = useState<Profile | null>(null);
+  const [session, setSession] = useState<TestSession | null>(null);
+  const [computedResult, setComputedResult] = useState<FinalResult | null>(null);
 
-  // Apply custom CSS variables for Pink Cream Garden vs Vintage Library themes
+  // Restore session from localStorage on application load
+  useEffect(() => {
+    const saved = loadSession();
+    if (saved) {
+      setSession(saved);
+      if (saved.completedAt) {
+        const res = calculateFinalResult(saved);
+        setComputedResult(res);
+        setStep('results');
+      } else {
+        setStep('testing');
+      }
+    }
+  }, []);
+
+  // Set CSS Variables depending on Vintage Library vs Pink Cream Garden theme
   useEffect(() => {
     const root = document.documentElement;
     if (theme === 'light-garden') {
@@ -38,123 +49,70 @@ export default function App() {
     }
   }, [theme]);
 
-  // Handle triggering of test start
+  // Handler for starting a test with nickname & mode
   const handleStartTest = (name: string, type: 'ringkas' | 'sedang' | 'penuh') => {
-    setUserName(name);
-    setTestType(type);
-    
-    // Slice question pool symmetrically across dimensions (EI, SN, FT, JP)
-    const sizeMap = { ringkas: 5, sedang: 9, penuh: 12 };
-    const itemsPerDimension = sizeMap[type];
+    const modeMap = {
+      ringkas: 'ringkas',
+      sedang: 'standar',
+      penuh: 'mendalam'
+    } as const;
 
-    const sliced: Question[] = [];
-    const dimensions: ('EI' | 'SN' | 'FT' | 'JP')[] = ['EI', 'SN', 'FT', 'JP'];
-
-    dimensions.forEach(dim => {
-      const dimFiltered = SOCIONICS_QUESTIONS.filter(q => q.dimension === dim);
-      sliced.push(...dimFiltered.slice(0, itemsPerDimension));
-    });
-
-    // Shuffle slightly or keep ordered by dimensions alternatingly
-    const alternated: Question[] = [];
-    for (let i = 0; i < itemsPerDimension; i++) {
-      dimensions.forEach(dim => {
-        const dimQuestions = sliced.filter(q => q.dimension === dim);
-        if (dimQuestions[i]) {
-          alternated.push(dimQuestions[i]);
-        }
-      });
-    }
-
-    setActiveQuestions(alternated);
-    setCurrentQuestionIndex(0);
-    setAnswers({});
+    const newSession = createSession(modeMap[type], name);
+    setSession(newSession);
+    setComputedResult(null);
     setStep('testing');
   };
 
-  // Skip tracks a neutral 5 score and moves forward
+  // Skip moves a question, recording it as skipped (clearing any old answer) and shifting currentIndex
   const handleSkipQuestion = () => {
-    const q = activeQuestions[currentQuestionIndex];
-    if (q) {
-      setAnswers(prev => ({ ...prev, [q.id]: 5 }));
-      handleNextQuestion();
-    }
+    if (!session) return;
+    const currentQId = session.questionIds[session.currentIndex];
+    const nextSession = applySkip(session, currentQId);
+    setSession(nextSession);
   };
 
-  // Navigations
-  const handleSelectAnswer = (questionId: string, score: number) => {
-    setAnswers(prev => ({ ...prev, [questionId]: score }));
+  // Selector update - records answers and auto-advances
+  const handleSelectAnswer = (questionId: string, rating: number) => {
+    if (!session) return;
+    const nextSession = applyAnswer(session, questionId, rating, true);
+    setSession(nextSession);
   };
 
   const handleNextQuestion = () => {
-    if (currentQuestionIndex < activeQuestions.length - 1) {
-      setCurrentQuestionIndex(prev => prev + 1);
+    if (!session) return;
+    if (session.currentIndex === session.questionIds.length - 1) {
+      handleCalculateResults();
     } else {
-      calculateResults();
+      setSession(prev => prev ? { ...prev, currentIndex: prev.currentIndex + 1 } : null);
     }
   };
 
   const handlePrevQuestion = () => {
-    if (currentQuestionIndex > 0) {
-      setCurrentQuestionIndex(prev => prev - 1);
-    }
+    if (!session) return;
+    setSession(prev => prev ? { ...prev, currentIndex: Math.max(0, prev.currentIndex - 1) } : null);
   };
 
-  // Core Scoring Engine & Dichotomy Converter based on average ratings
-  const calculateResults = () => {
-    // Collect average ratings per dimension
-    const dimensions = {
-      EI: { sum: 0, count: 0 },
-      SN: { sum: 0, count: 0 },
-      FT: { sum: 0, count: 0 },
-      JP: { sum: 0, count: 0 }
-    };
-
-    activeQuestions.forEach(q => {
-      const answerVal = answers[q.id] !== undefined ? answers[q.id] : 5; // default to neutral
-      dimensions[q.dimension].sum += answerVal;
-      dimensions[q.dimension].count += 1;
-    });
-
-    const average = (dim: 'EI' | 'SN' | 'FT' | 'JP') => {
-      const d = dimensions[dim];
-      return d.count > 0 ? d.sum / d.count : 5;
-    };
-
-    // Calculate dichotomy letters based on Filatova's original 5 threshold scale
-    // Lower means Option A (Extraversion, Sensing, Feeling, Rational/J)
-    // Higher means Option B (Introversion, Intuition, Thinking, Irrational/P)
-    const e_i = average('EI') < 5 ? 'E' : 'I';
-    const s_n = average('SN') < 5 ? 'S' : 'N';
-    const f_t = average('FT') < 5 ? 'F' : 'T';
-    const j_p = average('JP') < 5 ? 'J' : 'P';
-
-    const dichotomyKey = `${e_i}${s_n}${f_t}${j_p}`;
-
-    const mbtiToSocionics: Record<string, string> = {
-      'ESFJ': 'ESE',
-      'ISFJ': 'SEI',
-      'ESTP': 'SLE',
-      'ISTP': 'SLI',
-      'ESFP': 'SEE',
-      'ISFP': 'ESI',
-      'ESTJ': 'LSE',
-      'ISTJ': 'LSI',
-      'ENFJ': 'EIE',
-      'INFJ': 'IEI',
-      'ENTP': 'ILE',
-      'INTP': 'LII',
-      'ENTJ': 'LIE',
-      'INTJ': 'ILI',
-      'ENFP': 'IEE',
-      'INFP': 'EII'
-    };
-
-    const detectedType = mbtiToSocionics[dichotomyKey] || 'ILE';
-    const profile = getFullSocionicsProfile(detectedType);
-    setComputedProfile(profile);
+  const handleCalculateResults = () => {
+    if (!session) return;
+    const finished = completeSession(session);
+    setSession(finished);
+    const res = calculateFinalResult(finished);
+    setComputedResult(res);
     setStep('results');
   };
+
+  const handleRestart = () => {
+    clearSession();
+    setSession(null);
+    setComputedResult(null);
+    setStep('welcome');
+  };
+
+  // Map values for the TestEngine props
+  const activeQuestions = session ? session.questionIds.map(id => QUESTION_BY_ID.get(id)!) : [];
+  const mappedTestType = session 
+    ? (session.mode === 'ringkas' ? 'ringkas' : session.mode === 'standar' ? 'sedang' : 'penuh') 
+    : 'sedang';
 
   return (
     <div 
@@ -165,8 +123,8 @@ export default function App() {
         color: theme === 'light-garden' ? '#4A3525' : '#FAF3EE'
       }}
     >
-      {/* Upper Navigation & Theme Changer */}
-      <header id="app-nav-header" className="w-full max-w-5xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4 py-4 mb-4 border-b border-dashed border-stone-200 dark:border-stone-800">
+      {/* Upper Navigation Header */}
+      <header id="app-nav-header" className="w-full max-w-5xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4 py-4 mb-4 border-b border-dashed border-stone-200 dark:border-stone-800/40">
         <div id="logo-block" className="flex items-center gap-2">
           {theme === 'light-garden' ? (
             <span className="text-xl">🌸</span>
@@ -184,7 +142,7 @@ export default function App() {
         <ThemeToggle currentTheme={theme} onChangeTheme={setTheme} />
       </header>
 
-      {/* Dynamic Content Stages */}
+      {/* Dynamic Main App Section */}
       <main id="app-dynamic-stage" className="flex-grow flex items-center justify-center p-2 sm:p-4">
         {step === 'welcome' && (
           <WelcomeScreen 
@@ -194,14 +152,14 @@ export default function App() {
           />
         )}
 
-        {step === 'testing' && (
+        {step === 'testing' && session && (
           <TestEngine
             theme={theme}
-            userName={userName}
-            testType={testType}
+            userName={session.nickname || "Sahabat"}
+            testType={mappedTestType}
             questions={activeQuestions}
-            currentQuestionIndex={currentQuestionIndex}
-            answers={answers}
+            currentQuestionIndex={session.currentIndex}
+            answers={session.answers}
             onSelectAnswer={handleSelectAnswer}
             onNextQuestion={handleNextQuestion}
             onPrevQuestion={handlePrevQuestion}
@@ -216,18 +174,18 @@ export default function App() {
           />
         )}
 
-        {step === 'results' && computedProfile && (
+        {step === 'results' && computedResult && (
           <ResultsDisplay
             theme={theme}
-            userName={userName}
-            profile={computedProfile}
-            onRestart={() => setStep('welcome')}
+            userName={session?.nickname || "Sahabat"}
+            result={computedResult}
+            onRestart={handleRestart}
           />
         )}
       </main>
 
       {/* Universal Footer */}
-      <footer id="app-global-footer" className="w-full max-w-5xl mx-auto text-center py-6 mt-6 border-t border-dashed border-stone-200 dark:border-stone-900 text-[10px] text-stone-400 dark:text-stone-600 font-sans">
+      <footer id="app-global-footer" className="w-full max-w-5xl mx-auto text-center py-6 mt-6 border-t border-dashed border-stone-200 dark:border-stone-800/30 text-[10px] text-stone-400 dark:text-stone-600 font-sans">
         <p>© 2026 Proyek Assesmen Kognitif Socionics Terpimpin Indonesia. Hak Cipta Dilindungi.</p>
         <p className="mt-1">Dibuat dengan cinta kasih batin untuk kawan-kawan penjelajah jati diri.</p>
       </footer>

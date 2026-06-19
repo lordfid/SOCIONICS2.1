@@ -187,7 +187,7 @@ export default function WelcomeScreen({ theme, onStartTest, onViewReferences }: 
                       🌸 Tes Ringkas
                     </span>
                     <span className="text-[10px] text-stone-500 block leading-tight">
-                      ± 20 pertanyaan unik
+                      ± 80 pertanyaan unik
                     </span>
                   </div>
                   <span className="text-[9px] font-mono text-stone-400 mt-3 block">⏱️ 10 - 15 Menit</span>
@@ -216,7 +216,7 @@ export default function WelcomeScreen({ theme, onStartTest, onViewReferences }: 
                       🌿 Tes Sedang
                     </span>
                     <span className="text-[10px] text-stone-500 block leading-tight">
-                      ± 36 pertanyaan andal
+                      ± 128 pertanyaan andal
                     </span>
                   </div>
                   <span className="text-[9px] font-mono text-stone-400 mt-3 block">⏱️ 20 - 30 Menit</span>
@@ -245,7 +245,7 @@ export default function WelcomeScreen({ theme, onStartTest, onViewReferences }: 
                       📚 Tes Penuh
                     </span>
                     <span className="text-[10px] text-stone-500 block leading-tight">
-                      ± 48 pertanyaan komprehensif
+                      ± 224 pertanyaan komprehensif
                     </span>
                   </div>
                   <span className="text-[9px] font-mono text-stone-400 mt-3 block">⏱️ 40 - 60 Menit</span>

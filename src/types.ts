@@ -3,6 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
+// === LEGACY TYPES PRESERVED FOR FULL COMPATIBILITY ===
 export interface Question {
   id: string;
   dimension: 'EI' | 'JP' | 'FT' | 'SN'; // E/I, J/P, F/T, S/N
@@ -82,3 +83,108 @@ export interface TestState {
 }
 
 export type ThemeType = 'light-garden' | 'dark-library';
+
+
+// === NEW V3.5.0 COGNITIVE MODEL A TYPES ===
+export type InformationElement = "Ne" | "Ni" | "Se" | "Si" | "Te" | "Ti" | "Fe" | "Fi";
+export type MeasurementChannel = "producer" | "flexible" | "mask" | "threat" | "receiver" | "aspiration" | "dismissive" | "background";
+export type ScaleType = "frequency" | "automaticity" | "comfort" | "competence" | "importance" | "threat" | "relief" | "recognition" | "comparison";
+export type QuestionKind = "core" | "holdout" | "tie-break";
+export type Quadra = "Alpha" | "Beta" | "Gamma" | "Delta";
+export type SocionicsType = "ILE" | "SEI" | "ESE" | "LII" | "EIE" | "LSI" | "SLE" | "IEI" | "SEE" | "ILI" | "LIE" | "ESI" | "IEE" | "SLI" | "LSE" | "EII";
+export type ModelASlot = "base" | "creative" | "role" | "polr" | "suggestive" | "mobilizing" | "ignoring" | "demonstrative";
+export type TestMode = "ringkas" | "standar" | "mendalam";
+export type ThemeMode = "dark" | "light";
+
+export interface QuestionOption {
+  value: 1 | 2 | 3 | 4 | 5;
+  label: string;
+  meaning: string;
+  reaction: string;
+}
+
+export interface SocionicsQuestion {
+  id: string;
+  kind: QuestionKind;
+  element: InformationElement;
+  channel: MeasurementChannel;
+  context: string;
+  scale: ScaleType;
+  statement: string;
+  sourceSituation: string;
+  sourceResponse: string;
+  responseFocus: string;
+  options: QuestionOption[];
+  tieBreak?: { a: SocionicsType; b: SocionicsType };
+}
+
+export type Answers = Record<string, number>;
+
+export interface TestSession {
+  id: string;
+  version: string;
+  mode: TestMode;
+  seed: number;
+  questionIds: string[];
+  currentIndex: number;
+  answers: Answers;
+  skippedIds: string[];
+  startedAt: string;
+  lastUpdatedAt: string;
+  completedAt?: string;
+  nickname?: string;
+}
+
+export interface TimModel {
+  code: SocionicsType;
+  name: string;
+  alias: string;
+  quadra: Quadra;
+  temperament: string;
+  slots: Record<ModelASlot, InformationElement>;
+  tags: string[];
+}
+
+export interface CandidateScore {
+  type: SocionicsType;
+  name: string;
+  quadra: Quadra;
+  modelSimilarity: number;
+  relativeSupport: number;
+  holdoutSupport: number;
+  tieBreakAdjustment: number;
+  evidenceCells: number;
+}
+
+export interface ResponseQuality {
+  answered: number;
+  skipped: number;
+  midpointRate: number;
+  extremeRate: number;
+  variation: number;
+  straightlineRisk: number;
+  minutesElapsed: number;
+  speedFlag: "normal" | "terlalu-cepat" | "sangat-lambat";
+}
+
+export interface CoverageReport {
+  answeredCells: number;
+  totalCells: number;
+  byElement: Record<InformationElement, number>;
+  byChannel: Record<MeasurementChannel, number>;
+  missingCells: string[];
+}
+
+export interface FinalResult {
+  top3: CandidateScore[];
+  primary: CandidateScore;
+  confidence: number;
+  confidenceLabel: "tidak cukup bukti" | "rendah" | "sedang" | "cukup kuat" | "kuat";
+  confidenceExplanation: string;
+  coverage: CoverageReport;
+  responseQuality: ResponseQuality;
+  channelProfile: Record<string, number>;
+  elementRanking: Array<{ element: InformationElement; score: number }>;
+  unresolvedPair?: [SocionicsType, SocionicsType];
+  auditNotes: string[];
+}
