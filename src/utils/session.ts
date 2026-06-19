@@ -52,13 +52,13 @@ export function createSession(mode: TestMode, nickname = ""): TestSession {
 
   if (mode === "ringkas") {
     extraCoreCount = 0;
-    holdoutCount = 8;
+    holdoutCount = 16;
   } else if (mode === "standar") {
-    extraCoreCount = 32;
+    extraCoreCount = 48;
     holdoutCount = 16;
   } else {
     // mendalam / penuh
-    extraCoreCount = 96;
+    extraCoreCount = 128;
     holdoutCount = 32;
   }
 

@@ -473,6 +473,17 @@ export const HANDCRAFTED_SCENARIOS: Record<InformationElement, Record<Measuremen
   }
 };
 
+const CORE_CONTEXTS: Record<InformationElement, string> = {
+  Ne: "Skenario Eksplorasi Kreatif & Pencarian Ide Baru",
+  Ni: "Skenario Pembacaan Momentum & Arah Waktu Masa Depan",
+  Se: "Skenario Keberanian Aksi & Proteksi Kekuasaan Wilayah",
+  Si: "Skenario Harmoni Tubuh, Estetika & Kenyamanan Fisik",
+  Te: "Skenario Efisiensi Kerja, Biaya & Hasil Praktis Konkret",
+  Ti: "Skenario Analisis Aturan, Kategori & Konsistensi Logika",
+  Fe: "Skenario Ekspresi Sosial & Semangat Harmoni Kelompok",
+  Fi: "Skenario Ikatan Moral, Ketulusan & Jarak Kedekatan Personal"
+};
+
 // HELPER: Generates 256 core questions using the rich handcrafted scenarios database
 function generateCoreQuestions(): SocionicsQuestion[] {
   const list: SocionicsQuestion[] = [];
@@ -487,12 +498,12 @@ function generateCoreQuestions(): SocionicsQuestion[] {
           kind: "core",
           element,
           channel,
-          context: `Skenario Realistis ${element} (Adegan #${i + 1})`,
+          context: `${CORE_CONTEXTS[element]} (Penyelarasan #${i + 1})`,
           scale,
           statement: statements[i],
-          sourceSituation: `Konteks nyata ${element} saluran ${channel}`,
+          sourceSituation: `Konteks kehidupan harian`,
           sourceResponse: statements[i],
-          responseFocus: `resonansi ${element}:${channel}`,
+          responseFocus: `Penyelarasan Resonansi Batin`,
           options: generateOptions(element, channel, scale, statements[i])
         });
       }
@@ -501,7 +512,154 @@ function generateCoreQuestions(): SocionicsQuestion[] {
   return list;
 }
 
-// HELPER: Generates 32 holdout questions using deterministic select scenarios
+const HANDCRAFTED_HOLDOUTS: Record<InformationElement, Record<string, { stmt: string; context: string }>> = {
+  Ne: {
+    producer: {
+      stmt: "Saat dihadapkan pada jalan buntu dalam diskusi kelompok, saya langsung mencetuskan tiga cara pandang baru yang belum terpikirkan oleh siapa pun.",
+      context: "Terjadi kemacetan total ide ketika merancang konsep acara kumpul warga."
+    },
+    threat: {
+      stmt: "Saya merasa sangat tidak nyaman dan gelisah bila dipaksa menebak-nebak celah alternatif tersembunyi tanpa fakta kerja nyata.",
+      context: "Atasan memberikan instruksi tugas yang sengaja dibiarkan misterius dan tidak spesifik."
+    },
+    receiver: {
+      stmt: "Saya merasa lega dan terbantu bila ada rekan yang membukakan berbagai kemungkinan kreatif ketika pemikiran saya terasa buntu.",
+      context: "Merancang dekorasi panggung yang terasa monoton dan membosankan."
+    },
+    background: {
+      stmt: "Tanpa sadar, saya selalu mengamati pola-pola kemungkinan masa depan dan alternatif tersembunyi dari keputusan sepele teman-teman.",
+      context: "Mengamati obrolan santai kawan-kawan yang sedang membicarakan rencana liburan akhir tahun."
+    }
+  },
+  Ni: {
+    producer: {
+      stmt: "Saya langsung bisa menebak akhir dari tren perdebatan kelompok saat itu juga, dan insting visualisasi waktu saya terbukti tepat.",
+      context: "Perbedaan pendapat yang berlarut-larut terjadi di grup chat keluarga besar mengenai pembagian warisan."
+    },
+    threat: {
+      stmt: "Saya merasa tegang dan jengkel bila dipaksa terburu-buru memprediksi nasib masa depan tanpa diberikan keleluasaan waktu batin.",
+      context: "Tiba-tiba didesak membuat komitmen karir jangka panjang di bawah tenggat waktu yang mencekam."
+    },
+    receiver: {
+      stmt: "Kehadiran orang yang peka membaca momentum batin jangka panjang terasa bagaikan pijar penyembuh keresahan hidup saya.",
+      context: "Ketika merasa bingung menentukan arah tujuan hidup di tengah ketidakpastian karir."
+    },
+    background: {
+      stmt: "Sambil mendengarkan obrolan, pikiran autopilot saya menganalisis ke mana arah pergerakan waktu dari proyek tim ini.",
+      context: "Menyimak rapat koordinasi bulanan yang membahas naik turunnya performa bulanan."
+    }
+  },
+  Se: {
+    producer: {
+      stmt: "Saya spontan menegur orang yang bertindak seenaknya melanggar batas kenyamanan bersama dalam forum diskusi.",
+      context: "Seorang rekan berulang kali memotong pembicaraan orang lain secara tidak sopan di rapat warga."
+    },
+    threat: {
+      stmt: "Dada saya mendadak sesak dan defensif jika ada orang asing yang mencoba menekuk kehendak fisik saya secara semena-mena.",
+      context: "Seorang kenalan tiba-tiba datang tanpa diundang dan menyuruh-nyuruh merapikan rumah."
+    },
+    receiver: {
+      stmt: "Saya sangat tertolong oleh figur tegas yang berani pasang badan membela serta menyelesaikan konfrontasi fisik untuk saya.",
+      context: "Dituduh secara tidak adil oleh tetangga pemarah terkait batas tanah parkir rumah."
+    },
+    background: {
+      stmt: "Mata saya secara refleks merekam siapa saja yang mendominasi posisi duduk, gestur kekuasaan, dan postur tubuh di dalam ruangan.",
+      context: "Baru merapat masuk ke dalam cafe yang dipenuhi oleh berbagai macam pengunjung asing."
+    }
+  },
+  Si: {
+    producer: {
+      stmt: "Saya langsung menyisih untuk merapikan koordinasi jarak duduk dan sirkulasi udara agar suasana santai terasa asri.",
+      context: "Ruang kumpul keluarga yang sempit mulai dipenuhi oleh asap rokok dan hawa panas menyengat."
+    },
+    threat: {
+      stmt: "Saya merasa panik dan terancam bila tubuh jasmani ini dituntut bekerja melebihi kapasitas tanpa waktu istirahat yang manusiawi.",
+      context: "Instruksi pengerjaan lembur mendadak dari organisasi yang sama sekali mengabaikan jam tidur malam."
+    },
+    receiver: {
+      stmt: "Jiwa saya terasa sangat damai dan bersyukur ketika ada kawan yang dengan telaten membawakan kasur empuk dan sup hangat saat fisik lelah.",
+      context: "Kondisi badan menurun drastis dan demam sehabis mengejar draf kepatuhan organisasi luar."
+    },
+    background: {
+      stmt: "Pikiran bawah sadar saya selalu sensitif mendeteksi keasrian rasa makanan, suhu ruangan, dan posisi tubuh agar tetap tegak rileks.",
+      context: "Duduk menyimak pemaparan materi persidangan yang berlarut-larut selama tiga jam."
+    }
+  },
+  Te: {
+    producer: {
+      stmt: "Saya reflek menghitung estimasi efisiensi waktu vs biaya secara runtut, menyingkirkan draf rencana abstrak tanpa hasil nyata.",
+      context: "Ketika merencanakan renovasi kecil-kecilan taman belakang rumah agar tidak boros anggaran."
+    },
+    threat: {
+      stmt: "Kepala saya terasa panas dan ingin marah jika dipaksa menyajikan laporan keuangan yang dituntut serba praktis secara terburu-buru.",
+      context: "Atasan mendadak meminta kompilasi pembuktian bukti nota pengeluaran operasional dalam waktu lima belas menit."
+    },
+    receiver: {
+      stmt: "Rasa canggung draf batin saya langsung sirna tatkala kawan yang andal logika bisnisnya datang merapikan kalkulasi operasional saya.",
+      context: "Mengalami kebingungan mengelola arus kas bulanan usaha dagang rumahan yang baru dirintis."
+    },
+    background: {
+      stmt: "Autopilot batin saya senantiasa menyortir mana tindakan yang terbukti menghasilkan manfaat praktis dan mana yang omong kosong belaka.",
+      context: "Mendengarkan motivator sosial membagikan tips sukses yang terdengar puitis di hadapan umum."
+    }
+  },
+  Ti: {
+    producer: {
+      stmt: "Saya langsung membagi masalah ke dalam klasifikasi definisi yang rapi, memastikan argumen keluarga tidak berputar-putar tanpa arah.",
+      context: "Pertikaian sengit di grup chat keluarga yang dipicu oleh kesalahpahaman mengartikan istilah berita tertulis."
+    },
+    threat: {
+      stmt: "Otak saya mendadak beku dan tertekan bila dipaksa patuh pada aturan birokrasi kaku yang sama sekali tidak masuk akal sehat harian.",
+      context: "Menghadapi sistem administrasi kelurahan yang berbelit-belit hanya untuk mendapatkan selembar surat izin."
+    },
+    receiver: {
+      stmt: "Saya merasa sangat damai ketika ada orang berotak cerdas yang sudi merinci kerangka berpikir logis secara tenang dan adil untuk saya.",
+      context: "Kehilangan pegangan logika saat mencoba memahami buku panduan aturan pajak usaha yang rumit."
+    },
+    background: {
+      stmt: "Secara otomatis, otak saya selalu menyortir inkonsistensi kalimat dan struktur logis dari penjelasan pembicara di podium.",
+      context: "Menghadiri kuliah umum akademis tentang perkembangan teori sosial kemanusiaan."
+    }
+  },
+  Fe: {
+    producer: {
+      stmt: "Saya segera melempar lelucon riang atau mencairkan atmosfer agar suasana kaku pertemuan berubah dipenuhi senyum hangat.",
+      context: "Pertemuan ramah tamah pertama kali antara dua keluarga yang terlihat kaku dan saling membisu."
+    },
+    threat: {
+      stmt: "Batin saya merasa sangat bersalah dan tertekan jika dituduh sebagai perusak keceriaan atau penyebab kemurungan kelompok.",
+      context: "Rekan kerja tiba-tiba menegur saya karena wajah saya terlihat kurang bersahabat di sela jam istirahat."
+    },
+    receiver: {
+      stmt: "Kehadiran orang yang pandai memantik tawa ceria dan gelombang ekspresi gembira terasa menyembuhkan keletihan batin saya.",
+      context: "Merasa murung dan kesepian setelah melewati pekan kerja yang padat dan melelahkan raga."
+    },
+    background: {
+      stmt: "Refleks batin saya sangat peka mencium keretakan ekspresi emosional sekilas di wajah kawan meskipun mereka menyembunyikannya.",
+      context: "Sedang makan siang bersama tim kerja di kantin kantor."
+    }
+  },
+  Fi: {
+    producer: {
+      stmt: "Saya langsung menyaring jarak aman kedekatan personal, melindungi kawan dekat dari pengkhianatan orang asing yang tidak tulus.",
+      context: "Seorang anggota baru tim kerja mencoba menggali rahasia keuangan pribadi kawan akrab saya."
+    },
+    threat: {
+      stmt: "Saya gampang syok dan defensif jika ranah moralitas kejujuran batin saya digugat kasar atau dihakimi secara sepihak.",
+      context: "Dituduh memiliki niat jahat tersembunyi oleh tetangga baru saat memberikan masukan tentang keasrian lingkungan."
+    },
+    receiver: {
+      stmt: "Saya merasa batin ini tersiram air sejuk nan damai saat ada sahabat sejati yang tulus merangkul, memuji integritas moral saya.",
+      context: "Ketika merasa terisolasi dan dihujat akibat mempertahankan idealisme kejujuran di lingkungan kerja."
+    },
+    background: {
+      stmt: "Autopilot perasaan saya senantiasa menakar kadar ketulusan cinta kasih, niat batin, dan keaslian jarak aman relasi manusia harian.",
+      context: "Menyaksikan interaksi ramah tamah politisi dengan warga desa saat musim kampanye."
+    }
+  }
+};
+
+// HELPER: Generates 32 holdout questions using deterministic handcrafted real-world scenarios
 function generateHoldoutQuestions(): SocionicsQuestion[] {
   const list: SocionicsQuestion[] = [];
   const testChannels: MeasurementChannel[] = ["producer", "threat", "receiver", "background"];
@@ -509,21 +667,22 @@ function generateHoldoutQuestions(): SocionicsQuestion[] {
     testChannels.forEach((channel, idx) => {
       const id = `holdout_${element.toLowerCase()}_0${idx + 1}`;
       const scale = SCALE_MAP[channel];
-      const keywordEl = ELEMENT_KEYWORDS[element];
-      const stmt = `Mendapati lingkungan sosial atau tuntutan kerja yang mengharuskan aku ${keywordEl}, saya refleks menyikapinya sebagai ${keywordEl.split(",")[0]}.`;
-      list.push({
-        id,
-        kind: "holdout",
-        element,
-        channel,
-        context: "Verifikasi metodologi respon silang",
-        scale,
-        statement: stmt,
-        sourceSituation: `Uji komparasi silang ${element}`,
-        sourceResponse: stmt,
-        responseFocus: `verifikasi ${element}:${channel}`,
-        options: generateOptions(element, channel, scale, stmt)
-      });
+      const data = HANDCRAFTED_HOLDOUTS[element]?.[channel];
+      if (data) {
+        list.push({
+          id,
+          kind: "holdout",
+          element,
+          channel,
+          context: data.context,
+          scale,
+          statement: data.stmt,
+          sourceSituation: `Uji komparasi silang ${element}`,
+          sourceResponse: data.stmt,
+          responseFocus: `verifikasi ${element}:${channel}`,
+          options: generateOptions(element, channel, scale, data.stmt)
+        });
+      }
     });
   }
   return list;
@@ -547,32 +706,32 @@ export const PAIR_DISCRIMINATORS: SocionicsQuestion[] = [
     options: [
       {
         value: 1,
-        label: "Sangat Sisi A (LII)",
-        meaning: "Menarik mundur obrolan ke definisi awal dulu secara tenang, agar semua sadar letak salah pemahamannya tanpa harus adu urat saraf.",
+        label: "Menarik mundur obrolan ke definisi awal dulu secara tenang, agar semua sadar letak salah pemahamannya tanpa harus adu urat saraf.",
+        meaning: "Mengutamakan penataan konsep logis murni secara sabar untuk memperjelas batas teori.",
         reaction: "Kamu memilih diam mencatat inkonsistensi, lalu mengirim draf penjelasan komparatif lewat chat tertulis."
       },
       {
         value: 2,
-        label: "Cenderung Sisi A (LII)",
-        meaning: "Mengabaikan ketegangan fisik sekitar, berniat menjelaskan struktur aturan logis saat keadaan sudah sedikit mereda.",
+        label: "Mengabaikan ketegangan fisik sekitar, berniat menjelaskan struktur aturan logis saat keadaan sudah sedikit mereda.",
+        meaning: "Kamu memilah porsi teori terlebih dahulu sebelum mengintervensi realitas fisik.",
         reaction: "Kamu menghela napas panjang, merapikan kertas kerjamu, dan menunggu orang-orang selesai berdebat."
       },
       {
         value: 3,
-        label: "Seimbang di tengah",
-        meaning: "Mencoba memadukan klarifikasi definisi aturan logis sembari sesekali meminta ketegasan fisik di forum.",
+        label: "Mengambil jalan tengah: memperjelas definisi aturan logis sembari sesekali menuntut ketertiban fisik forum.",
+        meaning: "Menyeimbangkan penjelasan konseptual logis dengan ketegasan batasan di lapangan.",
         reaction: "Kamu mengetuk meja sesekali, meminta semua orang meredakan intonasi suara sembari merujuk aturan."
       },
       {
         value: 4,
-        label: "Cenderung Sisi B (LSI)",
-        meaning: "Menampilkan postur tubuh tegak, meminta pihak yang melanggar batas segera diam demi mematuhi tata tertib acara.",
+        label: "Meminta pihak yang melanggar batas segera diam dan mematuhi tata tertib demi kelancaran agenda.",
+        meaning: "Menunjuk pada kebutuhan ketertiban lapangan harian untuk menjamin integritas agenda bersama.",
         reaction: "Kamu menyela obrolan dengan nada tegas, meminta forum kembali berfokus pada agenda tertulis tim harian."
       },
       {
         value: 5,
-        label: "Sangat Sisi B (LSI)",
-        meaning: "Secara fisik langsung pasang badan mengambil kendali forum, menghentikan orang melanggar batas secara vokal, dan menuntut kedisplinan mutlak.",
+        label: "Langsung menghentikan orang tersebut dan meminta semuanya kembali mematuhi aturan baku yang sudah disepakati secara vokal.",
+        meaning: "Menuntut kepatuhan konkret secara instan demi menertibkan kegaduhan lingkungan saat itu juga.",
         reaction: "Kamu berdiri, menatap mata orang tersebut secara langsung, menghentikan kegaduhan konfrontasi, dan menegakkan kepatuhan struktur saat itu juga."
       }
     ]
@@ -593,33 +752,33 @@ export const PAIR_DISCRIMINATORS: SocionicsQuestion[] = [
     options: [
       {
         value: 1,
-        label: "Sangat Sisi A (IEE)",
-        meaning: "Respons batin orang, ketulusan ikatan moral, dan seberapa menghargai kehangatan hubungan antarafiliasi.",
+        label: "Fokus menyelami respons batin, mengutamakan kehangatan hubungan antarafiliasi dan menjaga nilai ikatan moral agar tetap selaras.",
+        meaning: "Mengutamakan aspek etika hubungan manusia di atas skema logika teknis.",
         reaction: "Kamu tersenyum hangat, menanyakan perasaan anggota tim, dan memastikan tidak ada hati yang tersinggung oleh ide tersebut."
       },
       {
         value: 2,
-        label: "Cenderung Sisi A (IEE)",
-        meaning: "Dinamika etis dan rasa nyaman kawan-kawan, mengutamakan penyelarasan moral sebelum melangkah ke rincian teknis.",
+        label: "Mengutamakan penyelarasan moral kelompok dan rasa nyaman kawan-kawan sebelum membahas rincian teknis.",
+        meaning: "Menggugah komitmen etis kelompok sebagai pilar utama penerimaan inovasi baru.",
         reaction: "Kamu membujuk forum dengan cerita inspiratif personal agar motivasi internal mereka selaras dengan ide baru."
       },
       {
         value: 3,
-        label: "Seimbang di tengah",
-        meaning: "Melihat bahwa logika sistem dan penyelarasan hati manusia sama pentingnya dalam menguji sebuah opsi inovasi.",
+        label: "Melihat bahwa logika kelayakan sistem dan keharmonisan hati manusia sama pentingnya dalam menguji sebuah inovasi.",
+        meaning: "Mengambil titik tengah antara ketepatan logika sistem dengan empati kemanusiaan.",
         reaction: "Kamu membuat bagan coretan yang membagi porsi kelayakan teknis model bisnis dan kenyamanan relasi personal tim."
       },
       {
         value: 4,
-        label: "Cenderung Sisi B (ILE)",
-        meaning: "Konsistensi logika kerangka teori, melihat seberapa koheren sistem ide tersebut jika dibedah dalam kategori.",
+        label: "Melihat seberapa koheren sistem gagasan tersebut jika dibedah dalam kerangka teori dan kategori klasifikasi yang rapi.",
+        meaning: "Menganalisis sistematika logika ide demi menjamin ketepatan struktur implementasi.",
         reaction: "Kamu menunjukkan celah-celah teoretis pada skema ide tersebut, menyarankan struktur klasifikasi yang lebih modular."
       },
       {
         value: 5,
-        label: "Sangat Sisi B (ILE)",
-        meaning: "Akurasi matematika struktural gagasan itu, mengabaikan respons emosional personal demi menguji orisinalitas analisis logis.",
-        reaction: "Kamu membongkar total kontradiksi definisi di papan tulis, menyodorkan draf fungsional baru, draf pembukti rasional."
+        label: "Menganalisis konsistensi logika struktural gagasan secara teoretis murni, mengabaikan respons emosional demi akurasi analisis.",
+        meaning: "Menuntut kepatuhan logika rasional penuh tanpa kompromi pada kenyamanan sosial kelompok.",
+        reaction: "Kamu membongkar total kontradiksi definisi di papan tulis, menyodorkan draf fungsional baru secara teoretis murni."
       }
     ]
   },
@@ -639,33 +798,33 @@ export const PAIR_DISCRIMINATORS: SocionicsQuestion[] = [
     options: [
       {
         value: 1,
-        label: "Sangat Sisi A (SLI)",
-        meaning: "Keheningan penuh, merapikan bantal sofa secara senyap, membuat teh hangat, dan menikmati kedamaian tanpa obrolan drama.",
+        label: "Mencari keheningan penuh, merapikan fasilitas fisik secara senyap, menyeduh teh hangat, dan menikmati kedamaian tanpa obrolan yang melelahkan.",
+        meaning: "Berfokus pada pemulihan energi fisik mandiri secara senyap.",
         reaction: "Kamu menyalakan diffuser beraroma melati, meredupkan lampu ruangan harian, dan bersandar menikmati keheningan indrawi."
       },
       {
         value: 2,
-        label: "Cenderung Sisi A (SLI)",
-        meaning: "Detail fasilitas praktis sekitar, memastikan suhu AC dingin pas dan sofa nyaman, malas menanggapi letupan tawa palsu.",
+        label: "Fokus pada kenyamanan fisik ruang dan instrumen praktis sekitar, tanpa merasa perlu memperindah suasana sosial.",
+        meaning: "Mengutamakan kestabilan raga daripada merespons atmosfer keceriaan sosial.",
         reaction: "Kamu membawakan bantal pelindung punggung dan duduk tenang menyimak sembari memakan camilan biskuit hangat."
       },
       {
         value: 3,
-        label: "Seimbang di tengah",
-        meaning: "Menginginkan ketenangan fisik indrawi sembari sesekali ikut tersenyum ramah menyapa kawan sekeliling hangat.",
-        reaction: "Kamu menyandarkan raga dengan rileks sembari menyeduh minuman hangat untuk dinikmati bersama kawan rapat."
+        label: "Menikmati ketenangan fisik indrawi sembari sesekali tersenyum ramah mendengarkan candaan kawan sekeliling.",
+        meaning: "Menyeimbangkan kenyamanan indrawi internal dengan suasana kebersamaan sosial sekitar.",
+        reaction: "Kamu menyandarkan raga dengan rileks sembari menyeduh minuman hangat untuk dinikmati bersama kawan."
       },
       {
         value: 4,
-        label: "Cenderung Sisi B (SEI)",
-        meaning: "Penyelarasan ekspresi kelompok, memancing obrolan ringan agar suasana santai dipenuhi oleh tawa kebersamaan.",
+        label: "Memancing obrolan kasual yang hangat dan melempar celetukan riang agar suasana santai dipenuhi oleh tawa kebersamaan.",
+        meaning: "Menggunakan ekspresi emosional ringan untuk menghidupkan kenyamanan indrawi.",
         reaction: "Kamu melempar celetukan lucu kasual untuk memancing senyum kawan yang terlihat kelelahan bekerja."
       },
       {
         value: 5,
-        label: "Sangat Sisi B (SEI)",
-        meaning: "Aktif melahirkan keceriaan atmosfer, menyanyi bersama, menyebar canda tawa lepas, dan melenyapkan kaku canggung emosional.",
-        reaction: "Kamu memutar musik ceria, memandu gelombang tawa heboh, mendistribusikan makanan enak, dan merangkul kehangatan batin."
+        label: "Aktif menyebarkan keceriaan atmosfer sosial, menyetel musik gembira, bercanda lepas, dan meleburkan kekakuan emosional kelompok.",
+        meaning: "Menggerakkan energi keceriaan ekspresi emosional kelompok sebagai pilar utama kenyamanan batin bersama.",
+        reaction: "Kamu memputar musik ceria, memandu gelombang tawa heboh, mendistribusikan makanan enak, dan merangkul kehangatan."
       }
     ]
   },
@@ -685,32 +844,32 @@ export const PAIR_DISCRIMINATORS: SocionicsQuestion[] = [
     options: [
       {
         value: 1,
-        label: "Sangat Sisi A (EIE)",
-        meaning: "Menyalakan api imajinasi masa depan, membawa kelompok merenungi visi jangka panjang, dan meresapi drama batin perjuangan.",
+        label: "Menyalakan imajinasi masa depan, membimbing kelompok merenungi visi batin jangka panjang yang bernada dramatis filosofis.",
+        meaning: "Mengarahkan energi emosional kelompok ke visi perubahan makro masa depan.",
         reaction: "Kamu berorasi dengan tatapan tajam visioner, menyuarakan makna filosofis hidup, dan menggugah batin pendengar."
       },
       {
         value: 2,
-        label: "Cenderung Sisi A (EIE)",
-        meaning: "Membawa suasana kelompok ke arah refleksi tren perubahan, mengobarkan komitmen moral demi impian kolektif agung kelak.",
+        label: "Membawa suasana kelompok ke arah refleksi tren perubahan, mengobarkan komitmen emosional demi impian kolektif agung kelak.",
+        meaning: "Menggunakan prediksi tren historis untuk menggugah semangat kolektif.",
         reaction: "Kamu menceritakan prediksi dramatik tentang masa depan tim, menggugah batin kawan-kawan dengan metafora puitis."
       },
       {
         value: 3,
-        label: "Seimbang di tengah",
-        meaning: "Menginginkan gelombang ekspresi emosional yang seimbang antara pemenuhan gizi batin indrawi dan arah maknanya.",
+        label: "Menyeimbangkan ekspresi emosional antara inspirasi visi masa depan dan sajian pemenuhan kenyamanan suasana saat ini.",
+        meaning: "Penyelarasan antara visi filosofis masa depan dengan kenikmatan suasana gembira saat ini.",
         reaction: "Kamu memandu jalannya acara dengan riang sembari sesekali menyelipkan ulasan hikmah bijaksana tentang kehidupan."
       },
       {
         value: 4,
-        label: "Cenderung Sisi B (ESE)",
-        meaning: "Kenyamanan fisik konkret peserta, memastikan semua orang kenyang makan lezat, ruangan bersih asri, dan tawa gembira harian.",
-        reaction: "Kamu sibuk mengecek ketersediaan hidangan lezat hangat dan menata bantal kursi agar kawan-kawan tidak pegal badannya."
+        label: "Memastikan kenyamanan fisik konkret peserta, memastikan sirkulasi udara baik, makanan lezat, dan tawa gembira harian.",
+        meaning: "Membidiki kesegaran raga jasmani sebagai pilar utama atmosfer emosi kelompok.",
+        reaction: "Kamu sibuk mengecek ketersediaan hidangan lezat hangat and menata bantal kursi agar kawan-kawan tidak pegal badannya."
       },
       {
         value: 5,
-        label: "Sangat Sisi B (ESE)",
-        meaning: "Pesta kenikmatan indrawi seutuhnya, tawa ceria fisik yang menular instan, tanpa menyentuh drama berat atau filosofi gelap.",
+        label: "Merayakan kepuasan indrawi seutuhnya dengan tawa riang fisik, hidangan lezat hangat, tanpa mau menyentuh drama batin berat.",
+        meaning: "Membebaskan kelompok dari ketegangan drama batin dengan kegembiraan indrawi nyata.",
         reaction: "Kamu tertawa terbahak-bahak, menyodorkan makanan enak penutup, memeluk hangat sahabat, dan merayakan kesegaran raga."
       }
     ]
@@ -731,32 +890,32 @@ export const PAIR_DISCRIMINATORS: SocionicsQuestion[] = [
     options: [
       {
         value: 1,
-        label: "Sangat Sisi A (SEE)",
-        meaning: "Membaca loyalitas orang, membangun kedekatan rahasia batin, menyiasati kawan vs lawan lewat pengaruh kharisma personal.",
+        label: "Membaca loyalitas orang, mendekati hati mereka secara rahasia untuk merangkul sekutu, dan mengamankan pengaruh kekuasaan personal.",
+        meaning: "Merajut aliansi interpersonal tepercaya demi mengendalikan situasi lapangan.",
         reaction: "Kamu merapat membisikkan instruksi khusus ke kawan dekat tepercaya, mengunci dukungan personalnya, dan mengisolasi peragu."
       },
       {
         value: 2,
-        label: "Cenderung Sisi A (SEE)",
-        meaning: "Memilah siapa yang tulus mendukung gerak langkah tim, memakai negosiasi interpersonal yang luwes agar kontrol tetap aman.",
+        label: "Memilah siapa saja kawan tepercaya yang tulus mau mendukung langkah tim, memakai muslihat negosiasi interpersonal yang luwes.",
+        meaning: "Menggunakan pengaruh karisma interpersonal untuk mengarahkan kehendak kelompok.",
         reaction: "Kamu menepuk pundak anggota tim dengan santun, menanyakan kesiapan hatinya membantu perjuangan sebelum memberi tugas."
       },
       {
         value: 3,
-        label: "Seimbang di tengah",
-        meaning: "Menerapkan struktur pembagian tugas harian secara logis sembari tetap memperhatikan kedekatan relasi emosional.",
-        reaction: "Kamu membagi lembar draf tugas secara tertulis sembari mengajak anggota tim makan bersama membicarakan batasnya."
+        label: "Menyeimbangkan pembagian tugas secara objektif dengan pembinaan hubungan diplomatis personal batin.",
+        meaning: "Mengambil jalan tengah antara ketertiban struktur logis dengan harmoni afiliasi personal.",
+        reaction: "Kamu membagi lembar draf tugas secara tertulis sembari mengajak anggota tim makan bersama membahas batasnya."
       },
       {
         value: 4,
-        label: "Cenderung Sisi B (SLE)",
-        meaning: "Kalkulasi logis fungsional, membagi porsi operasi secara objektif, dan memastikan roda sistematis berjalan tanpa drama perasaan.",
+        label: "Menyusun pembagian operasi tugas secara objektif matematis sesuai deskripsi kerja guna memastikan efisiensi roda sistem.",
+        meaning: "Mengarahkan ketertiban sistem berdasarkan pemetaan wewenang operasional nonsentimental.",
         reaction: "Kamu mengompilasikankan bagan wewenang tim secara hierarkis dan menuntut semua pihak tertib pada deskripsi kerja."
       },
       {
         value: 5,
-        label: "Sangat Sisi B (SLE)",
-        meaning: "Atur posisi logis tanpa pandang bulu, menegakkan disiplin secara mutlak, melacak penugasan numerik, dan memotong pelanggar ketertiban.",
+        label: "Menegakkan disiplin aturan penugasan kerja secara meluas tanpa pandang bulu, melacak target operasional secara tegas kaku.",
+        meaning: "Menegakkan kepatuhan aturan struktural secara mutlak tanpa kompromi pada dinamika emosi relasi.",
         reaction: "Kamu menetapkan draf evaluasi di meja, membacakan poin-poin pelanggaran sistem secara dingin, dan mengganti personel lamban instan."
       }
     ]
@@ -777,32 +936,32 @@ export const PAIR_DISCRIMINATORS: SocionicsQuestion[] = [
     options: [
       {
         value: 1,
-        label: "Sangat Sisi A (ILI)",
-        meaning: "Evaluasi angka realitas, kalkulasi kerugian pragmatis, dan mempersiapkan rencana darurat pengamanan biaya tanpa bauran emosi.",
+        label: "Melakukan evaluasi angka realitas, kalkulasi kerugian pragmatis secara dingin, mempersiapkan rencana pemangkasan biaya operasional.",
+        meaning: "Mengutamakan keselamatan materi kegunaan praktis daripada membakar emosi kelompok.",
         reaction: "Kamu membuka rincian anggaran pengeluaran, menandai pemborosan angka di dokumen, dan menyarankan aksi realistis."
       },
       {
         value: 2,
-        label: "Cenderung Sisi A (ILI)",
-        meaning: "Fokus pada struktur keefektifan operasional yang bisa dipangkas diam-diam di belakang layar demi keawetan modal kelompok.",
+        label: "Tutup mata terhadap sentimen perasaan, memikirkan struktur keefektifan fungsional di balik layar komputer untuk menghemat daya.",
+        meaning: "Mengkristalkan analisis risiko operasional secara objektif di belakang layar.",
         reaction: "Kamu duduk menyendiri menyusun analisis risiko kegagalan sistematis di komputer lembar kerjamu."
       },
       {
         value: 3,
-        label: "Seimbang di tengah",
-        meaning: "Meramalkan arah waktu jangka panjang sembari menimbang dampak moral tim dan hitungan rupiah secara seimbang.",
+        label: "Mengevaluasi tren masa depan dengan menimbang kelayakan materi pragmatis serta dampak motivasi emosional tim secara seimbang.",
+        meaning: "Menyeimbangkan antara prakiraan fungsional logis dengan dinamika semangat psikologis tim.",
         reaction: "Kamu memberikan masukan ramalan tren masa depan yang mengombinasikan faktor psikologi sosial dan hitungan aset."
       },
       {
         value: 4,
-        label: "Cenderung Sisi B (IEI)",
-        meaning: "Membakar kembali motivasi hati kawan, menebar kehangatan hubungan sosial agar mentalitas tim tidak hancur didera krisis waktu.",
+        label: "Membangun optimisme hati kawan, menebar empati dan kata-kata penyejuk jiwa agar mentalitas batin tim tidak hancur didera krisis.",
+        meaning: "Menggunakan empati puitis untuk menyeimbangkan pesimisme realitas operasional.",
         reaction: "Kamu tersenyum teduh, menyapa kawan dekat empat mata, dan memberikan wejangan puitis penenang batin."
       },
       {
         value: 5,
-        label: "Sangat Sisi B (IEI)",
-        meaning: "Merajut impian inspirasional, membingkai krisis sebagai takdir yang indah, dan menyatukan gelombang emosi tim agar bangkit.",
+        label: "Merajut harapan indah yang membakar motivasi batin, membingkai krisis sebagai momentum spiritual yang menggerakkan persatuan.",
+        meaning: "Membangun inspirasi emosional kolektif sebagai solusi utama menggerakkan roda organisasi terpuruk.",
         reaction: "Kamu menyuarakan kata-kata harapan spiritual penyejuk batin secara teatrikal, membangkitkan senyum haru kawan."
       }
     ]
@@ -823,32 +982,32 @@ export const PAIR_DISCRIMINATORS: SocionicsQuestion[] = [
     options: [
       {
         value: 1,
-        label: "Sangat Sisi A (LSE)",
-        meaning: "Detail realitas raga kerja, memastikan kesehatan fisik staf, sirkulasi udara ruangan rapi, dan pengerjaan yang teliti harian.",
+        label: "Fokus menjaga kualitas detail hasil kerja, memastikan stamina fisik staf terjaga prima, ventilasi udara rapi, dan pengerjaan teliti.",
+        meaning: "Mengutamakan kualitas pengerjaan fisik raga di lapangan sebagai pondasi efisiensi harian.",
         reaction: "Kamu merapikan letak meja mesin kerja, menyiapkan minum suplemen vitamin tim, dan menuntut standar hasil yang presisi."
       },
       {
         value: 2,
-        label: "Cenderung Sisi A (LSE)",
-        meaning: "Mengutamakan kualitas pengerjaan produk yang bebas cacat fungsional, menolak buru-buru melompati proses demi kenyamanan mutunya.",
+        label: "Menuntut keaslian rasa dan mutu praktis produk agar teruji andal secara fisik, pantang terburu-buru demi kualitas mutunya.",
+        meaning: "Mengamankan kontrol kualitas hasil kerja konkrit daripada sekadar mengejar waktu.",
         reaction: "Kamu menyortir sampel bahan baku harian dan meminta tim membetulkan jahitan atau sambungan pengerjaan."
       },
       {
         value: 3,
-        label: "Seimbang di tengah",
-        meaning: "Kejar omset visioner jangka panjang sembari tetap menjaga draf kenyamanan stamina dan detail fisik pengerjaan harian.",
+        label: "Menyeimbangkan target bisnis yang ambisius dengan pemenuhan kenyamanan jasmani serta kesehatan raga rekan kerja sehari-hari.",
+        meaning: "Menyelaraskan akselerasi target tren bisnis dengan kesejahteraan fisik jasmani harian staf.",
         reaction: "Kamu menyusun linimasa target bulanan yang fleksibel dipadu dengan agenda rekreasi pijat bersama tim."
       },
       {
         value: 4,
-        label: "Cenderung Sisi B (LIE)",
-        meaning: "Spekulasi tren investasi, mencari rute jalan pintas baru yang melipatgandakan aset meskipun harus menekan jam istirahat.",
+        label: "Mengamati spekulasi pasar baru, siap memangkas waktu santai demi merebut peluang usaha yang melipatgandakan aset.",
+        meaning: "Mengeksplorasi oportunitas investasi baru di kala senggang dengan sigap.",
         reaction: "Kamu mengajukan penawaran ekspansi sistem draf bisnis baru ke partner eksternal di sela-sela akhir pekan."
       },
       {
         value: 5,
-        label: "Sangat Sisi B (LIE)",
-        meaning: "Visi akselerator futuristik, melompati draf kenyamanan jasmani demi mengamankan rute momentum pasar baru, beralih serba cepat.",
+        label: "Mengambil jalur spekulasi tren futuristik, melompati kenyamanan rutinitas demi mengamankan momentum pasar secepat kilat.",
+        meaning: "Melakukan aksi akselerasi dinamika merebut peluang bisnis futuristik di atas stamina jasmani normatif.",
         reaction: "Kamu memesan tiket perjalanan bisnis mendadak, mengganti rencana operasional tim secara kilat, dan mengejar peluang."
       }
     ]
@@ -869,61 +1028,72 @@ export const PAIR_DISCRIMINATORS: SocionicsQuestion[] = [
     options: [
       {
         value: 1,
-        label: "Sangat Sisi A (EII)",
-        meaning: "Mencari celah motif batin alternatif di sebalik kelakuannya, mendengarkan alasannya penuh kasih, dan memberikan ampunan tulus.",
+        label: "Mencari motif batin tak terlihat di balik kesalahannya, percaya bahwa setiap manusia punya alasan emosional khusus, and memberi ampunan.",
+        meaning: "Mengutamakan pemberian ruang rehabilitasi moral dan memaafkan ketidaksempurnaan manusia.",
         reaction: "Kamu mendoakan ketenangan jiwanya, memaafkan kesalahannya di lubuk batin harian secara tenang."
       },
       {
         value: 2,
-        label: "Cenderung Sisi A (EII)",
-        meaning: "Menghindari penghakiman sosial yang kasar, percaya setiap orang memiliki luka batin masa lalu yang memicu kelakuan buruknya.",
+        label: "Menghindari penghakiman sosial yang kasar, merangkul jiwanya dengan menyimak cerita sisi batinnya secara sabar penuh empati.",
+        meaning: "Berempati menggali luka batin pelaku daripada buru-buru menyematkan sanksi sosial.",
         reaction: "Kamu menahan diri tidak ikut menghujat di grup chat, memilih mengirim pesan empati pribadi menanyakan kondisi emosinya."
       },
       {
         value: 3,
-        label: "Seimbang di tengah",
-        meaning: "Memperhatikan batas integritas moral sembari menyisakan sedikit ruang empati penjelasan dari pelakunya.",
+        label: "Menjaga batas kenyamanan integritas persahabatan tetapi tetap menyisakan ruang penjelasan moral yang ramah bagi pelaku.",
+        meaning: "Menyeimbangkan keadilan integritas komitmen etis dengan pemahaman sisi kemanusiaan.",
         reaction: "Kamu mendengarkan kasus tersebut secara tenang sembari mengingatkannya tentang kepatutan etis hubungan persahabatan."
       },
       {
         value: 4,
-        label: "Cenderung Sisi B (ESI)",
-        meaning: "Menjaga jarak aman kepercayaan personal, menandai hitam-putih integritasnya, dan enggan lagi terlibat obrolan dekat.",
+        label: "Menjaga jarak aman kepercayaan personal, menandai hitam-putih komitmen moralnya, dan enggan lagi membicarakan urusan batin.",
+        meaning: "Membatasi diri dari relasi moral yang terbukti lancung demi menjaga integritas pribadi.",
         reaction: "Kamu membalas chat orang tersebut seperlunya dengan kalimat formal yang kaku, dingin, and langsung menutup curhat pribadinya."
       },
       {
         value: 5,
-        label: "Sangat Sisi B (ESI)",
-        meaning: "Pasang batas proteksi defensif secara instan, mencoret namanya dari daftar tepercaya selamanya, dan pasang wajah dingin tak tersentuh.",
+        label: "Membatasi diri secara tak tertembus, mencoret kepercayaan moral padanya selamanya, dan memasang pandangan dingin melindungi diri.",
+        meaning: "Menegakkan pemutusan hubungan etis secara mutlak demi membela kebenaran tulus dan melindungi lingkaran intim.",
         reaction: "Kamu memblokir nomor kontaknya, berbalik arah membuang muka jika berpapasan, dan pasang radar dingin melindungi kawan dekat."
       }
     ]
   }
 ];
 
-// Helper to find hand-crafted pair discriminators or fall back to dynamic generation
+// Helper to find hand-crafted pair discriminators combined with dynamic discriminators
 export function getDiscriminatorsForPair(type1: SocionicsType, type2: SocionicsType): SocionicsQuestion[] {
-  const matched = PAIR_DISCRIMINATORS.filter(
+  const manual = PAIR_DISCRIMINATORS.filter(
     q => (q.tieBreak?.a === type1 && q.tieBreak?.b === type2) || 
          (q.tieBreak?.a === type2 && q.tieBreak?.b === type1)
   );
-  if (matched.length > 0) return matched;
   
-  // Fall back to dynamic generator
   const dyn = generateDynamicDiscriminator(type1, type2);
   
+  // Combine manual and dynamic to get a robust suite of 3-5 tie-breakers
+  const combined = [...manual, ...dyn];
+  
+  // Deduplicate by ID
+  const seenIds = new Set<string>();
+  const uniqueQuestions: SocionicsQuestion[] = [];
+  for (const q of combined) {
+    if (!seenIds.has(q.id)) {
+      seenIds.add(q.id);
+      uniqueQuestions.push(q);
+    }
+  }
+  
   // Register them in the master registries so they resolve
-  dyn.forEach(q => {
+  uniqueQuestions.forEach(q => {
     if (!QUESTION_BY_ID.has(q.id)) {
       ALL_QUESTIONS.push(q);
       QUESTION_BY_ID.set(q.id, q);
     }
   });
   
-  return dyn;
+  return uniqueQuestions; 
 }
 
-// Fallback dynamic generator matching Model A contrasting functions
+// Fallback dynamic generator matching Model A contrasting functions (No variables / type leaked)
 export function generateDynamicDiscriminator(type1: SocionicsType, type2: SocionicsType): SocionicsQuestion[] {
   const slots1 = TIM_MODELS[type1].slots;
   const slots2 = TIM_MODELS[type2].slots;
@@ -953,7 +1123,8 @@ export function generateDynamicDiscriminator(type1: SocionicsType, type2: Socion
   
   contrastElements.sort((a,b) => b.deltaWeight - a.deltaWeight);
   
-  const picked = contrastElements.slice(0, 2);
+  // Slice 3 elements for the 3 dynamic tie-breaker questions!
+  const picked = contrastElements.slice(0, 3);
   const result: SocionicsQuestion[] = [];
   
   picked.forEach((p, index) => {
@@ -973,8 +1144,8 @@ export function generateDynamicDiscriminator(type1: SocionicsType, type2: Socion
       element,
       channel: "producer",
       scale: "comparison",
-      context: `Bayangkan ini terjadi: Dibutuhkan penanganan situasi terkait potensi kognisi ${keywords}.`,
-      statement: `Saat keadaan lingkungan menuntut kita melindung diri atau mengekspresikan ${keywords}, mana gaya respon yang mewakili kepribadianmu?`,
+      context: `Bayangkan kejadian ini: Situasi sekitar menuntut keputusan cepat terkait: ${keywords}.`,
+      statement: `Saat keadaan lingkungan menuntut kita menyikapi atau mengekspresikan hal di atas, mana gaya respon harian yang mewakili dirimu?`,
       sourceSituation: `Pembeda dinamis ${type1} - ${type2}`,
       sourceResponse: stmt,
       responseFocus: `resolusi ${type1}:${type2}`,
@@ -982,33 +1153,33 @@ export function generateDynamicDiscriminator(type1: SocionicsType, type2: Socion
       options: [
         {
           value: 1,
-          label: `Sangat Sisi A (${weakType})`,
-          meaning: `Kamu merasa area ini bukanlah keahlian menonjol batin harianmu, dan kamu lebih sejalan dengan gaya respon tipe ${weakType}.`,
-          reaction: `kamu memilih membiarkan rekan kerja mengatasi area ini, menunggu instruksi tertulis, and bermain di zona nyaman.`
+          label: "Sangat jarang mengandalkan hal ini dalam merespons situasi harian",
+          meaning: "Kamu merasa ranah kognisi ini bukanlah area kekuatan batin harianmu, and cenderung menyerahkannya ke orang lain.",
+          reaction: "kamu memilih membiarkan rekan kerja mengatasi area ini, menunggu instruksi kerja, and memilih posisi netral."
         },
         {
           value: 2,
-          label: `Cenderung Sisi A (${weakType})`,
-          meaning: `Kamu tidak terlalu dominan melakukan hal ini, merasa lebih nyaman memposisikan dirimu seperti gaya tipe ${weakType}.`,
-          reaction: `kamu menyimak dinamika kelompok sekilas, mengangguk menyetujui, and berfokus di peran pembantu.`
+          label: "Hanya sesekali memakai cara ini ketika benar-benar dituntut keadaan",
+          meaning: "Kamu menyadari area ini terkadang dibutuhkan, tetapi bukan pilihan pertama yang spontan terlaksana dalam batinmu.",
+          reaction: "kamu menyimak dinamika kelompok sekilas, membiarkan orang lain memimpin, and bersikap santun menyelesaikannya."
         },
         {
           value: 3,
-          label: "Seimbang di tengah",
-          meaning: "Kedua gaya bertindak ini terasa sama-sama hidup di dalam batinmu tergantung kondisi darurat lapangan.",
-          reaction: "kamu memperhatikan getaran batinmu harian, merasa kedua opsi ini bisa bergantian melengkapi hidupmu."
+          label: "Seimbang di tengah, memakai keduanya secara proporsional sesuai kebutuhan ruangan",
+          meaning: "Kedua gaya bertindak ini dirasakan sama-sama hidup di dalam batinmu tergantung kondisi darurat lapangan.",
+          reaction: "kamu memperhatikan getaran batinmu harian, merasa kedua opsi ini bisa saling melengkapi hidupmu."
         },
         {
           value: 4,
-          label: `Cenderung Sisi B (${strongType})`,
-          meaning: `Kamu cukup percaya diri dan andal di area ini, sering refleks bertindak spontan memakai gaya tipe ${strongType}.`,
-          reaction: `kamu mengambil andil peranan kecil di area ini, perlahan menyelesaikan draf solusi dengan luwes.`
+          label: "Cukup sering and terbiasa menerapkan penanganan ini dengan percaya diri",
+          meaning: "Kamu merasa andal and percaya diri di area kognisi ini, serta lancar merumuskan draf solusi praktisnya.",
+          reaction: "kamu mengambil andil peran aktif di area ini, perlahan-lahan menata keadaan agar kembali kondusif."
         },
         {
           value: 5,
-          label: `Sangat Sisi B (${strongType})`,
-          meaning: `Kemampuan ini adalah salah satu tumpuan kekuatan jiwamu, dan kamu refleks bertindak mengikuti kebiasaan tipe ${strongType}.`,
-          reaction: `kamu langsung memimpin aksi utama di area ini, menyelesaikan draf hasil secara andal luar biasa.`
+          label: "Sangat spontan, andal, and menjadi tumpuan tindakan utama saya",
+          meaning: "Kemampuan ini adalah salah satu tumpuan kekuatan jiwamu, yang refleks berjalan di garis terdepan secara andal.",
+          reaction: "kamu langsung bergerak cepat memimpin aksi utama di area ini, mendedikasikan fokusmu murni untuk kelancarannya."
         }
       ]
     });

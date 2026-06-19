@@ -71,10 +71,10 @@ export default function App() {
     setSession(nextSession);
   };
 
-  // Selector update - records answers and auto-advances
+  // Selector update - records answers and shows detail definitions without forced instant auto-advancing
   const handleSelectAnswer = (questionId: string, rating: number) => {
     if (!session) return;
-    const nextSession = applyAnswer(session, questionId, rating, true);
+    const nextSession = applyAnswer(session, questionId, rating, false);
     setSession(nextSession);
   };
 
