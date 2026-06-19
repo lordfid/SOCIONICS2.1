@@ -167,7 +167,7 @@ export default function ReferenceSection({ theme, onBack }: ReferenceSectionProp
             </div>
             
             <p className="text-[10px] text-stone-400 mt-6 md:mt-0 font-sans italic text-center leading-relaxed">
-              *Metodologi ini dihitung konsisten dan andal demi kejujuran riset sains kognitif.
+              *Penilaian ini dikembangkan sebagai alat bantu belajar mandiri dan refleksi kepribadian.
             </p>
           </div>
         </div>

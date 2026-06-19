@@ -49,21 +49,17 @@ export function createSession(mode: TestMode, nickname = ""): TestSession {
   // Quotas for different test modes
   let extraCoreCount = 0;
   let holdoutCount = 0;
-  let tieBreakCount = 0;
 
   if (mode === "ringkas") {
     extraCoreCount = 0;
     holdoutCount = 8;
-    tieBreakCount = 8;
   } else if (mode === "standar") {
     extraCoreCount = 32;
     holdoutCount = 16;
-    tieBreakCount = 16;
   } else {
     // mendalam / penuh
     extraCoreCount = 96;
     holdoutCount = 32;
-    tieBreakCount = 32;
   }
 
   const extraCore = shuffle(
@@ -75,11 +71,7 @@ export function createSession(mode: TestMode, nickname = ""): TestSession {
     .slice(0, holdoutCount)
     .map((q) => q.id);
 
-  const tieBreak = shuffle(getTieBreakQuestions(), seed + 73)
-    .slice(0, tieBreakCount)
-    .map((q) => q.id);
-
-  const full = [...base, ...extraCore, ...holdout, ...tieBreak];
+  const full = [...base, ...extraCore, ...holdout];
   const questionIds = spreadQuestions(full, seed + 97);
   const now = new Date().toISOString();
 

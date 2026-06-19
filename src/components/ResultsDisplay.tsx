@@ -462,7 +462,7 @@ ${['base', 'creative', 'role', 'polr', 'suggestive', 'mobilizing', 'ignoring', '
             </div>
 
             <p className="text-[9px] text-stone-400 mt-6 pt-4 border-t border-dashed border-stone-200 dark:border-stone-800/40 leading-relaxed">
-              *Evaluasi ini berbasis Model A Socionics, terinspirasi oleh tradisi Filatova, dan dikembangkan menggunakan pendekatan saluran perilaku (behavioral) modern dengan menghitung kecocokan respon batin Anda terhadap 16 tipe model metabolisme informasi.
+              *Evaluasi ini berbasis Model A Socionics, dikembangkan sebagai alat refleksi tipologi. Bukan diagnosis klinis.
             </p>
           </div>
         </div>
@@ -558,7 +558,7 @@ ${['base', 'creative', 'role', 'polr', 'suggestive', 'mobilizing', 'ignoring', '
               <Compass size={18} className="text-amber-500" />
               <span>Arsitektur Metabolisme Energi & Informasi (Model A)</span>
             </h3>
-            <span className="text-[10px] font-mono text-stone-400">Teori Lapis Filatova-Augustinavičiūtė</span>
+            <span className="text-[10px] font-mono text-stone-400">Arsitektur Model A Socionics</span>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">

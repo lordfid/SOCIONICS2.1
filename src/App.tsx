@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ALL_QUESTIONS, QUESTION_BY_ID } from './data/questions';
+import { ALL_QUESTIONS, QUESTION_BY_ID, getDiscriminatorsForPair } from './data/questions';
 import { getFullSocionicsProfile } from './data/socionicsData';
 import { ThemeType, TestSession, FinalResult } from './types';
 import ThemeToggle from './components/ThemeToggle';
@@ -7,7 +7,7 @@ import WelcomeScreen from './components/WelcomeScreen';
 import TestEngine from './components/TestEngine';
 import ResultsDisplay from './components/ResultsDisplay';
 import ReferenceSection from './components/ReferenceSection';
-import { createSession, applyAnswer, applySkip, completeSession, loadSession, clearSession } from './utils/session';
+import { createSession, applyAnswer, applySkip, completeSession, loadSession, clearSession, saveSession } from './utils/session';
 import { calculateFinalResult } from './scoring/engine';
 
 export default function App() {
@@ -81,6 +81,40 @@ export default function App() {
   const handleNextQuestion = () => {
     if (!session) return;
     if (session.currentIndex === session.questionIds.length - 1) {
+      // Check if tie-breaker is triggered
+      const alreadyHasTieBreak = session.questionIds.some(id => id.startsWith('disc_') || id.startsWith('tb_dyn_'));
+      if (!alreadyHasTieBreak) {
+        // Calculate temporary scores on current answered questions
+        const tempResult = calculateFinalResult(session);
+        const top3 = tempResult.top3;
+        if (top3 && top3.length >= 2) {
+          const primary = top3[0];
+          const second = top3[1];
+          const gap = primary.modelSimilarity - second.modelSimilarity;
+          if (gap < 0.035) {
+            // Trigger tie break! Get questions for this primary-second pair
+            const tieQuestions = getDiscriminatorsForPair(primary.type, second.type);
+            if (tieQuestions && tieQuestions.length > 0) {
+              const tieIds = tieQuestions.map(q => q.id);
+              // Filter out duplicate ids if any
+              const uniqueTieIds = tieIds.filter(id => !session.questionIds.includes(id));
+              
+              if (uniqueTieIds.length > 0) {
+                const updatedSession: TestSession = {
+                  ...session,
+                  questionIds: [...session.questionIds, ...uniqueTieIds],
+                  currentIndex: session.currentIndex + 1,
+                  lastUpdatedAt: new Date().toISOString()
+                };
+                setSession(updatedSession);
+                saveSession(updatedSession);
+                return; // Stop and continue testing with new tie-breaker questions
+              }
+            }
+          }
+        }
+      }
+
       handleCalculateResults();
     } else {
       setSession(prev => prev ? { ...prev, currentIndex: prev.currentIndex + 1 } : null);

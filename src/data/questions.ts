@@ -1,4 +1,5 @@
-import type { SocionicsQuestion, QuestionOption, InformationElement, MeasurementChannel, ScaleType, QuestionKind, SocionicsType } from "../types";
+import type { SocionicsQuestion, QuestionOption, InformationElement, MeasurementChannel, ScaleType, QuestionKind, SocionicsType, ModelASlot } from "../types";
+import { TIM_MODELS, SLOT_TO_CHANNEL } from "./modelA";
 
 export const ELEMENTS: InformationElement[] = ["Ne", "Ni", "Se", "Si", "Te", "Ti", "Fe", "Fi"];
 export const CHANNELS: MeasurementChannel[] = ["producer", "flexible", "mask", "threat", "receiver", "aspiration", "dismissive", "background"];
@@ -528,63 +529,496 @@ function generateHoldoutQuestions(): SocionicsQuestion[] {
   return list;
 }
 
-// HELPER: Generates 32 tie-breaker questions
-function generateTieBreakQuestions(): SocionicsQuestion[] {
-  const tieBreakPairs: Array<[SocionicsType, SocionicsType]> = [
-    ["ILE", "IEE"], ["SEI", "SLI"], ["ESE", "EIE"], ["LII", "LSI"],
-    ["SLE", "SEE"], ["IEI", "ILI"], ["LIE", "ESI"], ["IEE", "EII"],
-    ["ILE", "LII"], ["SEI", "ESE"], ["EIE", "IEI"], ["LSI", "SLE"],
-    ["SEE", "ILI"], ["LIE", "ESI"], ["IEE", "SLI"], ["LSE", "EII"]
-  ];
+// HELPER: Manually crafted Pair Discriminators with behavioral scenarios
+export const PAIR_DISCRIMINATORS: SocionicsQuestion[] = [
+  // 1. LII vs LSI
+  {
+    id: "disc_lii_lsi_01",
+    kind: "tie-break",
+    element: "Ti",
+    channel: "producer",
+    scale: "comparison",
+    context: "Ketika rincian aturan tim sudah ditetapkan, tetapi interaksi anggota di lapangan menjadi sangat bising, mendesak, dan saling melanggar batas kemerdekaan.",
+    statement: "Dalam mengatasi kebisingan dan perebutan kuasa fisik tersebut, responsku lebih dekat ke...",
+    sourceSituation: "Tim bising melanggar batas",
+    sourceResponse: "Mengutamakan penjelasan aturan atau mendesak penertiban fisik",
+    responseFocus: "Aturan logis vs Penertiban fisik",
+    tieBreak: { a: "LSI", b: "LII" }, // Choices 4-5 (supported by rating) boost LSI, Choices 1-2 boost LII
+    options: [
+      {
+        value: 1,
+        label: "Sangat Sisi A (LII)",
+        meaning: "Menarik mundur obrolan ke definisi awal dulu secara tenang, agar semua sadar letak salah pemahamannya tanpa harus adu urat saraf.",
+        reaction: "Kamu memilih diam mencatat inkonsistensi, lalu mengirim draf penjelasan komparatif lewat chat tertulis."
+      },
+      {
+        value: 2,
+        label: "Cenderung Sisi A (LII)",
+        meaning: "Mengabaikan ketegangan fisik sekitar, berniat menjelaskan struktur aturan logis saat keadaan sudah sedikit mereda.",
+        reaction: "Kamu menghela napas panjang, merapikan kertas kerjamu, dan menunggu orang-orang selesai berdebat."
+      },
+      {
+        value: 3,
+        label: "Seimbang di tengah",
+        meaning: "Mencoba memadukan klarifikasi definisi aturan logis sembari sesekali meminta ketegasan fisik di forum.",
+        reaction: "Kamu mengetuk meja sesekali, meminta semua orang meredakan intonasi suara sembari merujuk aturan."
+      },
+      {
+        value: 4,
+        label: "Cenderung Sisi B (LSI)",
+        meaning: "Menampilkan postur tubuh tegak, meminta pihak yang melanggar batas segera diam demi mematuhi tata tertib acara.",
+        reaction: "Kamu menyela obrolan dengan nada tegas, meminta forum kembali berfokus pada agenda tertulis tim harian."
+      },
+      {
+        value: 5,
+        label: "Sangat Sisi B (LSI)",
+        meaning: "Secara fisik langsung pasang badan mengambil kendali forum, menghentikan orang melanggar batas secara vokal, dan menuntut kedisplinan mutlak.",
+        reaction: "Kamu berdiri, menatap mata orang tersebut secara langsung, menghentikan kegaduhan konfrontasi, dan menegakkan kepatuhan struktur saat itu juga."
+      }
+    ]
+  },
+  // 2. ILE vs IEE
+  {
+    id: "disc_ile_iee_01",
+    kind: "tie-break",
+    element: "Ne",
+    channel: "producer",
+    scale: "comparison",
+    context: "Ketika kelompok sedang mendiskusikan spekulasi ide baru yang belum pernah diuji di pasar harian.",
+    statement: "Penilaian utamaku terhadap rute kelayakan ide tersebut didasarkan pada...",
+    sourceSituation: "Spekulasi gagasan baru",
+    sourceResponse: "Kelayakan sistem logis versus resonansi etis hubungan manusia",
+    responseFocus: "Struktur logika vs Relasi personal",
+    tieBreak: { a: "ILE", b: "IEE" },
+    options: [
+      {
+        value: 1,
+        label: "Sangat Sisi A (IEE)",
+        meaning: "Respons batin orang, ketulusan ikatan moral, dan seberapa menghargai kehangatan hubungan antarafiliasi.",
+        reaction: "Kamu tersenyum hangat, menanyakan perasaan anggota tim, dan memastikan tidak ada hati yang tersinggung oleh ide tersebut."
+      },
+      {
+        value: 2,
+        label: "Cenderung Sisi A (IEE)",
+        meaning: "Dinamika etis dan rasa nyaman kawan-kawan, mengutamakan penyelarasan moral sebelum melangkah ke rincian teknis.",
+        reaction: "Kamu membujuk forum dengan cerita inspiratif personal agar motivasi internal mereka selaras dengan ide baru."
+      },
+      {
+        value: 3,
+        label: "Seimbang di tengah",
+        meaning: "Melihat bahwa logika sistem dan penyelarasan hati manusia sama pentingnya dalam menguji sebuah opsi inovasi.",
+        reaction: "Kamu membuat bagan coretan yang membagi porsi kelayakan teknis model bisnis dan kenyamanan relasi personal tim."
+      },
+      {
+        value: 4,
+        label: "Cenderung Sisi B (ILE)",
+        meaning: "Konsistensi logika kerangka teori, melihat seberapa koheren sistem ide tersebut jika dibedah dalam kategori.",
+        reaction: "Kamu menunjukkan celah-celah teoretis pada skema ide tersebut, menyarankan struktur klasifikasi yang lebih modular."
+      },
+      {
+        value: 5,
+        label: "Sangat Sisi B (ILE)",
+        meaning: "Akurasi matematika struktural gagasan itu, mengabaikan respons emosional personal demi menguji orisinalitas analisis logis.",
+        reaction: "Kamu membongkar total kontradiksi definisi di papan tulis, menyodorkan draf fungsional baru, draf pembukti rasional."
+      }
+    ]
+  },
+  // 3. SEI vs SLI
+  {
+    id: "disc_sei_sli_01",
+    kind: "tie-break",
+    element: "Si",
+    channel: "producer",
+    scale: "comparison",
+    context: "Setelah penat bekerja seharian, saat ingin bersantai bersama di sebuah ruangan kumpul kasual tim.",
+    statement: "Untuk membangun kenyamanan fisik yang damai, perhatian batin beralih ke...",
+    sourceSituation: "Santai setelah penat",
+    sourceResponse: "Menciptakan keceriaan emosi vs Merapikan fasilitas praktis",
+    responseFocus: "Atmosfer emosional vs Ketenangan praktis",
+    tieBreak: { a: "SEI", b: "SLI" },
+    options: [
+      {
+        value: 1,
+        label: "Sangat Sisi A (SLI)",
+        meaning: "Keheningan penuh, merapikan bantal sofa secara senyap, membuat teh hangat, dan menikmati kedamaian tanpa obrolan drama.",
+        reaction: "Kamu menyalakan diffuser beraroma melati, meredupkan lampu ruangan harian, dan bersandar menikmati keheningan indrawi."
+      },
+      {
+        value: 2,
+        label: "Cenderung Sisi A (SLI)",
+        meaning: "Detail fasilitas praktis sekitar, memastikan suhu AC dingin pas dan sofa nyaman, malas menanggapi letupan tawa palsu.",
+        reaction: "Kamu membawakan bantal pelindung punggung dan duduk tenang menyimak sembari memakan camilan biskuit hangat."
+      },
+      {
+        value: 3,
+        label: "Seimbang di tengah",
+        meaning: "Menginginkan ketenangan fisik indrawi sembari sesekali ikut tersenyum ramah menyapa kawan sekeliling hangat.",
+        reaction: "Kamu menyandarkan raga dengan rileks sembari menyeduh minuman hangat untuk dinikmati bersama kawan rapat."
+      },
+      {
+        value: 4,
+        label: "Cenderung Sisi B (SEI)",
+        meaning: "Penyelarasan ekspresi kelompok, memancing obrolan ringan agar suasana santai dipenuhi oleh tawa kebersamaan.",
+        reaction: "Kamu melempar celetukan lucu kasual untuk memancing senyum kawan yang terlihat kelelahan bekerja."
+      },
+      {
+        value: 5,
+        label: "Sangat Sisi B (SEI)",
+        meaning: "Aktif melahirkan keceriaan atmosfer, menyanyi bersama, menyebar canda tawa lepas, dan melenyapkan kaku canggung emosional.",
+        reaction: "Kamu memutar musik ceria, memandu gelombang tawa heboh, mendistribusikan makanan enak, dan merangkul kehangatan batin."
+      }
+    ]
+  },
+  // 4. ESE vs EIE
+  {
+    id: "disc_ese_eie_01",
+    kind: "tie-break",
+    element: "Fe",
+    channel: "producer",
+    scale: "comparison",
+    context: "Saat berada di tengah-tengah acara pesta atau kumpul besar untuk menaikkan gelombang kebersamaan.",
+    statement: "Ujung fokus utama dari ekspresi emosional dan dorongan energiku adalah...",
+    sourceSituation: "Menyemangati kumpul besar",
+    sourceResponse: "Kenyamanan jasmani saat ini vs Visi filosofis masa depan",
+    responseFocus: "Kenyamanan indrawi vs Visi emosional",
+    tieBreak: { a: "ESE", b: "EIE" },
+    options: [
+      {
+        value: 1,
+        label: "Sangat Sisi A (EIE)",
+        meaning: "Menyalakan api imajinasi masa depan, membawa kelompok merenungi visi jangka panjang, dan meresapi drama batin perjuangan.",
+        reaction: "Kamu berorasi dengan tatapan tajam visioner, menyuarakan makna filosofis hidup, dan menggugah batin pendengar."
+      },
+      {
+        value: 2,
+        label: "Cenderung Sisi A (EIE)",
+        meaning: "Membawa suasana kelompok ke arah refleksi tren perubahan, mengobarkan komitmen moral demi impian kolektif agung kelak.",
+        reaction: "Kamu menceritakan prediksi dramatik tentang masa depan tim, menggugah batin kawan-kawan dengan metafora puitis."
+      },
+      {
+        value: 3,
+        label: "Seimbang di tengah",
+        meaning: "Menginginkan gelombang ekspresi emosional yang seimbang antara pemenuhan gizi batin indrawi dan arah maknanya.",
+        reaction: "Kamu memandu jalannya acara dengan riang sembari sesekali menyelipkan ulasan hikmah bijaksana tentang kehidupan."
+      },
+      {
+        value: 4,
+        label: "Cenderung Sisi B (ESE)",
+        meaning: "Kenyamanan fisik konkret peserta, memastikan semua orang kenyang makan lezat, ruangan bersih asri, dan tawa gembira harian.",
+        reaction: "Kamu sibuk mengecek ketersediaan hidangan lezat hangat dan menata bantal kursi agar kawan-kawan tidak pegal badannya."
+      },
+      {
+        value: 5,
+        label: "Sangat Sisi B (ESE)",
+        meaning: "Pesta kenikmatan indrawi seutuhnya, tawa ceria fisik yang menular instan, tanpa menyentuh drama berat atau filosofi gelap.",
+        reaction: "Kamu tertawa terbahak-bahak, menyodorkan makanan enak penutup, memeluk hangat sahabat, dan merayakan kesegaran raga."
+      }
+    ]
+  },
+  // 5. SLE vs SEE
+  {
+    id: "disc_sle_see_01",
+    kind: "tie-break",
+    element: "Se",
+    channel: "producer",
+    scale: "comparison",
+    context: "Ketika kelompok harus segera menguasai kontrol teritori serta pembagian tugas di bawah tekanan berat krisis.",
+    statement: "Alat utama yang refleks kupakai untuk memandu jalannya eksekusi tim harian adalah...",
+    sourceSituation: "Kontrol teritori di bawah krisis",
+    sourceResponse: "Aturan hirarki logis vs Dinamika relasi personal",
+    responseFocus: "Sistem objektif vs Aliansi personal",
+    tieBreak: { a: "SLE", b: "SEE" },
+    options: [
+      {
+        value: 1,
+        label: "Sangat Sisi A (SEE)",
+        meaning: "Membaca loyalitas orang, membangun kedekatan rahasia batin, menyiasati kawan vs lawan lewat pengaruh kharisma personal.",
+        reaction: "Kamu merapat membisikkan instruksi khusus ke kawan dekat tepercaya, mengunci dukungan personalnya, dan mengisolasi peragu."
+      },
+      {
+        value: 2,
+        label: "Cenderung Sisi A (SEE)",
+        meaning: "Memilah siapa yang tulus mendukung gerak langkah tim, memakai negosiasi interpersonal yang luwes agar kontrol tetap aman.",
+        reaction: "Kamu menepuk pundak anggota tim dengan santun, menanyakan kesiapan hatinya membantu perjuangan sebelum memberi tugas."
+      },
+      {
+        value: 3,
+        label: "Seimbang di tengah",
+        meaning: "Menerapkan struktur pembagian tugas harian secara logis sembari tetap memperhatikan kedekatan relasi emosional.",
+        reaction: "Kamu membagi lembar draf tugas secara tertulis sembari mengajak anggota tim makan bersama membicarakan batasnya."
+      },
+      {
+        value: 4,
+        label: "Cenderung Sisi B (SLE)",
+        meaning: "Kalkulasi logis fungsional, membagi porsi operasi secara objektif, dan memastikan roda sistematis berjalan tanpa drama perasaan.",
+        reaction: "Kamu mengompilasikankan bagan wewenang tim secara hierarkis dan menuntut semua pihak tertib pada deskripsi kerja."
+      },
+      {
+        value: 5,
+        label: "Sangat Sisi B (SLE)",
+        meaning: "Atur posisi logis tanpa pandang bulu, menegakkan disiplin secara mutlak, melacak penugasan numerik, dan memotong pelanggar ketertiban.",
+        reaction: "Kamu menetapkan draf evaluasi di meja, membacakan poin-poin pelanggaran sistem secara dingin, dan mengganti personel lamban instan."
+      }
+    ]
+  },
+  // 6. IEI vs ILI
+  {
+    id: "disc_iei_ili_01",
+    kind: "tie-break",
+    element: "Ni",
+    channel: "producer",
+    scale: "comparison",
+    context: "Saat melihat tanda-tanda bahwa situasi proyek organisasi akan mengalami kemunduran momentum jangka panjang.",
+    statement: "Kecenderungan alami kepalaku dalam merenungi masa depan tersebut dilingkupi oleh...",
+    sourceSituation: "Organisasi mundur momentum",
+    sourceResponse: "Pemberdayaan emosional hubungan vs Perhitungan biaya ekonomi praktis",
+    responseFocus: "Atmosfer hubungan vs Efisiensi fungsional",
+    tieBreak: { a: "IEI", b: "ILI" },
+    options: [
+      {
+        value: 1,
+        label: "Sangat Sisi A (ILI)",
+        meaning: "Evaluasi angka realitas, kalkulasi kerugian pragmatis, dan mempersiapkan rencana darurat pengamanan biaya tanpa bauran emosi.",
+        reaction: "Kamu membuka rincian anggaran pengeluaran, menandai pemborosan angka di dokumen, dan menyarankan aksi realistis."
+      },
+      {
+        value: 2,
+        label: "Cenderung Sisi A (ILI)",
+        meaning: "Fokus pada struktur keefektifan operasional yang bisa dipangkas diam-diam di belakang layar demi keawetan modal kelompok.",
+        reaction: "Kamu duduk menyendiri menyusun analisis risiko kegagalan sistematis di komputer lembar kerjamu."
+      },
+      {
+        value: 3,
+        label: "Seimbang di tengah",
+        meaning: "Meramalkan arah waktu jangka panjang sembari menimbang dampak moral tim dan hitungan rupiah secara seimbang.",
+        reaction: "Kamu memberikan masukan ramalan tren masa depan yang mengombinasikan faktor psikologi sosial dan hitungan aset."
+      },
+      {
+        value: 4,
+        label: "Cenderung Sisi B (IEI)",
+        meaning: "Membakar kembali motivasi hati kawan, menebar kehangatan hubungan sosial agar mentalitas tim tidak hancur didera krisis waktu.",
+        reaction: "Kamu tersenyum teduh, menyapa kawan dekat empat mata, dan memberikan wejangan puitis penenang batin."
+      },
+      {
+        value: 5,
+        label: "Sangat Sisi B (IEI)",
+        meaning: "Merajut impian inspirasional, membingkai krisis sebagai takdir yang indah, dan menyatukan gelombang emosi tim agar bangkit.",
+        reaction: "Kamu menyuarakan kata-kata harapan spiritual penyejuk batin secara teatrikal, membangkitkan senyum haru kawan."
+      }
+    ]
+  },
+  // 7. LIE vs LSE
+  {
+    id: "disc_lie_lse_01",
+    kind: "tie-break",
+    element: "Te",
+    channel: "producer",
+    scale: "comparison",
+    context: "Dalam memimpin jalannya operasional kerja harian agar produktivitas tim melambung tinggi ke puncak keberhasilan.",
+    statement: "Gaya sadar yang kupakai untuk mengarahkan rute aktivitas draf kerja tersebut adalah...",
+    sourceSituation: "Memimpin produktivitas tim",
+    sourceResponse: "Investasi masa depan berspekulasi vs Detail kenyamanan jasmani harian",
+    responseFocus: "Visi masa depan vs Kenyamanan raga harian",
+    tieBreak: { a: "LIE", b: "LSE" },
+    options: [
+      {
+        value: 1,
+        label: "Sangat Sisi A (LSE)",
+        meaning: "Detail realitas raga kerja, memastikan kesehatan fisik staf, sirkulasi udara ruangan rapi, dan pengerjaan yang teliti harian.",
+        reaction: "Kamu merapikan letak meja mesin kerja, menyiapkan minum suplemen vitamin tim, dan menuntut standar hasil yang presisi."
+      },
+      {
+        value: 2,
+        label: "Cenderung Sisi A (LSE)",
+        meaning: "Mengutamakan kualitas pengerjaan produk yang bebas cacat fungsional, menolak buru-buru melompati proses demi kenyamanan mutunya.",
+        reaction: "Kamu menyortir sampel bahan baku harian dan meminta tim membetulkan jahitan atau sambungan pengerjaan."
+      },
+      {
+        value: 3,
+        label: "Seimbang di tengah",
+        meaning: "Kejar omset visioner jangka panjang sembari tetap menjaga draf kenyamanan stamina dan detail fisik pengerjaan harian.",
+        reaction: "Kamu menyusun linimasa target bulanan yang fleksibel dipadu dengan agenda rekreasi pijat bersama tim."
+      },
+      {
+        value: 4,
+        label: "Cenderung Sisi B (LIE)",
+        meaning: "Spekulasi tren investasi, mencari rute jalan pintas baru yang melipatgandakan aset meskipun harus menekan jam istirahat.",
+        reaction: "Kamu mengajukan penawaran ekspansi sistem draf bisnis baru ke partner eksternal di sela-sela akhir pekan."
+      },
+      {
+        value: 5,
+        label: "Sangat Sisi B (LIE)",
+        meaning: "Visi akselerator futuristik, melompati draf kenyamanan jasmani demi mengamankan rute momentum pasar baru, beralih serba cepat.",
+        reaction: "Kamu memesan tiket perjalanan bisnis mendadak, mengganti rencana operasional tim secara kilat, dan mengejar peluang."
+      }
+    ]
+  },
+  // 8. ESI vs EII
+  {
+    id: "disc_esi_eii_01",
+    kind: "tie-break",
+    element: "Fi",
+    channel: "producer",
+    scale: "comparison",
+    context: "Ketika mendengarkan laporan bahwa ada orang terdekat di lingkaran sosial kami berbuat curang dan melanggar moral kejujuran.",
+    statement: "Refleks batin pertama yang mendominasi penilaian terdalam jiwaku adalah...",
+    sourceSituation: "Gosip kecurangan teman",
+    sourceResponse: "Ampunan moral alternatif versus pasang batas dingin menguji loyalitas",
+    responseFocus: "Ruang pengampunan vs Batas proteksi moral",
+    tieBreak: { a: "EII", b: "ESI" },
+    options: [
+      {
+        value: 1,
+        label: "Sangat Sisi A (EII)",
+        meaning: "Mencari celah motif batin alternatif di sebalik kelakuannya, mendengarkan alasannya penuh kasih, dan memberikan ampunan tulus.",
+        reaction: "Kamu mendoakan ketenangan jiwanya, memaafkan kesalahannya di lubuk batin harian secara tenang."
+      },
+      {
+        value: 2,
+        label: "Cenderung Sisi A (EII)",
+        meaning: "Menghindari penghakiman sosial yang kasar, percaya setiap orang memiliki luka batin masa lalu yang memicu kelakuan buruknya.",
+        reaction: "Kamu menahan diri tidak ikut menghujat di grup chat, memilih mengirim pesan empati pribadi menanyakan kondisi emosinya."
+      },
+      {
+        value: 3,
+        label: "Seimbang di tengah",
+        meaning: "Memperhatikan batas integritas moral sembari menyisakan sedikit ruang empati penjelasan dari pelakunya.",
+        reaction: "Kamu mendengarkan kasus tersebut secara tenang sembari mengingatkannya tentang kepatutan etis hubungan persahabatan."
+      },
+      {
+        value: 4,
+        label: "Cenderung Sisi B (ESI)",
+        meaning: "Menjaga jarak aman kepercayaan personal, menandai hitam-putih integritasnya, dan enggan lagi terlibat obrolan dekat.",
+        reaction: "Kamu membalas chat orang tersebut seperlunya dengan kalimat formal yang kaku, dingin, and langsung menutup curhat pribadinya."
+      },
+      {
+        value: 5,
+        label: "Sangat Sisi B (ESI)",
+        meaning: "Pasang batas proteksi defensif secara instan, mencoret namanya dari daftar tepercaya selamanya, dan pasang wajah dingin tak tersentuh.",
+        reaction: "Kamu memblokir nomor kontaknya, berbalik arah membuang muka jika berpapasan, dan pasang radar dingin melindungi kawan dekat."
+      }
+    ]
+  }
+];
 
-  const list: SocionicsQuestion[] = [];
-  tieBreakPairs.forEach(([a, b], pairIdx) => {
-    for (let idx = 1; idx <= 2; idx++) {
-      const id = `tb_${a.toLowerCase()}_${b.toLowerCase()}_0${idx}`;
-      const stmt = idx === 1
-        ? `Saat berdiskusi and merampungkan tugas penting, keputusanku jauh lebih mencerminkan gaya batin ${a} (prinsip and rute aksi kerja nyata) dibanding cara ${b}.`
-        : `Dalam menghadapi perselisihan argumen atau krisis di sekelompok kawan, aku refleks bertindak menggunakan cara tangguh ${a} dibanding kompromi ala ${b}.`;
-
-      const options: QuestionOption[] = [1, 2, 3, 4, 5].map((val) => {
-        const labels = SCALE_LABELS.comparison;
-        const meanings = [
-          `Kepalamu sepenuhnya menolak gaya ${a} and merasa bahwa cara kerja serta respons kehidupanmu 100% selaras dengan tipe ${b}.`,
-          `Kepalamu agak condong ke gaya respons tipe ${b}, meskipun kamu masih sesekali melihat sudut pandang dari sisi ${a}.`,
-          `Kedua gaya respons ini terasa seimbang and sama kuatnya di dalam batinmu, tergantung pada rekan and situasi nyata yang ada.`,
-          `Kepalamu agak condong ke cara tangguh and penyelesaian ala tipe ${a}, meskipun ada sedikit pengaruh dari kompromi tipe ${b}.`,
-          `Kamu yakin batin and aksi spontanmu sepenuhnya digerakkan oleh kecenderungan tipe ${a}, and hampir tidak pernah memakai cara ${b}.`
-        ];
-        const listReactions = [
-          `kamu secara fisik melangkah mundur, membiarkan pola reaksi ${b} mengambil seluruh tindakanmu, and menaruh draf ${a} di laci lemari.`,
-          `kamu melirik draf ${b} sekilas, mencoba menyelesaikannya lewat cara itu, and baru menengok draf ${a} jika caramu mampet.`,
-          `kamu mengetuk-ngetukkan jari ke dagu, memandang bergantian ke arah dua pilihan tindakan, lalu melangkah sesuai kondisi paling mendesak.`,
-          `kamu langsung condong memegang pulpen untuk merealisasikan gagasan ${a}, and baru melirik sisi ${b} jika kawanmu berkeras gila.`,
-          `kamu menegakkan pundak, melontarkan jawaban presisi cara kerja tipe ${a} dengan nada mantap, and langsung melangkah menyelesaikan aksi terdepan.`
-        ];
-        return {
-          value: val as any,
-          label: labels[val - 1] || "",
-          meaning: meanings[val - 1] || "",
-          reaction: listReactions[val - 1]
-        };
-      });
-
-      list.push({
-        id,
-        kind: "tie-break",
-        element: "Ne",
-        channel: "producer",
-        context: `Penyeimbang Model A: Penentuan khusus kandidat ${a} vs ${b}`,
-        scale: "comparison",
-        statement: stmt,
-        sourceSituation: `Tie Break pembeda kandidat ${a} - ${b}`,
-        sourceResponse: stmt,
-        responseFocus: `resolusi resolusi ${a}:${b}`,
-        options
-      });
+// Helper to find hand-crafted pair discriminators or fall back to dynamic generation
+export function getDiscriminatorsForPair(type1: SocionicsType, type2: SocionicsType): SocionicsQuestion[] {
+  const matched = PAIR_DISCRIMINATORS.filter(
+    q => (q.tieBreak?.a === type1 && q.tieBreak?.b === type2) || 
+         (q.tieBreak?.a === type2 && q.tieBreak?.b === type1)
+  );
+  if (matched.length > 0) return matched;
+  
+  // Fall back to dynamic generator
+  const dyn = generateDynamicDiscriminator(type1, type2);
+  
+  // Register them in the master registries so they resolve
+  dyn.forEach(q => {
+    if (!QUESTION_BY_ID.has(q.id)) {
+      ALL_QUESTIONS.push(q);
+      QUESTION_BY_ID.set(q.id, q);
     }
   });
-  return list;
+  
+  return dyn;
+}
+
+// Fallback dynamic generator matching Model A contrasting functions
+export function generateDynamicDiscriminator(type1: SocionicsType, type2: SocionicsType): SocionicsQuestion[] {
+  const slots1 = TIM_MODELS[type1].slots;
+  const slots2 = TIM_MODELS[type2].slots;
+  
+  const contrastElements: Array<{ element: InformationElement; deltaWeight: number }> = [];
+  const slotVal = {
+    base: 10,
+    creative: 8,
+    demonstrative: 6,
+    ignoring: 4,
+    role: 2,
+    mobilizing: 1,
+    suggestive: 0,
+    polr: -5
+  };
+  
+  ELEMENTS.forEach(element => {
+    const slot1 = (Object.keys(slots1) as ModelASlot[]).find(k => slots1[k] === element)!;
+    const slot2 = (Object.keys(slots2) as ModelASlot[]).find(k => slots2[k] === element)!;
+    const val1 = slotVal[slot1] ?? 0;
+    const val2 = slotVal[slot2] ?? 0;
+    const diff = Math.abs(val1 - val2);
+    if (diff > 0) {
+      contrastElements.push({ element, deltaWeight: diff });
+    }
+  });
+  
+  contrastElements.sort((a,b) => b.deltaWeight - a.deltaWeight);
+  
+  const picked = contrastElements.slice(0, 2);
+  const result: SocionicsQuestion[] = [];
+  
+  picked.forEach((p, index) => {
+    const element = p.element;
+    const valType1 = slots1.base === element || slots1.creative === element;
+    
+    const strongType = valType1 ? type1 : type2;
+    const weakType = valType1 ? type2 : type1;
+    
+    const keywords = ELEMENT_KEYWORDS[element];
+    const stmt = `Dalam ranah ${keywords.toLowerCase()}, kecenderungan kognitif dan responsku biasanya terasa jauh lebih dekat ke...`;
+    const id = `tb_dyn_${type1.toLowerCase()}_${type2.toLowerCase()}_0${index + 1}`;
+    
+    result.push({
+      id,
+      kind: "tie-break",
+      element,
+      channel: "producer",
+      scale: "comparison",
+      context: `Bayangkan ini terjadi: Dibutuhkan penanganan situasi terkait potensi kognisi ${keywords}.`,
+      statement: `Saat keadaan lingkungan menuntut kita melindung diri atau mengekspresikan ${keywords}, mana gaya respon yang mewakili kepribadianmu?`,
+      sourceSituation: `Pembeda dinamis ${type1} - ${type2}`,
+      sourceResponse: stmt,
+      responseFocus: `resolusi ${type1}:${type2}`,
+      tieBreak: { a: strongType, b: weakType },
+      options: [
+        {
+          value: 1,
+          label: `Sangat Sisi A (${weakType})`,
+          meaning: `Kamu merasa area ini bukanlah keahlian menonjol batin harianmu, dan kamu lebih sejalan dengan gaya respon tipe ${weakType}.`,
+          reaction: `kamu memilih membiarkan rekan kerja mengatasi area ini, menunggu instruksi tertulis, and bermain di zona nyaman.`
+        },
+        {
+          value: 2,
+          label: `Cenderung Sisi A (${weakType})`,
+          meaning: `Kamu tidak terlalu dominan melakukan hal ini, merasa lebih nyaman memposisikan dirimu seperti gaya tipe ${weakType}.`,
+          reaction: `kamu menyimak dinamika kelompok sekilas, mengangguk menyetujui, and berfokus di peran pembantu.`
+        },
+        {
+          value: 3,
+          label: "Seimbang di tengah",
+          meaning: "Kedua gaya bertindak ini terasa sama-sama hidup di dalam batinmu tergantung kondisi darurat lapangan.",
+          reaction: "kamu memperhatikan getaran batinmu harian, merasa kedua opsi ini bisa bergantian melengkapi hidupmu."
+        },
+        {
+          value: 4,
+          label: `Cenderung Sisi B (${strongType})`,
+          meaning: `Kamu cukup percaya diri dan andal di area ini, sering refleks bertindak spontan memakai gaya tipe ${strongType}.`,
+          reaction: `kamu mengambil andil peranan kecil di area ini, perlahan menyelesaikan draf solusi dengan luwes.`
+        },
+        {
+          value: 5,
+          label: `Sangat Sisi B (${strongType})`,
+          meaning: `Kemampuan ini adalah salah satu tumpuan kekuatan jiwamu, dan kamu refleks bertindak mengikuti kebiasaan tipe ${strongType}.`,
+          reaction: `kamu langsung memimpin aksi utama di area ini, menyelesaikan draf hasil secara andal luar biasa.`
+        }
+      ]
+    });
+  });
+  
+  return result;
+}
+
+function generateTieBreakQuestions(): SocionicsQuestion[] {
+  return PAIR_DISCRIMINATORS;
 }
 
 function generateOptions(element: InformationElement, channel: MeasurementChannel, scale: ScaleType, situation: string): QuestionOption[] {

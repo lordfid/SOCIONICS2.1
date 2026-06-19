@@ -256,8 +256,8 @@ export default function WelcomeScreen({ theme, onStartTest, onViewReferences }: 
 
           <div id="welcome-action-footer" className="mt-8 pt-6 border-t border-dashed border-stone-200 dark:border-stone-800 flex flex-col sm:flex-row justify-between items-center gap-4">
             <p className="text-[11px] text-stone-400 font-sans text-center sm:text-left leading-relaxed">
-              *Hasil tes sepenuhnya bersifat pribadi, rahasia, and tidak disimpan ke server.<br />
-              Berbasis Model A Socionics, terinspirasi oleh tradisi Filatova, dan dikembangkan menggunakan pendekatan saluran perilaku (behavioral) modern.
+              *Hasil tes bersifat pribadi dan tidak disimpan ke server.<br />
+              Berbasis Model A Socionics, dikembangkan sebagai alat refleksi tipologi. Bukan diagnosis klinis.
             </p>
             <button
               id="start-test-btn"

@@ -129,7 +129,7 @@ export default function TestEngine({
           >
             <div className="flex items-center gap-2 mb-1.5 font-bold tracking-wider text-[10px] uppercase text-amber-600 dark:text-amber-400">
               <MessageSquare size={13} />
-              <span>Skenario / Konteks Resonansi</span>
+              <span>Bayangkan ini terjadi:</span>
             </div>
             <div>{currentQuestion.context}</div>
           </div>
@@ -137,7 +137,7 @@ export default function TestEngine({
 
         {/* Cognitive Statement Indicator */}
         <div className="mb-6">
-          <span className="text-[10px] uppercase font-bold tracking-widest text-[#B58572] block mb-1">Pernyataan Refleksi</span>
+          <span className="text-[10px] uppercase font-bold tracking-widest text-[#B58572] block mb-1">Responsku biasanya:</span>
           <h3 
             id="test-q-text"
             className="text-base sm:text-lg font-serif leading-relaxed"
